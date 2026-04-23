@@ -1,0 +1,35 @@
+<div class="user-actions">
+    <div class="cart-container">
+        <a href="/pages/panier.html" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count">0</span>
+        </a>
+        
+        <!-- Aperçu du panier -->
+        <div class="cart-preview" id="cart-preview">
+            <div class="cart-preview-header">
+                <h3>Votre Panier</h3>
+                <span class="cart-preview-count">0</span>
+            </div>
+            <div class="cart-preview-items" id="cart-preview-items">
+                <!-- Les articles du panier seront ajoutés ici dynamiquement -->
+            </div>
+            <div class="cart-preview-footer">
+                <div class="cart-preview-total">
+                    <span>Total</span>
+                    <span class="cart-preview-total-amount">€0.00</span>
+                </div>
+                <div class="cart-preview-buttons">
+                    <a href="/pages/panier.html" class="cart-preview-button view-cart">Voir panier</a>
+                    <a href="/pages/panier.html" class="cart-preview-button checkout">Paiement</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Toast de notification pour l'ajout au panier -->
+<div class="cart-toast" id="cart-toast">
+    <i class="fas fa-check-circle"></i>
+    <p class="cart-toast-text">Article ajouté au panier</p>
+</div> 

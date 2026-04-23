@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez une large sélection de papeterie et bureautique sur notre site. Achetez des produits de qualité à prix compétitifs." />
+    <title>Stylo Magik- Accueil</title>
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .blue-theme-background {
+            background-color: var(--background-color);
+        }
+        .blue-gradient-bg {
+            background: linear-gradient(135deg, rgba(25, 38, 33, 0.14) 0%, rgba(39, 58, 50, 0.22) 100%);
+        }
+    </style>
+</head>
+<body class="blue-theme-background theme-night">
+    <div class="fixed-logo">
+        <a href="./index.html">
+            <img src="./Images/Logo.png" alt="Logo Stylo Magique" class="logo-img">
+        </a>
+    </div>
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./Images/Logo.png" alt="Logo Stylo Magique - Fournitures de bureau et papeterie" class="logo">
+                    <h1>Stylo <span class="logo-accent">Magik</span></h1>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="user-actions">
+                <a href="./pages/panier.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="./index.html" class="active">Accueil</a></li>
+                <li><a href="./pages/papeterie.html">Papeterie</a></li>
+                <li><a href="./pages/bureautique.html">Bureautique</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1 class="visually-hidden">Accueil - Stylo Magik</h1>
+        <section class="hero blue-gradient-bg">
+            <div class="hero-particles">
+                <span></span>
+            </div>
+            <div class="hero-content">
+                <h2 class="hero-title">Bienvenue chez <strong>Stylo <span class="highlight">Magik</span></strong></h2>
+                <p>Votre destination pour tous vos besoins en <strong>papeterie</strong> et <strong>bureautique</strong></p>
+                <div class="hero-buttons">
+                    <a href="#categories" class="cta-button">Découvrir nos produits</a>
+                    <a href="#contact" class="cta-button secondary">Nous contacter</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories blue-gradient-bg">
+            <h2>Nos Catégories</h2>
+            <div class="category-grid">
+                <a href="./pages/papeterie.html" class="category-card">
+                    <div class="category-image">
+                        <img src="./Images/categories/papeterie-banner.png" alt="Catégorie Papeterie - Découvrez notre gamme complète de fournitures de papeterie">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Papeterie</h3>
+                        <p>Découvrez notre sélection de produits de papeterie de qualité</p>
+                        <span class="category-link">Explorer <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+                <a href="./pages/bureautique.html" class="category-card">
+                    <div class="category-image">
+                        <img src="./Images/categories/bureautique-banner.png" alt="Catégorie Bureautique - Équipements et accessoires professionnels pour votre bureau">
+                        <div class="category-overlay"></div>
+                    </div>
+                    <div class="category-content">
+                        <h3>Bureautique</h3>
+                        <p>Équipez votre bureau avec nos produits professionnels</p>
+                        <span class="category-link">Explorer <i class="fas fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="advantages blue-gradient-bg">
+            <h2>Pourquoi Nous Choisir ?</h2>
+            <div class="advantages-grid">
+                <div class="advantage-card">
+                    <i class="fas fa-truck"></i>
+                    <h3><strong>Livraison Rapide</strong></h3>
+                    <p>Livraison en <strong>24/48h</strong> sur toute la France</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-check-circle"></i>
+                    <h3><strong>Qualité Garantie</strong></h3>
+                    <p>Produits <strong>sélectionnés avec soin</strong></p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-lock"></i>
+                    <h3>Paiement Sécurisé</h3>
+                    <p>Transactions 100% sécurisées</p>
+                </div>
+                <div class="advantage-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Service Client</h3>
+                    <p>Support disponible 6j/7</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials blue-gradient-bg">
+            <h2>Nos Clients Témoignent</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Stylo Magik a complètement transformé mon expérience d'achat de fournitures de bureau. La qualité est exceptionnelle et le service client est réactif et professionnel.</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-avatar" aria-hidden="true"><i class="fas fa-user"></i></span>
+                        <div class="testimonial-author-info">
+                            <span class="testimonial-author-name">Marie Dupont</span>
+                            <span class="testimonial-author-title">Graphiste Indépendante</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">Je commande régulièrement pour mon entreprise et je suis toujours impressionné par la rapidité de livraison et la qualité des produits. Un partenaire fiable pour toutes nos fournitures!</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-avatar" aria-hidden="true"><i class="fas fa-user"></i></span>
+                        <div class="testimonial-author-info">
+                            <span class="testimonial-author-name">Thomas Leroux</span>
+                            <span class="testimonial-author-title">Directeur Commercial</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">Le rapport qualité-prix est imbattable, et le site est vraiment facile à utiliser. Je recommande Stylo Magik à tous mes collègues cherchant des fournitures de bureau de qualité.</p>
+                    <div class="testimonial-author">
+                        <span class="testimonial-avatar" aria-hidden="true"><i class="fas fa-user"></i></span>
+                        <div class="testimonial-author-info">
+                            <span class="testimonial-author-name">Sophie Martin</span>
+                            <span class="testimonial-author-title">Enseignante</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section blue-gradient-bg visible-section">
+            <h2>Nous Contacter</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3><strong>Nos Coordonnées</strong></h3>
+                    <p><i class="fas fa-map-marker-alt"></i> <strong>Montpellier, France 34000</strong></p>
+                    <p><i class="fas fa-phone"></i> 0695396132</p>
+                    <p><i class="fas fa-envelope"></i> fayed.amourani8@gmail.com</p>
+                    <p><i class="fas fa-clock"></i> Lun-Ven: 9h-18h</p>
+                    
+                    <div class="contact-social">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">
+                        Envoyer
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <div class="form-message" id="formMessage"></div>
+                </form>
+            </div>
+        </section>
+
+        <div style="margin: 50px 0;"></div>
+    </main>
+
+    <footer class="blue-gradient-bg">
+        <p>&copy; 2024 Stylo Magik - Tous droits réservés</p>
+    </footer>
+
+    <div id="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <div class="cookie-banner">
+        <p class="cookie-text">🍪 Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant, vous acceptez notre politique de cookies.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn accept-cookies">Accepter</button>
+            <button class="cookie-btn reject-cookies">Refuser</button>
+        </div>
+    </div>
+
+    <script src="./scripts/cart.js"></script>
+    <script src="./scripts/mobile-menu.js"></script>
+    <script src="./scripts/back-to-top.js"></script>
+    <script src="./scripts/header-scroll.js"></script>
+    <script src="./scripts/theme-toggle.js"></script>
+    <script>
+        // Back to top functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('visible');
+                } else {
+                    backToTopButton.classList.remove('visible');
+                }
+            });
+            
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Menu state (managed globally by mobile-menu.js)
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navMenu = document.querySelector('nav ul');
+            const contactLink = document.querySelector('a[href="#contact"]');
+            const contactSection = document.getElementById('contact');
+
+            // Traiter le clic sur le lien de contact
+            if (contactLink && contactSection) {
+                contactLink.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Forcer l'affichage de la section
+                    contactSection.style.display = 'block';
+                    contactSection.style.visibility = 'visible';
+                    contactSection.style.opacity = '1';
+                    contactSection.classList.add('visible-section');
+                    
+                    // Faire défiler jusqu'à la section
+                    contactSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Fermer le menu mobile si ouvert
+                    if (menuToggle && navMenu && navMenu.classList.contains('show')) {
+                        navMenu.classList.remove('show');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+            
+            // Animation au défilement
+            const animateElements = document.querySelectorAll('.advantage-card, .category-card, .contact-container');
+            
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+
+        // Cookie banner
+        document.addEventListener('DOMContentLoaded', function() {
+            const cookieBanner = document.querySelector('.cookie-banner');
+            const acceptCookies = document.querySelector('.accept-cookies');
+            const rejectCookies = document.querySelector('.reject-cookies');
+            
+            setTimeout(function() {
+                if (!localStorage.getItem('cookiesAccepted')) {
+                    cookieBanner.classList.add('show');
+                }
+            }, 2000);
+            
+            acceptCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                cookieBanner.classList.remove('show');
+            });
+            
+            rejectCookies.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'false');
+                cookieBanner.classList.remove('show');
+            });
+        });
+
+        // Contact form handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const formMessage = document.getElementById('formMessage');
+            const contactSection = document.getElementById('contact');
+            
+            // S'assurer que la section de contact est visible
+            if (contactSection) {
+                // Forcer l'affichage de la section contact
+                contactSection.style.display = 'block';
+                contactSection.style.visibility = 'visible';
+                contactSection.style.opacity = '1';
+                
+                // Vérifier si la section est masquée par des styles calculés
+                setTimeout(function() {
+                    const computedStyle = window.getComputedStyle(contactSection);
+                    if (computedStyle.display === 'none' || computedStyle.visibility === 'hidden' || computedStyle.opacity === '0') {
+                        console.error('La section contact est masquée par des styles CSS');
+                        // Forcer l'affichage à nouveau
+                        contactSection.setAttribute('style', 'display: block !important; visibility: visible !important; opacity: 1 !important; position: relative !important; z-index: 999 !important;');
+                    }
+                }, 1000);
+            }
+            
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Simuler un envoi de formulaire
+                    const submitButton = contactForm.querySelector('.submit-button');
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+                    submitButton.disabled = true;
+                    
+                    // Simuler un délai d'envoi
+                    setTimeout(function() {
+                        // Afficher le message de succès
+                        formMessage.innerHTML = 'Votre message a été envoyé avec succès! Nous vous répondrons dans les plus brefs délais.';
+                        formMessage.className = 'form-message success';
+                        
+                        // Réinitialiser le formulaire
+                        contactForm.reset();
+                        
+                        // Restaurer le bouton
+                        submitButton.innerHTML = 'Envoyer <i class="fas fa-paper-plane"></i>';
+                        submitButton.disabled = false;
+                        
+                        // Faire disparaître le message après 5 secondes
+                        setTimeout(function() {
+                            formMessage.className = 'form-message';
+                        }, 5000);
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+</html>

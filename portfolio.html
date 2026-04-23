@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de AMOURANI Fayed</title>
+    <link rel="icon" type="image/jpeg" href="images/logo portfolio AMOURANI Fayed.jpg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <a href="#accueil">AFAZ</a>
+        </div>
+        <div class="toggle-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#accueil" class="active">Accueil</a></li>
+            <li class="dropdown">
+                <a href="#qui-suis-je">Qui suis-je <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="mobile-only"><a href="#qui-suis-je">Qui suis-je</a></li>
+                    <li><a href="#a-propos">À propos</a></li>
+                    <li><a href="#presentation-bts">BTS SIO</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#parcours">Parcours <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li class="mobile-only"><a href="#parcours">Parcours</a></li>
+                    <li><a href="#veille">Veille</a></li>
+                    <li><a href="#competences">Compétences</a></li>
+                </ul>
+            </li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#showreel">Showreel</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="theme-toggle-container"><div class="theme-toggle"><i class="fas fa-moon"></i></div></li>
+        </ul>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="accueil" class="hero">
+        <!-- Formes de fond animées -->
+        <div class="shapes-container">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+            <div class="shape shape4"></div>
+        </div>
+        
+        <div class="container">
+            <div class="content">
+                <div class="badge fade-in">Développeur Web Full Stack</div>
+                <h1 class="fade-in">Bonjour, je suis <span class="highlight">Fayed AMOURANI</span></h1>
+                <h2 class="fade-in delay-1">Étudiant en <span class="highlight">BTS SIO</span> & <span class="typewriter">Développeur Web</span></h2>
+                <p class="fade-in delay-2">À la recherche d'un stage et d'une alternance en développement web</p>
+                <div class="buttons fade-in delay-3">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                </div>
+            </div>
+            <div class="hero-image fade-in delay-2">
+                <div class="image-frame">
+                    <img src="images/logo portfolio AMOURANI Fayed.jpg" alt="Illustration Fayed AMOURANI">
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#a-propos">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="a-propos" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text reveal">
+                    <p>Bonjour ! Je suis Fayed AMOURANI, étudiant en BTS SIO (Services Informatiques aux Organisations) à l'EPSI et développeur web passionné par la création d'expériences numériques innovantes.</p>
+                    
+                    <p>Je suis actuellement à la recherche d'un <strong>stage</strong> et d'une <strong>alternance</strong> pour mettre en pratique mes compétences acquises. Déterminé, autonome et doté d'un esprit d'analyse, je suis capable de m'adapter rapidement aux nouvelles technologies et méthodologies.</p>
+                    
+                    <p>Mon parcours académique et mes projets personnels m'ont permis de développer une solide base technique et une grande capacité d'apprentissage. Je combine créativité et compétences techniques pour donner vie à des projets web qui se démarquent.</p>
+                    
+                    <div class="about-info">
+                        <div class="info">
+                            <i class="fas fa-envelope"></i>
+                            <span>fayed.amourani8@gmail.com</span>
+                        </div>
+                        <div class="info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Montpellier, France</span>
+                        </div>
+                        <div class="info">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>BTS SIO - EPSI</span>
+                        </div>
+                    </div>
+                    <div class="social-actions">
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/TlkVIII" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                        </div>
+                        <a href="cv/cv.pdf" class="btn btn-primary" download="CV_Fayed_AMOURANI.pdf">Télécharger mon CV</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Qui suis-je -->
+    <section id="qui-suis-je" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-highlight">Qui suis-je ?</span>
+            </h2>
+            
+            <div class="identity-brief reveal">
+                <p>Développeur curieux, j'explore les technologies au-delà du code pour comprendre et façonner l'avenir numérique.</p>
+            </div>
+            
+            <div class="identity-container reveal">
+                <div class="identity-card">
+                    <div class="identity-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Mon esprit</h3>
+                    </div>
+                    <div class="identity-content">
+                        <p>La tech est plus que du code. Je cherche à comprendre le monde numérique dans sa globalité.</p>
+                        <ul class="identity-list">
+                            <li><i class="fas fa-check-circle"></i> IA & développement</li>
+                            <li><i class="fas fa-check-circle"></i> Web scraping</li>
+                            <li><i class="fas fa-check-circle"></i> Analyse SEO</li>
+                            <li><i class="fas fa-check-circle"></i> Docker & phpMyAdmin</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="identity-card">
+                    <div class="identity-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Profil technique</h3>
+                    </div>
+                    <div class="identity-content">
+                        <ul class="identity-list identity-compact">
+                            <li><i class="fas fa-globe"></i> Développement web</li>
+                            <li><i class="fas fa-cogs"></i> Docker</li>
+                            <li><i class="fas fa-robot"></i> Intégration IA</li>
+                            <li><i class="fas fa-search"></i> Web scraping</li>
+                            <li><i class="fas fa-rss"></i> Veille tech</li>
+                            <li><i class="fas fa-chart-line"></i> SEO</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="identity-card">
+                    <div class="identity-header">
+                        <i class="fas fa-dumbbell"></i>
+                        <h3>Corps & Esprit</h3>
+                    </div>
+                    <div class="identity-content">
+                        <p>Musculation = discipline + confiance. Le développement personnel passe aussi par le dépassement physique.</p>
+                        <div class="identity-balance">
+                            <div class="balance-item">Mental</div>
+                            <div class="balance-bar">
+                                <div class="balance-progress"></div>
+                            </div>
+                            <div class="balance-item">Physique</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="identity-card">
+                    <div class="identity-header">
+                        <i class="fas fa-heart"></i>
+                        <h3>Mes valeurs</h3>
+                    </div>
+                    <div class="identity-content">
+                        <p>La tech doit rester humaine.</p>
+                        <ul class="identity-list">
+                            <li><i class="fas fa-check-circle"></i> Entraide (CV, démarches)</li>
+                            <li><i class="fas fa-check-circle"></i> Impact & stratégie</li>
+                            <li><i class="fas fa-check-circle"></i> Alignement avec mes valeurs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="identity-card">
+                    <div class="identity-header">
+                        <i class="fas fa-rocket"></i>
+                        <h3>Objectifs</h3>
+                    </div>
+                    <div class="identity-content">
+                        <p>Je sais apprendre vite et je veux :</p>
+                        <ul class="identity-list identity-goals">
+                            <li><i class="fas fa-arrow-right"></i> Explorer les nouvelles technologies</li>
+                            <li><i class="fas fa-arrow-right"></i> Collaborer sur des projets stimulants</li>
+                            <li><i class="fas fa-arrow-right"></i> Grandir comme développeur et humain</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="identity-quote reveal">
+                <i class="fas fa-quote-left"></i>
+                <blockquote>
+                    La technologie bien conçue améliore considérablement notre quotidien. Cette conviction me pousse à continuer d'apprendre chaque jour.
+                </blockquote>
+                <i class="fas fa-quote-right"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Présentation BTS SIO -->
+    <section id="presentation-bts" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title reveal">
+                <span class="title-highlight">Le BTS SIO</span>
+                <span class="title-accent">Services Informatiques aux Organisations</span>
+            </h2>
+            
+            <div class="bts-description reveal">
+                <p>Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> est une formation de niveau bac+2 qui prépare aux métiers de l'informatique en entreprise. Cette formation combine des compétences techniques, organisationnelles et relationnelles nécessaires pour s'adapter au monde professionnel en constante évolution.</p>
+                <p>Le programme inclut des enseignements généraux (culture générale, anglais, mathématiques, économie et management) et des enseignements professionnels adaptés au monde informatique (analyse économique et managériale, conception de SI, cybersécurité, développement d'applications, etc.).</p>
+            </div>
+            
+            <div class="options-container reveal">
+                <h3 class="options-title">Les deux options du BTS SIO</h3>
+                
+                <div class="options-grid">
+                    <!-- Option SLAM - Option choisie -->
+                    <div class="option-card option-slam chosen-option">
+                        <div class="chosen-badge">Mon choix ✓</div>
+                        <div class="option-header">
+                            <div class="option-icon">
+                            <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Option SLAM</h3>
+                            <p class="option-subtitle">Solutions Logicielles et Applications Métiers</p>
+                        </div>
+                        <div class="option-content">
+                            <p>Cette option est orientée <strong>développement</strong> et forme des spécialistes de la conception et du développement d'applications.</p>
+                            <ul class="option-list">
+                                <li><i class="fas fa-check-circle"></i> Développement web et mobile</li>
+                                <li><i class="fas fa-check-circle"></i> Programmation</li>
+                                <li><i class="fas fa-check-circle"></i> Bases de données</li>
+                                <li><i class="fas fa-check-circle"></i> Méthodes agiles</li>
+                            </ul>
+                            <div class="option-footer">
+                                <h4>Débouchés</h4>
+                                <div class="option-tags">
+                                    <span class="option-tag">Développeur web</span>
+                                    <span class="option-tag">Développeur d'applications</span>
+                                    <span class="option-tag">Analyste programmeur</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Option SISR -->
+                    <div class="option-card option-sisr">
+                        <div class="option-header">
+                            <div class="option-icon">
+                            <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Option SISR</h3>
+                            <p class="option-subtitle">Solutions d'Infrastructure, Systèmes et Réseaux</p>
+                        </div>
+                        <div class="option-content">
+                            <p>L'option SISR est orientée <strong>réseaux et systèmes</strong> et forme des spécialistes de l'installation, de l'intégration et de la maintenance des équipements informatiques.</p>
+                            <ul class="option-list">
+                                <li><i class="fas fa-check-circle"></i> Administration de systèmes (Windows, Linux)</li>
+                                <li><i class="fas fa-check-circle"></i> Configuration des réseaux</li>
+                                <li><i class="fas fa-check-circle"></i> Sécurité informatique</li>
+                                <li><i class="fas fa-check-circle"></i> Virtualisation et cloud computing</li>
+                                <li><i class="fas fa-check-circle"></i> Support aux utilisateurs</li>
+                            </ul>
+                            <div class="option-footer">
+                                <h4>Débouchés</h4>
+                                <div class="option-tags">
+                                    <span class="option-tag">Administrateur réseau</span>
+                                    <span class="option-tag">Technicien systèmes</span>
+                                    <span class="option-tag">Administrateur sécurité</span>
+                                    <span class="option-tag">Architecte infrastructure</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Veille Technologique -->
+    <section id="veille" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Veille Technologique</h2>
+            <div class="veille-grid">
+                <div class="veille-card reveal">
+                    <div class="veille-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>L'intégration de l'IA dans le développement logiciel</h3>
+                    </div>
+                    <div class="veille-content">
+                        <p>Analyse approfondie des outils d'IA comme Copilot et CodeWhisperer, et leur impact sur le développement logiciel en 2025.</p>
+                        <ul class="veille-list">
+                            <li><i class="fas fa-check-circle"></i> Évolution des assistants de codage IA</li>
+                            <li><i class="fas fa-check-circle"></i> Impact sur la productivité des développeurs</li>
+                            <li><i class="fas fa-check-circle"></i> Nouvelles tendances en développement assisté</li>
+                            <li><i class="fas fa-check-circle"></i> Perspectives d'évolution pour 2025</li>
+                        </ul>
+                        <div class="veille-sources">
+                            <h4>Sources d'information :</h4>
+                            <ul>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://github.com/features/copilot" target="_blank">GitHub Copilot</a></li>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://aws.amazon.com/codewhisperer/" target="_blank">AWS CodeWhisperer</a></li>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://www.gartner.com/en" target="_blank">Gartner - Tendances IA 2025</a></li>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://www.forrester.com/" target="_blank">Forrester Research</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="veille-card reveal">
+                    <div class="veille-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Développement mobile multiplateforme</h3>
+                    </div>
+                    <div class="veille-content">
+                        <p>Comparaison approfondie entre Flutter et React Native, et leur positionnement sur le marché du développement mobile en 2025.</p>
+                        <ul class="veille-list">
+                            <li><i class="fas fa-check-circle"></i> Analyse des performances et des fonctionnalités</li>
+                            <li><i class="fas fa-check-circle"></i> Évolution des frameworks</li>
+                            <li><i class="fas fa-check-circle"></i> Tendance du marché</li>
+                            <li><i class="fas fa-check-circle"></i> Perspectives d'évolution pour 2025</li>
+                        </ul>
+                        <div class="veille-sources">
+                            <h4>Sources d'information :</h4>
+                            <ul>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://flutter.dev/" target="_blank">Flutter Documentation</a></li>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://reactnative.dev/" target="_blank">React Native Documentation</a></li>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://www.statista.com/" target="_blank">Statista - Marché Mobile</a></li>
+                                <li><i class="fas fa-external-link-alt"></i> <a href="https://www.appbrain.com/stats/" target="_blank">AppBrain Statistics</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Parcours avec menu déroulant -->
+    <section id="parcours" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title reveal">Mon Parcours</h2>
+            
+            <!-- Menu déroulant -->
+            <div class="accordion-container reveal">
+                <!-- Formation -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Formation</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2024 - 2026</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>BTS SIO (Bac +1)</h4>
+                                    <p><strong>EPSI de Montpellier</strong></p>
+                                    <p>Services Informatiques aux Organisations</p>
+                                    <div class="stage-missions">
+                                        <h5>Formation :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-code"></i> Option SLAM (Solutions Logicielles et Applications Métiers)</li>
+                                            <li><i class="fas fa-laptop-code"></i> Développement d'applications</li>
+                                            <li><i class="fas fa-project-diagram"></i> Gestion de projets informatiques</li>
+                                            <li><i class="fas fa-graduation-cap"></i> Niveau Bac +1</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2022 - 2023</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Baccalauréat série générale (Assez Bien)</h4>
+                                    <p><strong>Lycée Polyvalent de Sada</strong></p>
+                                    <p>Formation générale avec spécialisation en informatique</p>
+                                    <div class="stage-missions">
+                                        <h5>Spécialisation :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-microchip"></i> Spécialisation en informatique</li>
+                                            <li><i class="fas fa-star"></i> Mention Assez Bien</li>
+                                            <li><i class="fas fa-book"></i> Formation générale</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2019 - 2020</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Brevet des collèges (Bien)</h4>
+                                    <p><strong>Collège de Sada</strong></p>
+                                    <p>Formation générale</p>
+                                    <div class="stage-missions">
+                                        <h5>Résultats :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-award"></i> Mention Bien</li>
+                                            <li><i class="fas fa-school"></i> Formation générale</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expérience -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Expérience</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2025</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Stage Développement Web - Infoboost</h4>
+                                    <p><strong>Montpellier, France</strong></p>
+                                    <p>Stage en développement web et communication digitale</p>
+                                    <div class="stage-missions">
+                                        <h5>Missions principales :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-code"></i> Développement web et création de pages</li>
+                                            <li><i class="fab fa-wordpress"></i> Utilisation complète de WordPress et ses plugins</li>
+                                            <li><i class="fas fa-search"></i> Analyse SEO et optimisation</li>
+                                            <li><i class="fas fa-comments"></i> Communication et support client</li>
+                                        </ul>
+                                    </div>
+                                    <div class="stage-link">
+                                        <a href="https://infoboost.fr" target="_blank" class="btn btn-sm btn-outline">
+                                            <i class="fas fa-external-link-alt"></i> Visiter le site Infoboost
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2023 - 2024</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Animateur - Événements</h4>
+                                    <p><strong>Village, France</strong></p>
+                                    <p>Animation et organisation d'événements au sein d'un village</p>
+                                    <div class="stage-missions">
+                                        <h5>Missions principales :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-users"></i> Encadrement d'événements au sein d'un village</li>
+                                            <li><i class="fas fa-calendar-alt"></i> Organisation d'activités au sein d'un village</li>
+                                            <li><i class="fas fa-tasks"></i> Chef de projet dans le métier d'animateur</li>
+                                            <li><i class="fas fa-bullhorn"></i> Chargé de communication d'importantes activités</li>
+                                            <li><i class="fas fa-handshake"></i> Intégration au sein d'un comité jeune dans un village</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2019</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Stage Scolaire - Observation</h4>
+                                    <p><strong>Électronique & Comptabilité</strong></p>
+                                    <p>Stage d'observation dans différents domaines professionnels</p>
+                                    <div class="stage-missions">
+                                        <h5>Missions principales :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-microchip"></i> Connaissance des composants d'un appareil électronique</li>
+                                            <li><i class="fas fa-tools"></i> Observation de réparation d'appareil électronique</li>
+                                            <li><i class="fas fa-shield-alt"></i> Connaissance des bonnes pratiques pendant une réparation</li>
+                                            <li><i class="fas fa-calculator"></i> Stage dans le métier de Comptable</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projets -->
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <h3>Projets</h3>
+                        <div class="accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="accordion-content">
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">
+                                    <h3>2024 - 2025</h3>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Open Innovation - Insight Plus</h4>
+                                    <p><strong>Projet en cours</strong></p>
+                                    <p>Solution qui permet à des professionnelles de recenser tous les avis les concernant sur diverses plateformes d'avis</p>
+                                    <div class="stage-missions">
+                                        <h5>Fonctionnalités :</h5>
+                                        <ul>
+                                            <li><i class="fas fa-search"></i> Veille et monitoring des avis</li>
+                                            <li><i class="fas fa-chart-line"></i> Analyse des retours clients</li>
+                                            <li><i class="fas fa-users"></i> Gestion des réputations en ligne</li>
+                                            <li><i class="fas fa-clock"></i> Projet en cours de développement</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title reveal">Mes Compétences</h2>
+            <div class="skills-grid">
+                <!-- Développement Frontend -->
+                <div class="skill-category reveal">
+                    <h3>Développement Frontend</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Développement Backend -->
+                <div class="skill-category reveal">
+                    <h3>Développement Backend</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                            </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                            </div>
+                
+                <!-- Outils & Autres -->
+                <div class="skill-category reveal">
+                    <h3>Outils & Autres</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-search"></i>
+                            <span>SEO</span>
+                            </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-globe"></i>
+                            <span>Web Analytics</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-wordpress"></i>
+                            <span>WordPress</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-puzzle-piece"></i>
+                            <span>Plugins WP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Environnements de développement -->
+                <div class="skill-category reveal">
+                    <h3>Environnements de développement</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-php"></i>
+                            <span>PhpStorm</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub Desktop</span>
+                            </div>
+                        <div class="skill-icon">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                        </div>
+                    </div>
+                            </div>
+                
+                <!-- Bureautique -->
+                <div class="skill-category reveal">
+                    <h3>Bureautique</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="far fa-file-word"></i>
+                            <span>Word</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="far fa-file-excel"></i>
+                            <span>Excel</span>
+                            </div>
+                        <div class="skill-icon">
+                            <i class="far fa-file-powerpoint"></i>
+                            <span>PowerPoint</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Mes Projets</h2>
+            <div class="project-filters reveal">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-content">
+                        <h3>Site E-commerce - Fournitures de Bureau</h3>
+                        <p>Un site de commerce électronique moderne dédié à la vente de fournitures et matériel de bureau. Plateforme complète avec catalogue produits, système de panier et processus de commande.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./ecommerce/index.html" target="_blank" class="btn btn-sm btn-primary">
+                                Voir le site
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-content">
+                        <h3>Site Web Hôtel Neptune</h3>
+                        <p>Site web complet pour la réservation et la gestion d'un hôtel, avec interface administrative, gestion des disponibilités, formulaire de réservation et stockage des données clients en base SQL.</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>PHP</span>
+                            <span>SQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-sm btn-primary">Voir le site</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card reveal" data-category="web">
+                    <div class="project-content">
+                        <h3>Galerie Photo Connectée</h3>
+                        <p>Projet personnel d'un site internet de galerie photo permettant d'importer et d'organiser des images prises avec un appareil photo ou un téléphone mobile.</p>
+                        <div class="project-tags">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projetperso/index.html" target="_blank" class="btn btn-sm btn-primary">Voir le site</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Showreel -->
+    <section id="showreel" class="section bg-alt">
+        <div class="container">
+            <h2 class="section-title reveal">Mon Showreel</h2>
+            <div class="showreel-container reveal">
+                <div class="video-wrapper">
+                    <video controls poster="images/logo portfolio AMOURANI Fayed.jpg">
+                        <source src="videos/showreel/showreel.mp4" type="video/mp4">
+                        Votre navigateur ne supporte pas la lecture de vidéos.
+                    </video>
+                </div>
+                <div class="showreel-description">
+                    <h3>Découvrez mon univers</h3>
+                    <p>Ce showreel présente une sélection de mes meilleurs projets et réalisations. Une vitrine de mes compétences en développement web et de ma créativité.</p>
+                    <div class="showreel-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-code"></i>
+                            <span>Développement Web</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>Design Responsive</span>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <span>UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title reveal">Me Contacter</h2>
+            <div class="contact-container">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Adresse</h3>
+                            <p>Montpellier, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>fayed.amourani8@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Téléphone</h3>
+                            <p>06 95 39 61 32</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/TlkVIII" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <a href="#accueil">AFAZ</a>
+                </div>
+                <p>© 2023 Tous droits réservés</p>
+                <p>Conçu et développé par <span class="highlight">Fayed AMOURANI</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton Scroll Top -->
+    <a href="#accueil" class="scroll-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/back-to-top.js"></script>
+</body>
+</html> 

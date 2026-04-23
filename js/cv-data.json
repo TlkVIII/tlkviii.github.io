@@ -1,0 +1,66 @@
+{
+  "education": [
+    {
+      "period": "2024 - 2026",
+      "title": "BTS SIO (Bac +1)",
+      "location": "EPSI de Montpellier",
+      "details": [
+        "Services Informatiques aux Organisations",
+        "Option SLAM (Solutions Logicielles et Applications Métiers)",
+        "Formation axée sur le développement d'applications et la gestion de projets informatiques"
+      ]
+    },
+    {
+      "period": "2022 - 2023",
+      "title": "Baccalauréat série générale (Assez Bien)",
+      "location": "Lycée Polyvalent de Sada",
+      "details": [
+        "Formation générale avec spécialisation en informatique",
+        "Obtention de la mention Assez Bien"
+      ]
+    },
+    {
+      "period": "2019 - 2020",
+      "title": "Brevet des collèges (Bien)",
+      "location": "Collège de Sada",
+      "details": [
+        "Formation générale",
+        "Obtention de la mention Bien"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "period": "2023",
+      "title": "Animateur",
+      "location": "Événements",
+      "details": [
+        "Encadrement d'événement au sein d'un village",
+        "Organisation d'activité au sein d'un village",
+        "Chef de projet dans le métier d'animateur",
+        "Chargée de communication d'importantes activités",
+        "Intégration au sein d'un comité jeune dans un village"
+      ]
+    },
+    {
+      "period": "2019",
+      "title": "Stage Scolaire",
+      "location": "Observation",
+      "details": [
+        "Connaissance des composants d'un appareil électronique",
+        "Observation de réparation d'appareil électronique",
+        "Connaissance des bonnes pratiques pendant une réparation",
+        "Stage dans le métier de Comptable"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "period": "2025 - 2026",
+      "title": "Open Innovation (En cours)",
+      "details": [
+        "Insight Plus: Solution qui permet à des professionnelles de recensées tout les avis les concernant sur diverses plateformes d'avis"
+      ]
+    }
+  ]
+} 

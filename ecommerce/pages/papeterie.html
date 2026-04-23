@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre gamme complète de produits de papeterie de qualité professionnelle. Stylos, cahiers, classeurs et bien plus." />
+    <title>Stylo Magik - Papeterie</title>
+    <link rel="stylesheet" href="../Styles/styles.css">
+    <link rel="stylesheet" href="../Styles/StylesPapeterie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="papeterie-page blue-theme-background theme-night">
+    <header>
+        <div class="top-header">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../Images/Logo.png" alt="Logo Stylo Magique - Fournitures de bureau et papeterie" class="logo">
+                    <h1>Stylo <span class="logo-accent">Magik</span></h1>
+                </a>
+            </div>
+            <button class="menu-toggle" aria-label="Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="user-actions">
+                <a href="./panier.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="./papeterie.html" class="active">Papeterie</a></li>
+                <li><a href="./bureautique.html">Bureautique</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="papeterie-page">
+        <section class="category-header">
+            <div class="header-content">
+                <h1>Papeterie</h1>
+                <p>Découvrez notre sélection de produits de papeterie de qualité pour tous vos besoins professionnels et personnels</p>
+            </div>
+        </section>
+
+        <section class="products-section blue-gradient-bg">
+            <h2>Nos Produits de Papeterie</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/stylos-couleur.png" 
+                             onerror="this.src='../Images/products/papeterie/stylos-couleur.jpg'" 
+                             alt="Set de Stylos Colorés - Ensemble de stylos de qualité aux couleurs variées"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Set de Stylos Colorés</h3>
+                        <p class="product-reference">RÉF: STY-COL</p>
+                        <div class="price-stock-container">
+                            <span class="price">€9.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/cahier-premium.png" 
+                             onerror="this.src='../Images/products/papeterie/cahier-premium.jpg'" 
+                             alt="Cahier Premium A4 - Cahier de haute qualité avec couverture robuste"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3><strong>Cahier Premium A4</strong></h3>
+                        <p class="product-reference">RÉF: <strong>CAH-PREM</strong></p>
+                        <div class="price-stock-container">
+                            <span class="price"><strong>€4.99</strong></span>
+                            <span class="stock-status"><strong>En stock</strong></span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/classeur.png" 
+                             onerror="this.src='../Images/products/papeterie/classeur.jpg'" 
+                             alt="Classeur A4"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Classeur A4 Deluxe</h3>
+                        <p class="product-reference">RÉF: CLA-DEL</p>
+                        <div class="price-stock-container">
+                            <span class="price">€6.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/post-it.png" 
+                             onerror="this.src='../Images/products/papeterie/post-it.jpg'" 
+                             alt="Pack Post-it"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Pack Post-it Colorés</h3>
+                        <p class="product-reference">RÉF: POST-COL</p>
+                        <div class="price-stock-container">
+                            <span class="price">€7.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/marqueurs.png" 
+                             onerror="this.src='../Images/products/papeterie/marqueurs.jpg'" 
+                             alt="Marqueurs"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Set de Marqueurs</h3>
+                        <p class="product-reference">RÉF: MARQ-12</p>
+                        <div class="price-stock-container">
+                            <span class="price">€12.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/agenda2025.png" 
+                             onerror="this.src='../Images/products/papeterie/agenda2025.jpg'" 
+                             alt="Agenda 2025"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Agenda 2025 Premium</h3>
+                        <p class="product-reference">RÉF: AGD-2025</p>
+                        <div class="price-stock-container">
+                            <span class="price">€14.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/crayons.png" 
+                             onerror="this.src='../Images/products/papeterie/crayons.jpg'" 
+                             alt="Crayons de Couleur"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Crayons de Couleur Pro</h3>
+                        <p class="product-reference">RÉF: CRAY-PRO</p>
+                        <div class="price-stock-container">
+                            <span class="price">€8.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="image-container">
+                        <img src="../Images/products/papeterie/chemises.png" 
+                             onerror="this.src='../Images/products/papeterie/chemises.jpg'" 
+                             alt="Lot de Chemises"
+                             class="product-image" onclick="openModal(this.src, this.alt)">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lot de 10 Chemises</h3>
+                        <p class="product-reference">RÉF: CHEM-10</p>
+                        <div class="price-stock-container">
+                            <span class="price">€5.99</span>
+                            <span class="stock-status">En stock</span>
+                        </div>
+                        <button class="add-to-cart">Ajouter au panier</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal pour l'agrandissement des images -->
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <img src="" alt="" class="modal-image" id="modalImage">
+                <button class="close-modal" onclick="closeModal()"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="blue-gradient-bg">
+        <p>&copy; 2024 Stylo Magik - Tous droits réservés</p>
+    </footer>
+
+    <script src="../scripts/cart.js"></script>
+    <script src="../scripts/mobile-menu.js"></script>
+    <script src="../scripts/back-to-top.js"></script>
+    <script src="../scripts/header-scroll.js"></script>
+    <script src="../scripts/theme-toggle.js"></script>
+    <script>
+        // Script pour la modal d'image
+        function openModal(src, alt) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('modalImage').alt = alt;
+            document.getElementById('imageModal').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Empêche le défilement
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').classList.remove('active');
+            document.body.style.overflow = 'auto'; // Réactive le défilement
+        }
+
+        // Fermer la modal en cliquant à l'extérieur
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('imageModal');
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Fermer la modal avec la touche ESC
+        window.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && document.getElementById('imageModal').classList.contains('active')) {
+                closeModal();
+            }
+        });
+
+        // Fonctionnalité du bouton retour en haut
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+    <button id="back-to-top" aria-label="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+</body>
+</html>
