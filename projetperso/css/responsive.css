@@ -1,0 +1,206 @@
+/* Projet perso — responsive (chargé en dernier) */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+}
+
+/* --- Contenu principal --- */
+.main-content {
+    min-width: 0;
+    padding-left: max(0.75rem, env(safe-area-inset-left));
+    padding-right: max(0.75rem, env(safe-area-inset-right));
+}
+
+/* --- Tablette (≤992px) --- */
+@media (max-width: 992px) {
+    .main-content {
+        padding: clamp(0.85rem, 2vw, 1.5rem);
+    }
+
+    .main-header {
+        margin: 0.75rem;
+    }
+
+    .main-footer {
+        margin: 0.75rem;
+    }
+}
+
+/* --- Navigation mobile / tablette --- */
+@media (max-width: 900px) {
+    .nav-menu {
+        padding: 0.45rem 3.45rem;
+    }
+
+    .nav-menu a {
+        padding: 0.48rem 0.65rem;
+        font-size: 0.8rem;
+        min-height: 2.45rem;
+    }
+}
+
+/* --- Mobile large (≤768px) --- */
+@media (max-width: 768px) {
+    .photographie-page,
+    .galerie-page {
+        background-attachment: scroll;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        gap: 0.9rem;
+        padding: 0.25rem 0;
+    }
+
+    .gallery-item {
+        min-height: 200px;
+    }
+
+    .gallery-intro {
+        font-size: 0.9rem;
+        text-align: left;
+        padding: 0.75rem 0.9rem;
+    }
+
+    .lightbox {
+        padding: max(0.5rem, env(safe-area-inset-top)) max(0.5rem, env(safe-area-inset-right))
+            max(0.5rem, env(safe-area-inset-bottom)) max(0.5rem, env(safe-area-inset-left));
+    }
+
+    .lightbox-content {
+        max-width: 100%;
+        max-height: 88dvh;
+    }
+
+    .lightbox-image {
+        max-height: min(88dvh, 88vh);
+        width: auto;
+        height: auto;
+    }
+
+    .lightbox-close {
+        top: max(4px, env(safe-area-inset-top));
+        right: max(4px, env(safe-area-inset-right));
+    }
+}
+
+/* --- Très petit mobile (≤480px) --- */
+@media (max-width: 480px) {
+    .main-header {
+        margin: 0.4rem;
+        padding: 1rem 0.7rem 1.25rem;
+        padding-top: 3.4rem;
+        border-radius: 16px;
+    }
+
+    .main-header h1 {
+        font-size: 1.45rem;
+        line-height: 1.2;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+
+    .theme-toggle {
+        width: 40px;
+        height: 40px;
+        top: 8px;
+        right: max(8px, env(safe-area-inset-right));
+    }
+
+    .main-footer {
+        margin: 0.4rem;
+        padding: 0.85rem 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .gallery-filters {
+        flex-direction: column;
+    }
+
+    .filter-btn {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .back-to-top {
+        right: max(10px, env(safe-area-inset-right));
+        bottom: max(12px, env(safe-area-inset-bottom));
+        width: 48px;
+        height: 48px;
+    }
+
+    .photo-badge {
+        font-size: 0.68rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .welcome-section {
+        padding: 1rem 0.85rem 1.25rem;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-link {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* --- Accueil: fond moins lourd en mobile --- */
+@media (max-width: 768px) {
+    .container::before {
+        background-attachment: scroll;
+    }
+}
+
+/* --- Personnalisation: zones tactiles + canvas --- */
+@media (max-width: 480px) {
+    .upload-area p {
+        font-size: 0.92rem;
+    }
+
+    .canvas-container {
+        min-height: 220px;
+        padding: 0.6rem;
+    }
+
+    #imageCanvas {
+        max-height: 55dvh;
+    }
+
+    .action-btn,
+    .filter-btn {
+        min-height: 44px;
+    }
+
+    .controls-panel {
+        padding: 0.75rem;
+    }
+
+    .control-group h3 {
+        font-size: 0.95rem;
+    }
+}
+
+/* --- Préférence utilisateur: moins d’animation --- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
