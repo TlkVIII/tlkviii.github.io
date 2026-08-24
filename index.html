@@ -792,42 +792,55 @@
     </section>
 
     <!-- Section Contact -->
-    <section id="contact" class="section bg-light">
+    <section id="contact" class="section bg-light contact-section">
         <div class="container">
-            <h2 class="section-title reveal">Me Contacter</h2>
+            <div class="contact-section-heading reveal">
+                <span class="contact-section-kicker">CONTACT</span>
+                <h2 class="section-title">Créons quelque chose <span>ensemble.</span></h2>
+                <p>Une opportunité, une idée ou simplement envie d'échanger ? Je serais ravi d'en discuter avec vous.</p>
+            </div>
             <div class="contact-container">
                 <div class="contact-info reveal">
+                    <div class="contact-info-intro">
+                        <span class="contact-availability"><span class="contact-availability-dot"></span> Disponible pour une alternance</span>
+                        <h3>Parlons de votre prochain projet.</h3>
+                        <p>Développeur web basé à Montpellier, je suis ouvert aux nouvelles opportunités et collaborations.</p>
+                    </div>
                     <div class="contact-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h3>Adresse</h3>
+                            <h3>Localisation</h3>
                             <p>Montpellier, France</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h3>Email</h3>
-                            <p>fayed.amourani8@gmail.com</p>
+                            <h3>E-mail</h3>
+                            <a href="mailto:fayed.amourani8@gmail.com">fayed.amourani8@gmail.com</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
                         <div>
                             <h3>Téléphone</h3>
-                            <p>06 95 39 61 32</p>
+                            <a href="tel:+33695396132">06 95 39 61 32</a>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/TlkVIII" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                    <div class="contact-social-block">
+                        <p>Retrouvez-moi également sur</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/TlkVIII" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil GitHub"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
+                    <div class="contact-response-note"><i class="fas fa-bolt"></i> Réponse rapide à chaque message</div>
                 </div>
                 <div class="contact-form-card reveal">
                     <div class="contact-form-heading">
                         <span class="contact-form-eyebrow"><i class="fas fa-paper-plane"></i> Échangeons ensemble</span>
                         <h3>Envoyez-moi un message</h3>
-                        <p>Une alternance, un projet ou une question ? N'hésitez pas à me contacter.</p>
+                        <p>Quelques mots suffisent pour démarrer une belle collaboration.</p>
                     </div>
                     <form
                         class="contact-form"
@@ -844,27 +857,27 @@
 
                         <div class="contact-form-row">
                             <div class="contact-form-field">
-                                <label for="contact-name">Nom complet</label>
+                                <label for="contact-name"><i class="far fa-user" aria-hidden="true"></i> Nom complet</label>
                                 <input id="contact-name" name="name" type="text" placeholder="Votre nom" autocomplete="name" maxlength="100" required>
                             </div>
                             <div class="contact-form-field">
-                                <label for="contact-email">Adresse e-mail</label>
+                                <label for="contact-email"><i class="far fa-envelope" aria-hidden="true"></i> Adresse e-mail</label>
                                 <input id="contact-email" name="email" type="email" placeholder="vous@exemple.fr" autocomplete="email" maxlength="254" required>
                             </div>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="contact-subject">Sujet</label>
+                            <label for="contact-subject"><i class="fas fa-tag" aria-hidden="true"></i> Sujet</label>
                             <input id="contact-subject" name="subject" type="text" placeholder="L'objet de votre message" maxlength="150" required>
                         </div>
 
                         <div class="contact-form-field">
-                            <label for="contact-message">Message</label>
+                            <label for="contact-message"><i class="far fa-comment-dots" aria-hidden="true"></i> Message</label>
                             <textarea id="contact-message" name="message" placeholder="Bonjour Fayed, je vous contacte à propos de..." rows="5" minlength="10" maxlength="3000" required></textarea>
                         </div>
 
                         <div class="contact-form-field contact-attachments-field">
-                            <label for="contact-attachments">Pièces jointes <span class="contact-field-optional">(facultatif)</span></label>
+                            <label for="contact-attachments"><i class="fas fa-paperclip" aria-hidden="true"></i> Pièces jointes <span class="contact-field-optional">(facultatif)</span></label>
                             <label for="contact-attachments" class="contact-file-dropzone">
                                 <i class="fas fa-paperclip" aria-hidden="true"></i>
                                 <span>Ajouter un ou plusieurs fichiers</span>
@@ -879,6 +892,7 @@
                             <span>Envoyer le message</span>
                         </button>
                         <p class="contact-form-feedback" role="status" aria-live="polite"></p>
+                        <p class="contact-form-note"><i class="fas fa-shield-alt"></i> Vos informations restent confidentielles.</p>
                     </form>
                 </div>
             </div>
