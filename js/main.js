@@ -149,57 +149,87 @@ function animateOnScroll() {
 }
 
 // Formulaire de contact
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.querySelector(".contact-form");
+
 if (contactForm) {
-    const feedback = contactForm.querySelector('.contact-form-feedback');
+    const feedback = contactForm.querySelector(
+        ".contact-form-feedback"
+    );
 
-    if (new URLSearchParams(window.location.search).get('contact') === 'success') {
-        feedback.textContent = 'Votre message a bien été envoyé. Merci !';
-        feedback.dataset.state = 'success';
-    }
-
-    contactForm.addEventListener('submit', async (event) => {
+    contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const submitLabel = submitBtn.querySelector('span');
+        const submitBtn = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        const submitLabel = submitBtn.querySelector("span");
+
         const originalText = submitLabel.textContent;
+
         const formData = new FormData(contactForm);
 
-        if (formData.get('_honey')) {
+        if (formData.get("_honey")) {
             return;
         }
 
-        formData.set('_subject', `Portfolio — ${formData.get('subject')}`);
-        submitLabel.textContent = 'Envoi en cours...';
+        submitLabel.textContent = "Envoi en cours...";
+
         submitBtn.disabled = true;
-        feedback.textContent = '';
+
+        feedback.textContent = "";
+
         delete feedback.dataset.state;
 
         try {
-            const response = await fetch(contactForm.dataset.ajaxUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Accept: 'application/json'
-                },
-                body: JSON.stringify(Object.fromEntries(formData.entries()))
-            });
+            const response = await fetch(
+                contactForm.dataset.contactUrl,
+                {
+                    method: "POST",
+
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+
+                    body: JSON.stringify({
+                        name: formData.get("name"),
+                        email: formData.get("email"),
+                        subject: formData.get("subject"),
+                        message: formData.get("message"),
+                        _honey: formData.get("_honey") || "",
+                    }),
+                }
+            );
+
             const result = await response.json();
 
-            if (!response.ok || result.success === false || result.success === 'false') {
-                throw new Error(result.message || "L'envoi du message a échoué.");
+            if (!response.ok || !result.success) {
+                throw new Error(
+                    result.error || "Impossible d'envoyer le message."
+                );
             }
 
             contactForm.reset();
-            feedback.textContent = 'Votre message a bien été envoyé. Merci !';
-            feedback.dataset.state = 'success';
+
+            feedback.textContent =
+                "Votre message a bien été envoyé. Merci !";
+
+            feedback.dataset.state = "success";
+
         } catch (error) {
-            console.error("Erreur lors de l'envoi du formulaire :", error);
-            feedback.textContent = "Impossible d'envoyer le message. Réessayez ou écrivez à fayed.amourani8@gmail.com.";
-            feedback.dataset.state = 'error';
+            console.error(
+                "Erreur lors de l'envoi du formulaire :",
+                error
+            );
+
+            feedback.textContent =
+                "Impossible d'envoyer le message. Réessayez ou écrivez à fayed.amourani8@gmail.com.";
+
+            feedback.dataset.state = "error";
+
         } finally {
             submitLabel.textContent = originalText;
+
             submitBtn.disabled = false;
         }
     });
