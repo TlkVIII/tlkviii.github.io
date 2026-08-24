@@ -5723,3 +5723,30 @@ git add css/style.css
 git commit -m "Centrage des icÃ´nes dans la section veille"
 
 git push origin main
+
+/* Centrer les icônes dans la section Veille */
+
+.portfolio-premium .veille-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    text-align: center;
+}
+
+.portfolio-premium .veille-header > i {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.portfolio-premium .veille-header h3 {
+    color: #ffffff;
+}
