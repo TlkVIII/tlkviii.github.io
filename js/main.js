@@ -7,18 +7,20 @@ const skillProgressBars = document.querySelectorAll('.skill-progress');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const scrollTopBtn = document.querySelector('.scroll-top');
+const mobileNavigationBreakpoint = 980;
 
 // Gestion du mode sombre
 const themeToggle = document.querySelector('.theme-toggle');
 const themeIcon = themeToggle.querySelector('i');
 
 // Vérifier si l'utilisateur a déjà une préférence
-const currentTheme = localStorage.getItem('theme') || 'light';
+const currentTheme = localStorage.getItem('theme') || 'dark';
 
 // Appliquer le thème au chargement
 if (currentTheme === 'dark') {
     document.documentElement.setAttribute('data-theme', 'dark');
     themeIcon.classList.replace('fa-moon', 'fa-sun');
+    themeToggle.setAttribute('aria-label', 'Activer le thème clair');
 }
 
 // Basculer le thème lorsqu'on clique sur le bouton
@@ -31,8 +33,10 @@ themeToggle.addEventListener('click', () => {
     if (currentTheme !== 'dark') {
         newTheme = 'dark';
         themeIcon.classList.replace('fa-moon', 'fa-sun');
+        themeToggle.setAttribute('aria-label', 'Activer le thème clair');
     } else {
         themeIcon.classList.replace('fa-sun', 'fa-moon');
+        themeToggle.setAttribute('aria-label', 'Activer le thème sombre');
     }
     
     // Appliquer le nouveau thème
@@ -46,7 +50,7 @@ themeToggle.addEventListener('click', () => {
 window.addEventListener('load', () => {
     setTimeout(() => {
         loader.classList.add('hidden');
-    }, 1000);
+    }, 450);
 });
 
 // Navigation fixée lors du défilement
@@ -67,6 +71,9 @@ window.addEventListener('scroll', () => {
 toggleMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     toggleMenu.classList.toggle('active');
+    const isOpen = navLinks.classList.contains('active');
+    toggleMenu.setAttribute('aria-expanded', String(isOpen));
+    toggleMenu.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
 });
 
 // Sous-menus mobile (toggle au clic)
@@ -76,7 +83,7 @@ navDropdowns.forEach(dropdown => {
     if (!trigger) return;
 
     trigger.addEventListener('click', (e) => {
-        if (window.innerWidth > 768) return;
+        if (window.innerWidth > mobileNavigationBreakpoint) return;
         e.preventDefault();
 
         const isOpen = dropdown.classList.contains('open');
@@ -91,12 +98,14 @@ navDropdowns.forEach(dropdown => {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', (e) => {
         // En mobile, un clic sur l'entrée parent de dropdown sert uniquement à ouvrir/fermer son sous-menu
-        if (window.innerWidth <= 768 && link.parentElement.classList.contains('dropdown')) {
+        if (window.innerWidth <= mobileNavigationBreakpoint && link.parentElement.classList.contains('dropdown')) {
             return;
         }
 
         navLinks.classList.remove('active');
         toggleMenu.classList.remove('active');
+        toggleMenu.setAttribute('aria-expanded', 'false');
+        toggleMenu.setAttribute('aria-label', 'Ouvrir le menu');
         navDropdowns.forEach(item => item.classList.remove('open'));
     });
 });
@@ -121,7 +130,7 @@ filterBtns.forEach(btn => {
         
         projectCards.forEach(card => {
             if (filter === 'all' || card.getAttribute('data-category') === filter) {
-                card.style.display = 'block';
+                card.style.display = '';
             } else {
                 card.style.display = 'none';
             }
@@ -314,61 +323,74 @@ if (contactForm) {
 const typewriterElement = document.querySelector('.typewriter');
 if (typewriterElement) {
     // Sur mobile, on garde un texte fixe pour éviter les sauts de mise en page.
-    if (window.innerWidth <= 768) {
-        typewriterElement.textContent = 'Développeur Web';
+    if (window.innerWidth <= 768 || window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        typewriterElement.textContent = 'Développeur web & mobile';
     } else {
-    const phrases = ['Développeur Web'];
-    let i = 0;
-    let j = 0;
-    let currentPhrase = [];
-    let isDeleting = false;
-    let isEnd = false;
+        const phrases = [
+            'Développeur web & mobile',
+            'Créateur d’expériences web',
+            'Étudiant en BTS SIO SLAM'
+        ];
+        let phraseIndex = 0;
+        let characterIndex = phrases[0].length;
+        let isDeleting = true;
 
-    function typewriter() {
-        isEnd = false;
-        if (i < phrases.length) {
-            
-            if (!isDeleting && j <= phrases[i].length) {
-                currentPhrase.push(phrases[i][j]);
-                j++;
-                typewriterElement.innerHTML = currentPhrase.join('');
+        const typewriter = () => {
+            const phrase = phrases[phraseIndex];
+
+            if (isDeleting) {
+                characterIndex -= 1;
+            } else {
+                characterIndex += 1;
             }
 
-            if (isDeleting && j <= phrases[i].length) {
-                currentPhrase.pop();
-                j--;
-                typewriterElement.innerHTML = currentPhrase.join('');
-            }
+            typewriterElement.textContent = phrase.slice(0, characterIndex);
 
-            if (j == phrases[i].length) {
-                isEnd = true;
+            let nextDelay = isDeleting ? 48 : 88;
+
+            if (!isDeleting && characterIndex === phrase.length) {
                 isDeleting = true;
-            }
-
-            if (isDeleting && j === 0) {
-                currentPhrase = [];
+                nextDelay = 2400;
+            } else if (isDeleting && characterIndex === 0) {
                 isDeleting = false;
-                i++;
-                if (i === phrases.length) {
-                    i = 0;
-                }
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                nextDelay = 320;
             }
-        }
-        
-        const spedUp = 80;
-        const normalSpeed = 120;
-        const time = isEnd ? 2000 : isDeleting ? spedUp : normalSpeed;
-        setTimeout(typewriter, time);
-    }
 
-    typewriter();
+            window.setTimeout(typewriter, nextDelay);
+        };
+
+        window.setTimeout(typewriter, 1900);
     }
 }
 
 // Animation initiale
 document.addEventListener('DOMContentLoaded', () => {
     animateOnScroll();
+
+    const currentYear = document.querySelector('#current-year');
+
+    if (currentYear) {
+        currentYear.textContent = String(new Date().getFullYear());
+    }
 });
+
+// Si aucune vidéo de showreel n'a encore été ajoutée, proposer les projets à la place.
+const showreelVideo = document.querySelector('#showreel video');
+
+if (showreelVideo) {
+    const showreelWrapper = showreelVideo.closest('.video-wrapper');
+    const showreelSource = showreelVideo.querySelector('source');
+    const displayShowreelFallback = () => {
+        showreelWrapper.classList.add('is-unavailable');
+    };
+
+    showreelVideo.addEventListener('error', displayShowreelFallback);
+
+    if (showreelSource) {
+        showreelSource.addEventListener('error', displayShowreelFallback);
+    }
+}
 
 // Vérification de l'existence du CV
 const cvButton = document.querySelector('a[download]');
@@ -496,7 +518,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const firstAccordionItem = document.querySelector('.accordion-item');
     if (firstAccordionItem) {
         firstAccordionItem.classList.add('active');
-        console.log('Premier accordéon ouvert:', firstAccordionItem.querySelector('h3').textContent);
     }
     
     accordionHeaders.forEach(header => {
@@ -517,16 +538,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 parent.classList.add('active');
             }
             
-            // Debug: afficher dans la console
-            console.log('Accordéon cliqué:', parent.querySelector('h3').textContent, 'Actif:', parent.classList.contains('active'));
         });
-    });
-    
-    // Debug: afficher tous les accordéons trouvés
-    console.log('Accordéons trouvés:', accordionHeaders.length);
-    
-    // Vérifier que tous les accordéons sont bien initialisés
-    document.querySelectorAll('.accordion-item').forEach((item, index) => {
-        console.log(`Accordéon ${index + 1}:`, item.querySelector('h3').textContent, 'Classe active:', item.classList.contains('active'));
     });
 }); 
