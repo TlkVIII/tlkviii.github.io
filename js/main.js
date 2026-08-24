@@ -152,54 +152,138 @@ function animateOnScroll() {
 const contactForm = document.querySelector(".contact-form");
 
 if (contactForm) {
-    const feedback = contactForm.querySelector(
-        ".contact-form-feedback"
-    );
+    const feedback = contactForm.querySelector(".contact-form-feedback");
+    const attachmentInput = contactForm.querySelector("#contact-attachments");
+    const attachmentSummary = contactForm.querySelector(".contact-file-summary");
+    const maxAttachmentCount = 3;
+    const maxAttachmentSize = 5 * 1024 * 1024;
+    const maxTotalAttachmentSize = 10 * 1024 * 1024;
+    const allowedExtensions = new Set([
+        "pdf", "doc", "docx", "jpg", "jpeg", "png", "webp"
+    ]);
+
+    const validateAttachments = (files) => {
+        if (files.length > maxAttachmentCount) {
+            throw new Error("Vous pouvez joindre 3 fichiers maximum.");
+        }
+
+        let totalSize = 0;
+
+        files.forEach((file) => {
+            const extension = file.name.split(".").pop().toLowerCase();
+
+            if (!allowedExtensions.has(extension)) {
+                throw new Error(
+                    `Le fichier "${file.name}" n'est pas autorisé. Utilisez un PDF, un document Word ou une image.`
+                );
+            }
+
+            if (file.size > maxAttachmentSize) {
+                throw new Error(
+                    `Le fichier "${file.name}" dépasse la limite de 5 Mo.`
+                );
+            }
+
+            totalSize += file.size;
+        });
+
+        if (totalSize > maxTotalAttachmentSize) {
+            throw new Error("Le poids total des pièces jointes ne doit pas dépasser 10 Mo.");
+        }
+    };
+
+    const updateAttachmentSummary = () => {
+        const files = Array.from(attachmentInput.files || []);
+
+        if (files.length === 0) {
+            attachmentSummary.textContent = "Aucun fichier sélectionné.";
+            return;
+        }
+
+        attachmentSummary.textContent = files
+            .map((file) => `${file.name} (${(file.size / 1024 / 1024).toFixed(2)} Mo)`)
+            .join(" · ");
+    };
+
+    const encodeAttachment = (file) => new Promise((resolve, reject) => {
+        const reader = new FileReader();
+
+        reader.onload = () => {
+            const result = String(reader.result || "");
+            const encodedContent = result.split(",")[1];
+
+            if (!encodedContent) {
+                reject(new Error(`Impossible de lire le fichier "${file.name}".`));
+                return;
+            }
+
+            resolve({
+                filename: file.name,
+                content: encodedContent,
+                contentType: file.type || "application/octet-stream"
+            });
+        };
+
+        reader.onerror = () => {
+            reject(new Error(`Impossible de lire le fichier "${file.name}".`));
+        };
+
+        reader.readAsDataURL(file);
+    });
+
+    attachmentInput.addEventListener("change", () => {
+        try {
+            validateAttachments(Array.from(attachmentInput.files || []));
+            updateAttachmentSummary();
+
+            if (feedback.dataset.state === "error") {
+                feedback.textContent = "";
+                delete feedback.dataset.state;
+            }
+        } catch (error) {
+            attachmentInput.value = "";
+            updateAttachmentSummary();
+            feedback.textContent = error.message;
+            feedback.dataset.state = "error";
+        }
+    });
 
     contactForm.addEventListener("submit", async (event) => {
         event.preventDefault();
 
-        const submitBtn = contactForm.querySelector(
-            'button[type="submit"]'
-        );
-
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
         const submitLabel = submitBtn.querySelector("span");
-
         const originalText = submitLabel.textContent;
-
         const formData = new FormData(contactForm);
 
         if (formData.get("_honey")) {
             return;
         }
 
+        feedback.textContent = "";
+        delete feedback.dataset.state;
         submitLabel.textContent = "Envoi en cours...";
-
         submitBtn.disabled = true;
 
-        feedback.textContent = "";
-
-        delete feedback.dataset.state;
-
         try {
-            const response = await fetch(
-                "https://portfolio-server-production-0723.up.railway.app/contact",
-                {
-                    method: "POST",
+            const files = Array.from(attachmentInput.files || []);
+            validateAttachments(files);
 
-                    headers: {
-                        "Content-Type": "application/json",
-                    },
-
-                    body: JSON.stringify({
-                        name: formData.get("name"),
-                        email: formData.get("email"),
-                        subject: formData.get("subject"),
-                        message: formData.get("message"),
-                        _honey: formData.get("_honey") || "",
-                    }),
-                }
-            );
+            const attachments = await Promise.all(files.map(encodeAttachment));
+            const response = await fetch(contactForm.dataset.contactUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    name: formData.get("name"),
+                    email: formData.get("email"),
+                    subject: formData.get("subject"),
+                    message: formData.get("message"),
+                    _honey: formData.get("_honey") || "",
+                    attachments
+                })
+            });
 
             const result = await response.json();
 
@@ -210,26 +294,17 @@ if (contactForm) {
             }
 
             contactForm.reset();
-
+            updateAttachmentSummary();
             feedback.textContent =
                 "Votre message a bien été envoyé. Merci !";
-
             feedback.dataset.state = "success";
-
         } catch (error) {
-            console.error(
-                "Erreur lors de l'envoi du formulaire :",
-                error
-            );
-
-            feedback.textContent =
+            console.error("Erreur lors de l'envoi du formulaire :", error);
+            feedback.textContent = error.message ||
                 "Impossible d'envoyer le message. Réessayez ou écrivez à fayed.amourani8@gmail.com.";
-
             feedback.dataset.state = "error";
-
         } finally {
             submitLabel.textContent = originalText;
-
             submitBtn.disabled = false;
         }
     });
