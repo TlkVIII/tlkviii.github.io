@@ -823,6 +823,46 @@
                         <a href="https://github.com/TlkVIII" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
+                <div class="contact-form-card reveal">
+                    <div class="contact-form-heading">
+                        <span class="contact-form-eyebrow"><i class="fas fa-paper-plane"></i> Échangeons ensemble</span>
+                        <h3>Envoyez-moi un message</h3>
+                        <p>Une alternance, un projet ou une question ? N'hésitez pas à me contacter.</p>
+                    </div>
+                    <form class="contact-form" action="https://formsubmit.co/fayed.amourani8@gmail.com" method="POST" data-ajax-url="https://formsubmit.co/ajax/fayed.amourani8@gmail.com">
+                        <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio de Fayed Amourani">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_next" value="https://tlkviii.github.io/?contact=success#contact">
+                        <input type="text" name="_honey" class="contact-form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+                        <div class="contact-form-row">
+                            <div class="contact-form-field">
+                                <label for="contact-name">Nom complet</label>
+                                <input id="contact-name" name="name" type="text" placeholder="Votre nom" autocomplete="name" maxlength="100" required>
+                            </div>
+                            <div class="contact-form-field">
+                                <label for="contact-email">Adresse e-mail</label>
+                                <input id="contact-email" name="email" type="email" placeholder="vous@exemple.fr" autocomplete="email" maxlength="254" required>
+                            </div>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <label for="contact-subject">Sujet</label>
+                            <input id="contact-subject" name="subject" type="text" placeholder="L'objet de votre message" maxlength="150" required>
+                        </div>
+
+                        <div class="contact-form-field">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" placeholder="Bonjour Fayed, je vous contacte à propos de..." rows="5" minlength="10" maxlength="3000" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary contact-submit">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Envoyer le message</span>
+                        </button>
+                        <p class="contact-form-feedback" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
