@@ -3,28 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de AMOURANI Fayed</title>
+    <title>Fayed Amourani — Développeur web & mobile à Montpellier</title>
+    <meta name="description" content="Portfolio de Fayed Amourani, développeur web et mobile à Montpellier. Découvrez mes projets, mes compétences et ma recherche d'alternance en BTS SIO SLAM.">
+    <meta name="theme-color" content="#080b16">
+    <script>
+        try {
+            document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+        } catch (error) {
+            document.documentElement.setAttribute("data-theme", "dark");
+        }
+    </script>
     <link rel="icon" type="image/jpeg" href="images/logo portfolio AMOURANI Fayed.jpg">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/style.css?v=portfolio-premium-20260824">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="portfolio-premium">
     <!-- Loader -->
     <div class="loader-wrapper">
         <div class="loader"></div>
     </div>
 
     <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <a href="#accueil">AFAZ</a>
+    <nav aria-label="Navigation principale">
+        <div class="logo nav-brand">
+            <a href="#accueil" aria-label="Fayed Amourani — retour à l'accueil">
+                <span class="brand-monogram">FA</span>
+                <span class="brand-name">Fayed<span>.</span></span>
+            </a>
         </div>
-        <div class="toggle-menu">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+        <button class="toggle-menu" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
         <ul class="nav-links">
             <li><a href="#accueil" class="active">Accueil</a></li>
             <li class="dropdown">
@@ -45,56 +59,84 @@
             </li>
             <li><a href="#projets">Projets</a></li>
             <li><a href="#showreel">Showreel</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li class="theme-toggle-container"><div class="theme-toggle"><i class="fas fa-moon"></i></div></li>
+            <li><a href="#contact" class="nav-contact-link">Contact <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+            <li class="theme-toggle-container"><button class="theme-toggle" type="button" aria-label="Changer le thème"><i class="fas fa-moon"></i></button></li>
         </ul>
     </nav>
 
     <!-- Section Accueil -->
     <section id="accueil" class="hero">
-        <!-- Formes de fond animées -->
         <div class="shapes-container">
             <div class="shape shape1"></div>
             <div class="shape shape2"></div>
             <div class="shape shape3"></div>
             <div class="shape shape4"></div>
         </div>
-        
-        <div class="container">
-            <div class="content">
-                <div class="badge fade-in">Développeur Web Full Stack</div>
-                <h1 class="fade-in">Bonjour, je suis <span class="highlight">Fayed AMOURANI</span></h1>
-                <h2 class="fade-in delay-1">Étudiant en <span class="highlight">BTS SIO</span> & <span class="typewriter">Développeur Web</span></h2>
-                <p class="fade-in delay-2">À la recherche d'un stage et d'une alternance en développement web</p>
+
+        <div class="container hero-layout">
+            <div class="content hero-copy">
+                <div class="badge hero-availability fade-in"><span></span> Disponible pour une alternance</div>
+                <p class="hero-greeting fade-in">Bonjour, moi c'est</p>
+                <h1 class="fade-in">Fayed<br><span class="highlight">Amourani.</span></h1>
+                <h2 class="fade-in delay-1"><span class="hero-role-line"></span><span class="typewriter">Développeur web & mobile</span></h2>
+                <p class="hero-description fade-in delay-2">Je conçois des expériences numériques modernes, utiles et accessibles. Actuellement à la recherche d'une alternance en développement web à Montpellier.</p>
                 <div class="buttons fade-in delay-3">
-                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
-                    <a href="#contact" class="btn btn-outline">Me contacter</a>
+                    <a href="#projets" class="btn btn-primary">Découvrir mes projets <i class="fas fa-arrow-right"></i></a>
+                    <a href="cv/cv.pdf" class="btn btn-outline" download="CV_Fayed_AMOURANI.pdf"><i class="fas fa-download"></i> Télécharger mon CV</a>
+                </div>
+                <div class="hero-meta fade-in delay-3">
+                    <span><i class="fas fa-location-dot"></i> Montpellier</span>
+                    <span><i class="fas fa-graduation-cap"></i> BTS SIO SLAM</span>
+                    <span><i class="fas fa-code"></i> Web & mobile</span>
                 </div>
             </div>
-            <div class="hero-image fade-in delay-2">
+            <div class="hero-image hero-visual fade-in delay-2">
+                <div class="hero-orbit hero-orbit-one"></div>
+                <div class="hero-orbit hero-orbit-two"></div>
                 <div class="image-frame">
-                    <img src="images/logo portfolio AMOURANI Fayed.jpg" alt="Illustration Fayed AMOURANI">
+                    <img src="images/Photo_profile.png" alt="Portrait de Fayed Amourani, développeur web et mobile">
                 </div>
+                <div class="hero-floating-card hero-floating-projects"><i class="fas fa-layer-group"></i><div><strong>4+ projets</strong><span>Web & applications</span></div></div>
+                <div class="hero-floating-card hero-floating-code"><i class="fab fa-react"></i><div><strong>React / Expo</strong><span>Mobile & web</span></div></div>
+                <div class="hero-portrait-caption"><span>FA</span> Concevoir, développer, évoluer.</div>
             </div>
         </div>
         <div class="scroll-down">
             <a href="#a-propos">
-                <i class="fas fa-chevron-down"></i>
+                <span>Explorer</span><i class="fas fa-arrow-down"></i>
             </a>
         </div>
     </section>
 
+    <div class="technology-strip" aria-label="Technologies principales">
+        <div class="container technology-strip-inner">
+            <span class="technology-strip-label">Technologies</span>
+            <div class="technology-strip-list">
+                <span><i class="fab fa-react"></i> React</span>
+                <span><i class="fab fa-js"></i> JavaScript</span>
+                <span><i class="fab fa-node-js"></i> Node.js</span>
+                <span><i class="fab fa-php"></i> PHP</span>
+                <span><i class="fas fa-database"></i> MySQL</span>
+                <span><i class="fab fa-git-alt"></i> Git</span>
+            </div>
+        </div>
+    </div>
+
     <!-- Section À Propos -->
     <section id="a-propos" class="section">
         <div class="container">
-            <h2 class="section-title reveal">À propos de moi</h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>01</span> À propos</span>
+                <h2 class="section-title">Un profil curieux,<br><span>des idées concrètes.</span></h2>
+                <p>J'aime transformer une idée en une expérience numérique qui a du sens.</p>
+            </div>
             <div class="about-content">
                 <div class="about-text reveal">
-                    <p>Bonjour ! Je suis Fayed AMOURANI, étudiant en BTS SIO (Services Informatiques aux Organisations) et développeur web passionné par la création d'expériences numériques innovantes.</p>
-                    
-                    <p>Je suis actuellement à la recherche d'un <strong>stage</strong> et d'une <strong>alternance</strong> pour mettre en pratique mes compétences acquises. Déterminé, autonome et doté d'un esprit d'analyse, je suis capable de m'adapter rapidement aux nouvelles technologies et méthodologies.</p>
-                    
-                    <p>Mon parcours académique et mes projets personnels m'ont permis de développer une solide base technique et une grande capacité d'apprentissage. Je combine créativité et compétences techniques pour donner vie à des projets web qui se démarquent.</p>
+                    <p class="about-lead">Je suis <strong>Fayed Amourani</strong>, développeur web et mobile passionné par les interfaces soignées, les projets utiles et l'apprentissage continu.</p>
+
+                    <p>Je recherche une <strong>alternance en développement web à Montpellier</strong> pour poursuivre mon BTS SIO option SLAM et contribuer à de vrais projets au sein d'une équipe.</p>
+
+                    <p>Applications mobiles, sites vitrines, plateformes avec base de données : j'aime comprendre l'ensemble d'un projet, de l'expérience utilisateur jusqu'à sa mise en ligne.</p>
                     
                     <div class="about-info">
                         <div class="info">
@@ -112,10 +154,21 @@
                     </div>
                     <div class="social-actions">
                         <div class="social-links">
-                            <a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="https://github.com/TlkVIII" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+                            <a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/TlkVIII" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Profil GitHub"><i class="fab fa-github"></i></a>
                         </div>
-                        <a href="cv/cv.pdf" class="btn btn-primary" download="CV_Fayed_AMOURANI.pdf">Télécharger mon CV</a>
+                        <a href="#contact" class="btn btn-outline">Discutons de votre projet <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="about-side reveal">
+                    <div class="about-feature-card about-feature-main">
+                        <div class="about-feature-icon"><i class="fas fa-laptop-code"></i></div>
+                        <strong>Du concept<br>au projet en ligne.</strong>
+                        <span>Conception, développement, base de données et déploiement.</span>
+                    </div>
+                    <div class="about-stat-grid">
+                        <div class="about-stat-card"><strong>4+</strong><span>Projets réalisés</span></div>
+                        <div class="about-stat-card"><strong>Web<br>& mobile</strong><span>Applications multiplateformes</span></div>
                     </div>
                 </div>
             </div>
@@ -125,12 +178,10 @@
     <!-- Section Qui suis-je -->
     <section id="qui-suis-je" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title reveal">
-                <span class="title-highlight">Qui suis-je ?</span>
-            </h2>
-            
-            <div class="identity-brief reveal">
-                <p>Développeur curieux, j'explore les technologies au-delà du code pour comprendre et façonner l'avenir numérique.</p>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>02</span> Ma personnalité</span>
+                <h2 class="section-title">Bien plus<br><span>que quelques lignes de code.</span></h2>
+                <p>Ce qui guide ma manière d'apprendre, de travailler et d'évoluer.</p>
             </div>
             
             <div class="identity-container reveal">
@@ -228,10 +279,11 @@
     <!-- Section Présentation BTS SIO -->
     <section id="presentation-bts" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title reveal">
-                <span class="title-highlight">Le BTS SIO</span>
-                <span class="title-accent">Services Informatiques aux Organisations</span>
-            </h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>03</span> Ma formation</span>
+                <h2 class="section-title">BTS SIO,<br><span>spécialité développement.</span></h2>
+                <p>Une formation complète pour concevoir les solutions numériques de demain.</p>
+            </div>
             
             <div class="bts-description reveal">
                 <p>Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong> est une formation de niveau bac+2 qui prépare aux métiers de l'informatique en entreprise. Cette formation combine des compétences techniques, organisationnelles et relationnelles nécessaires pour s'adapter au monde professionnel en constante évolution.</p>
@@ -308,7 +360,11 @@
     <!-- Section Veille Technologique -->
     <section id="veille" class="section">
         <div class="container">
-            <h2 class="section-title reveal">Veille Technologique</h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>04</span> Veille & curiosité</span>
+                <h2 class="section-title">Comprendre ce qui<br><span>fait avancer la tech.</span></h2>
+                <p>J'explore les technologies et les méthodes qui transforment nos usages.</p>
+            </div>
             <div class="veille-grid">
                 <div class="veille-card reveal">
                     <div class="veille-header">
@@ -366,7 +422,11 @@
     <!-- Section Parcours avec menu déroulant -->
     <section id="parcours" class="section bg-light">
         <div class="container">
-            <h2 class="section-title reveal">Mon Parcours</h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>05</span> Mon parcours</span>
+                <h2 class="section-title">Une progression<br><span>construite sur le terrain.</span></h2>
+                <p>Formations, expériences professionnelles et projets qui ont façonné mon profil.</p>
+            </div>
             
             <!-- Menu déroulant -->
             <div class="accordion-container reveal">
@@ -565,7 +625,11 @@
     <!-- Section Compétences -->
     <section id="competences" class="section bg-light">
         <div class="container">
-            <h2 class="section-title reveal">Mes Compétences</h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>06</span> Compétences</span>
+                <h2 class="section-title">Ma boîte à outils<br><span>pour donner vie aux idées.</span></h2>
+                <p>Des technologies que j'utilise pour concevoir, développer et mettre en ligne.</p>
+            </div>
             <div class="skills-grid">
                 <!-- Développement Frontend -->
                 <div class="skill-category reveal">
@@ -608,6 +672,24 @@
                         </div>
                     </div>
                             </div>
+
+                <div class="skill-category reveal">
+                    <h3>Applications mobiles</h3>
+                    <div class="skills-icons">
+                        <div class="skill-icon">
+                            <i class="fab fa-react"></i>
+                            <span>React Native</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-mobile-screen-button"></i>
+                            <span>Expo</span>
+                        </div>
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                            <span>TypeScript</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- Outils & Autres -->
                 <div class="skill-category reveal">
@@ -684,16 +766,27 @@
     <!-- Section Projets -->
     <section id="projets" class="section">
         <div class="container">
-            <h2 class="section-title reveal">Mes Projets</h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>07</span> Projets sélectionnés</span>
+                <h2 class="section-title">Des idées devenues<br><span>des expériences concrètes.</span></h2>
+                <p>Une sélection de réalisations web et mobile accessibles en ligne.</p>
+            </div>
             <div class="project-filters reveal">
                 <button class="filter-btn active" data-filter="all">Tous</button>
                 <button class="filter-btn" data-filter="web">Web</button>
                 <button class="filter-btn" data-filter="app">Application</button>
             </div>
             <div class="projects-grid">
-                <div class="project-card reveal" data-category="app">
+                <div class="project-card project-featured reveal" data-category="app">
+                    <div class="project-visual project-visual-skillup">
+                        <span class="project-visual-category"><i class="fas fa-mobile-screen-button"></i> Application web & mobile</span>
+                        <div class="skillup-visual-brand"><i class="fas fa-bolt"></i><span>Skill<span>Up</span></span></div>
+                        <div class="skillup-visual-metrics"><span><i class="fas fa-trophy"></i> Quiz</span><span><i class="fas fa-fire"></i> Défis</span><span><i class="fas fa-medal"></i> Badges</span></div>
+                    </div>
                     <div class="project-content">
-                        <h3>SkillUp - Application d'apprentissage</h3>
+                        <span class="project-eyebrow">Projet à la une · 2026</span>
+                        <h3>SkillUp</h3>
+                        <span class="project-subtitle">Application d'apprentissage gamifié</span>
                         <p>Application mobile et web d'apprentissage gamifié proposant des cours, des quiz, des exercices pratiques, des défis quotidiens, des badges et un classement. Les comptes et la progression sont synchronisés avec une API et une base de données en ligne.</p>
                         <div class="project-tags">
                             <span>React Native</span>
@@ -704,30 +797,36 @@
                         </div>
                         <div class="project-links">
                             <a href="https://tlkviii-skillup.expo.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">
-                                Tester l'application
+                                Tester l'application <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card reveal" data-category="web">
+                    <div class="project-visual project-visual-commerce"><img src="images/ecommerce.jpg" alt="Illustration du projet de site e-commerce" loading="lazy"><span class="project-visual-category">Site e-commerce</span></div>
                     <div class="project-content">
-                        <h3>Site E-commerce - Fournitures de Bureau</h3>
+                        <span class="project-eyebrow">Développement web</span>
+                        <h3>E-commerce</h3>
+                        <span class="project-subtitle">Fournitures de bureau</span>
                         <p>Un site de commerce électronique moderne dédié à la vente de fournitures et matériel de bureau. Plateforme complète avec catalogue produits, système de panier et processus de commande.</p>
                         <div class="project-tags">
-                            <span>React</span>
-                            <span>Node.js</span>
-                            <span>MongoDB</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
                         </div>
                         <div class="project-links">
                             <a href="./ecommerce/index.html" target="_blank" class="btn btn-sm btn-primary">
-                                Voir le site
+                                Voir le site <i class="fas fa-arrow-right"></i>
                             </a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card reveal" data-category="web">
+                    <div class="project-visual project-visual-hotel"><img src="images/hotelneptune.jpeg" alt="Présentation du projet Hôtel Neptune" loading="lazy"><span class="project-visual-category">Réservation hôtelière</span></div>
                     <div class="project-content">
-                        <h3>Site Web Hôtel Neptune</h3>
+                        <span class="project-eyebrow">Application full-stack</span>
+                        <h3>Hôtel Neptune</h3>
+                        <span class="project-subtitle">Réservation et gestion hôtelière</span>
                         <p>Site web complet pour la réservation et la gestion d'un hôtel, avec interface administrative, gestion des disponibilités, formulaire de réservation et stockage des données clients en base SQL.</p>
                         <div class="project-tags">
                             <span>HTML/CSS</span>
@@ -736,13 +835,16 @@
                             <span>SQL</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://tlkviii.fr" target="_blank" class="btn btn-sm btn-primary">Voir le site</a>
+                            <a href="https://tlkviii.fr" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Voir le site <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="project-card reveal" data-category="web">
+                    <div class="project-visual project-visual-gallery"><img src="projetperso/images/gallery/IMG_2773.jpg" alt="Aperçu photographique de la galerie personnelle" loading="lazy"><span class="project-visual-category">Photographie</span></div>
                     <div class="project-content">
-                        <h3>Galerie Photo Connectée</h3>
+                        <span class="project-eyebrow">Projet personnel</span>
+                        <h3>Galerie photo</h3>
+                        <span class="project-subtitle">Photographie et interface web</span>
                         <p>Projet personnel d'un site internet de galerie photo permettant d'importer et d'organiser des images prises avec un appareil photo ou un téléphone mobile.</p>
                         <div class="project-tags">
                             <span>HTML/CSS</span>
@@ -750,7 +852,7 @@
                             <span>Responsive</span>
                         </div>
                         <div class="project-links">
-                            <a href="./projetperso/index.html" target="_blank" class="btn btn-sm btn-primary">Voir le site</a>
+                            <a href="./projetperso/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary">Voir le site <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -761,13 +863,23 @@
     <!-- Section Showreel -->
     <section id="showreel" class="section bg-alt">
         <div class="container">
-            <h2 class="section-title reveal">Mon Showreel</h2>
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>08</span> Showreel</span>
+                <h2 class="section-title">Mon univers,<br><span>en quelques images.</span></h2>
+                <p>Un aperçu de ma créativité et de mes réalisations.</p>
+            </div>
             <div class="showreel-container reveal">
                 <div class="video-wrapper">
-                    <video controls poster="images/logo portfolio AMOURANI Fayed.jpg">
+                    <video controls preload="metadata" poster="images/logo portfolio AMOURANI Fayed.jpg">
                         <source src="videos/showreel/showreel.mp4" type="video/mp4">
                         Votre navigateur ne supporte pas la lecture de vidéos.
                     </video>
+                    <a href="#projets" class="showreel-fallback">
+                        <span class="showreel-fallback-icon"><i class="fas fa-clapperboard"></i></span>
+                        <strong>Découvrez mes réalisations.</strong>
+                        <span>Explorez mes projets web et mobile.</span>
+                        <span class="showreel-fallback-link">Voir mes projets <i class="fas fa-arrow-right"></i></span>
+                    </a>
                 </div>
                 <div class="showreel-description">
                     <h3>Découvrez mon univers</h3>
@@ -795,7 +907,7 @@
     <section id="contact" class="section bg-light contact-section">
         <div class="container">
             <div class="contact-section-heading reveal">
-                <span class="contact-section-kicker">CONTACT</span>
+                <span class="contact-section-kicker">09 — CONTACT</span>
                 <h2 class="section-title">Créons quelque chose <span>ensemble.</span></h2>
                 <p>Une opportunité, une idée ou simplement envie d'échanger ? Je serais ravi d'en discuter avec vous.</p>
             </div>
@@ -903,11 +1015,12 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="logo">
-                    <a href="#accueil">AFAZ</a>
+                <div class="logo footer-brand">
+                    <a href="#accueil"><span class="brand-monogram">FA</span><span class="brand-name">Fayed<span>.</span></span></a>
                 </div>
-                <p>© 2023 Tous droits réservés</p>
-                <p>Conçu et développé par <span class="highlight">Fayed AMOURANI</span></p>
+                <p>Conçu et développé avec passion à Montpellier.</p>
+                <div class="footer-socials"><a href="https://github.com/TlkVIII" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+                <p class="footer-copyright">© <span id="current-year">2026</span> Fayed Amourani. Tous droits réservés.</p>
             </div>
         </div>
     </footer>
@@ -918,7 +1031,7 @@
     </a>
 
     <!-- Scripts -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js?v=portfolio-premium-20260824"></script>
     <script src="js/back-to-top.js"></script>
 </body>
 </html> 
