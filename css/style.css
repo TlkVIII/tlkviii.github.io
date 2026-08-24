@@ -4382,27 +4382,46 @@ body.portfolio-premium {
 }
 
 .portfolio-premium .veille-header {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
     gap: 12px;
     margin-bottom: 17px;
+    text-align: center !important;
 }
 
-.portfolio-premium .veille-header > i {
-    display: grid;
+.portfolio-premium .veille-icon-center {
+    display: flex !important;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 auto 12px !important;
+}
+
+.portfolio-premium .veille-icon-center > i {
+    position: static !important;
+    display: grid !important;
     width: 43px;
     height: 43px;
     flex: 0 0 43px;
     place-items: center;
-    background: rgba(99, 91, 255, 0.1);
+    margin: 0 auto !important;
+    background: rgba(255, 255, 255, 0.16);
     border-radius: 12px;
-    color: var(--primary-color);
+    color: #ffffff;
     font-size: 17px;
+    transform: none !important;
 }
 
 .portfolio-premium .veille-header h3 {
-    color: var(--text-color);
+    width: 100%;
+    margin: 0;
+    color: #ffffff;
     font-family: var(--font-display);
     font-size: 16px;
     line-height: 1.4;
+    text-align: center !important;
 }
 
 .portfolio-premium .veille-content > p,
@@ -5716,37 +5735,4 @@ body.portfolio-premium {
     .portfolio-premium .contact-section-heading .section-title {
         font-size: 35px;
     }
-}
-
-git add css/style.css
-
-git commit -m "Centrage des icÃ´nes dans la section veille"
-
-git push origin main
-
-/* Centrer les icônes dans la section Veille */
-
-.portfolio-premium .veille-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    text-align: center;
-}
-
-.portfolio-premium .veille-header > i {
-    display: grid;
-    width: 43px;
-    height: 43px;
-    place-items: center;
-    margin: 0 auto;
-    background: rgba(255, 255, 255, 0.16);
-    border-radius: 12px;
-    color: #ffffff;
-    font-size: 17px;
-}
-
-.portfolio-premium .veille-header h3 {
-    color: #ffffff;
 }
