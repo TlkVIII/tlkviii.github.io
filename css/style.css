@@ -5717,3 +5717,9 @@ body.portfolio-premium {
         font-size: 35px;
     }
 }
+
+git add css/style.css
+
+git commit -m "Centrage des icônes dans la section veille"
+
+git push origin main
