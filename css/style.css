@@ -3805,6 +3805,22 @@ body.portfolio-premium {
     object-position: center 31%;
 }
 
+.portfolio-premium .hero-visual .hero-logo-frame {
+    width: 365px;
+    height: 365px;
+    background: #e9e7dc;
+    border-radius: 31px;
+}
+
+.portfolio-premium .hero-visual .hero-logo-frame::before {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.07), transparent 68%);
+}
+
+.portfolio-premium .hero-visual .hero-logo-frame img {
+    object-fit: contain;
+    object-position: center;
+}
+
 .portfolio-premium .hero-floating-card {
     position: absolute;
     z-index: 3;
@@ -5102,6 +5118,12 @@ body.portfolio-premium {
         height: 370px;
     }
 
+    .portfolio-premium .hero-visual .hero-logo-frame {
+        width: 315px;
+        height: 315px;
+        border-radius: 25px;
+    }
+
     .portfolio-premium .hero-orbit {
         width: 370px;
         height: 370px;
@@ -5444,6 +5466,12 @@ body.portfolio-premium {
         width: min(255px, 72vw);
         height: 315px;
         border-radius: 140px 140px 21px 21px;
+    }
+
+    .portfolio-premium .hero-visual .hero-logo-frame {
+        width: min(275px, 75vw);
+        height: min(275px, 75vw);
+        border-radius: 23px;
     }
 
     .portfolio-premium .hero-orbit {
