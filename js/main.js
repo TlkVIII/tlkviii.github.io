@@ -183,7 +183,7 @@ if (contactForm) {
 
         try {
             const response = await fetch(
-                contactForm.dataset.contactUrl,
+                "https://portfolio-server-production-0723.up.railway.app/contact",
                 {
                     method: "POST",
 
