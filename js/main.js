@@ -151,22 +151,57 @@ function animateOnScroll() {
 // Formulaire de contact
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Simulation d'envoi
+    const feedback = contactForm.querySelector('.contact-form-feedback');
+
+    if (new URLSearchParams(window.location.search).get('contact') === 'success') {
+        feedback.textContent = 'Votre message a bien été envoyé. Merci !';
+        feedback.dataset.state = 'success';
+    }
+
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
         const submitBtn = contactForm.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        
-        submitBtn.textContent = 'Envoi en cours...';
+        const submitLabel = submitBtn.querySelector('span');
+        const originalText = submitLabel.textContent;
+        const formData = new FormData(contactForm);
+
+        if (formData.get('_honey')) {
+            return;
+        }
+
+        formData.set('_subject', `Portfolio — ${formData.get('subject')}`);
+        submitLabel.textContent = 'Envoi en cours...';
         submitBtn.disabled = true;
-        
-        setTimeout(() => {
-            alert('Votre message a été envoyé avec succès!');
+        feedback.textContent = '';
+        delete feedback.dataset.state;
+
+        try {
+            const response = await fetch(contactForm.dataset.ajaxUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json'
+                },
+                body: JSON.stringify(Object.fromEntries(formData.entries()))
+            });
+            const result = await response.json();
+
+            if (!response.ok || result.success === false || result.success === 'false') {
+                throw new Error(result.message || "L'envoi du message a échoué.");
+            }
+
             contactForm.reset();
-            submitBtn.textContent = originalText;
+            feedback.textContent = 'Votre message a bien été envoyé. Merci !';
+            feedback.dataset.state = 'success';
+        } catch (error) {
+            console.error("Erreur lors de l'envoi du formulaire :", error);
+            feedback.textContent = "Impossible d'envoyer le message. Réessayez ou écrivez à fayed.amourani8@gmail.com.";
+            feedback.dataset.state = 'error';
+        } finally {
+            submitLabel.textContent = originalText;
             submitBtn.disabled = false;
-        }, 2000);
+        }
     });
 }
 
