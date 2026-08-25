@@ -347,6 +347,265 @@ html.motion-ready:not(.motion-reduced) .scroll-top:hover > i {
     animation: motionArrowUp 0.75s var(--motion-ease);
 }
 
+/* Immersive ambient atmosphere shared by the portfolio and project pages. */
+
+.motion-particle-field {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.project-hero > .motion-particle-field {
+    z-index: 0;
+}
+
+.project-hero > :not(.motion-particle-field) {
+    position: relative;
+    z-index: 1;
+}
+
+.motion-particle {
+    position: absolute;
+    top: var(--particle-top);
+    left: var(--particle-left);
+    width: var(--particle-size);
+    height: var(--particle-size);
+    background: #b7b0ff;
+    border-radius: 50%;
+    box-shadow: 0 0 12px rgba(168, 156, 255, 0.9);
+    opacity: 0;
+    animation: motionParticleDrift var(--particle-duration) ease-in-out var(--particle-delay) infinite;
+}
+
+.motion-particle:nth-child(3n) {
+    background: #83c4ff;
+    box-shadow: 0 0 13px rgba(114, 177, 255, 0.85);
+}
+
+.motion-particle:nth-child(5n) {
+    background: #e3beff;
+    box-shadow: 0 0 15px rgba(194, 139, 255, 0.78);
+}
+
+.project-hero .motion-particle {
+    background: var(--detail-accent);
+    box-shadow: 0 0 12px rgba(var(--detail-accent-rgb), 0.72);
+}
+
+.motion-shooting-star {
+    position: absolute;
+    top: var(--shooting-top);
+    right: -24%;
+    width: 140px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(174, 168, 255, 0.9));
+    opacity: 0;
+    transform: rotate(-18deg);
+    animation: motionShootingStar var(--shooting-duration) ease-in-out var(--shooting-delay) infinite;
+}
+
+.motion-shooting-star::after {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 5px;
+    height: 5px;
+    background: #ffffff;
+    border-radius: 50%;
+    box-shadow: 0 0 17px rgba(183, 171, 255, 0.95);
+    content: "";
+}
+
+.motion-cursor-halo {
+    position: fixed;
+    z-index: 1195;
+    top: -19px;
+    left: -19px;
+    width: 38px;
+    height: 38px;
+    background: rgba(134, 122, 255, 0.075);
+    border: 1px solid rgba(153, 145, 255, 0.62);
+    border-radius: 50%;
+    box-shadow:
+        0 0 19px rgba(142, 126, 255, 0.22),
+        inset 0 0 13px rgba(134, 121, 255, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition:
+        width 0.28s var(--motion-ease),
+        height 0.28s var(--motion-ease),
+        top 0.28s var(--motion-ease),
+        left 0.28s var(--motion-ease),
+        opacity 0.22s ease,
+        border-color 0.28s ease,
+        background-color 0.28s ease;
+    will-change: transform;
+}
+
+.motion-cursor-halo.motion-cursor-active {
+    opacity: 1;
+}
+
+.motion-cursor-halo.motion-cursor-hovering {
+    top: -28px;
+    left: -28px;
+    width: 56px;
+    height: 56px;
+    background: rgba(129, 121, 255, 0.115);
+    border-color: rgba(166, 158, 255, 0.85);
+}
+
+.motion-magnetic-button {
+    translate: var(--magnetic-x, 0px) var(--magnetic-y, 0px);
+    transition:
+        translate 0.26s var(--motion-ease),
+        transform 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-role-line {
+    transform-origin: left center;
+    animation: motionLineBreathing 2.9s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-availability {
+    animation: motionAvailabilityGlow 3.2s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-floating-card > i,
+html.motion-ready:not(.motion-reduced) .project-pill > i {
+    animation: motionIconBreathing 3.2s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-floating-code > i {
+    animation: motionReactRotation 14s linear infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-visual .hero-logo-frame {
+    animation: motionLogoGlow 4.6s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit {
+    border-color: rgba(136, 130, 255, 0.22);
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit-two {
+    border-color: rgba(124, 165, 255, 0.16);
+}
+
+html.motion-ready:not(.motion-reduced) .skill-icon.motion-reveal {
+    translate: 0 18px;
+    scale: 0.91;
+}
+
+html.motion-ready:not(.motion-reduced) .skill-icon.motion-reveal.motion-visible {
+    translate: 0 0;
+    scale: 1;
+}
+
+html.motion-ready:not(.motion-reduced) .skill-icon:hover i {
+    animation: motionSkillBounce 0.62s var(--motion-ease);
+}
+
+.motion-code-symbol {
+    position: absolute;
+    z-index: 1;
+    top: var(--code-top);
+    left: var(--code-left);
+    color: rgba(184, 177, 255, 0.42);
+    font-family: monospace;
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0;
+    pointer-events: none;
+    animation: motionCodeFloat 5.8s ease-in-out var(--code-delay) infinite;
+}
+
+.portfolio-premium .skillup-visual-brand,
+.portfolio-premium .skillup-visual-metrics {
+    z-index: 2;
+}
+
+.portfolio-premium .skillup-visual-brand {
+    position: relative;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .skillup-visual-brand > i {
+    animation: motionBrandGlow 3.3s ease-in-out infinite;
+}
+
+.motion-stage-orb {
+    position: absolute;
+    z-index: 2;
+    top: -34%;
+    right: -23%;
+    width: 250px;
+    height: 250px;
+    background: radial-gradient(circle, rgba(var(--detail-accent-rgb), 0.18), transparent 68%);
+    border-radius: 50%;
+    opacity: 0.65;
+    pointer-events: none;
+    animation: motionStageOrb 9s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .project-stage::after {
+    position: absolute;
+    z-index: 3;
+    top: -55%;
+    left: -80%;
+    width: 36%;
+    height: 210%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.09), transparent);
+    content: "";
+    pointer-events: none;
+    transform: rotate(22deg);
+    animation: motionStageSweep 8.8s var(--motion-ease) 1.6s infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .feature-icon,
+html.motion-ready:not(.motion-reduced) .option-icon,
+html.motion-ready:not(.motion-reduced) .about-feature-icon {
+    position: relative;
+}
+
+html.motion-ready:not(.motion-reduced) .feature-card:hover .feature-icon,
+html.motion-ready:not(.motion-reduced) .about-feature-card:hover .about-feature-icon {
+    box-shadow: 0 0 23px rgba(132, 120, 255, 0.23);
+}
+
+html.motion-ready:not(.motion-reduced) .project-card:hover .project-visual-category,
+html.motion-ready:not(.motion-reduced) .project-pill:hover {
+    animation: motionBadgeShimmer 0.85s var(--motion-ease);
+}
+
+html.motion-ready:not(.motion-reduced) .project-meta-grid .meta-item.motion-visible {
+    animation: motionMetaHighlight 0.75s var(--motion-ease) both;
+    animation-delay: var(--motion-delay, 0ms);
+}
+
+html.motion-ready:not(.motion-reduced) .section-kicker,
+html.motion-ready:not(.motion-reduced) .section-label {
+    position: relative;
+}
+
+html.motion-ready:not(.motion-reduced) .section-kicker > i,
+html.motion-ready:not(.motion-reduced) .section-label > i {
+    animation: motionIconBreathing 3.4s ease-in-out infinite;
+}
+
+[data-theme="light"] .motion-cursor-halo {
+    background: rgba(108, 95, 225, 0.055);
+    border-color: rgba(111, 96, 226, 0.48);
+}
+
+[data-theme="light"] .project-hero .motion-particle {
+    opacity: 0.55;
+}
+
 @keyframes motionHeroEntrance {
     from {
         opacity: 0;
@@ -504,6 +763,195 @@ html.motion-ready:not(.motion-reduced) .scroll-top:hover > i {
     }
 }
 
+@keyframes motionParticleDrift {
+    0%,
+    100% {
+        opacity: 0.13;
+        transform: translate3d(0, 9px, 0) scale(0.75);
+    }
+
+    50% {
+        opacity: 0.85;
+        transform: translate3d(var(--particle-drift), -17px, 0) scale(1.28);
+    }
+}
+
+@keyframes motionShootingStar {
+    0%,
+    68%,
+    100% {
+        opacity: 0;
+        translate: 0 0;
+    }
+
+    72% {
+        opacity: 0.85;
+    }
+
+    91% {
+        opacity: 0;
+        translate: -88vw 28vh;
+    }
+}
+
+@keyframes motionLineBreathing {
+    0%,
+    100% {
+        opacity: 0.72;
+        scale: 0.78 1;
+    }
+
+    50% {
+        opacity: 1;
+        scale: 1 1;
+    }
+}
+
+@keyframes motionAvailabilityGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 0 rgba(78, 211, 152, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 21px rgba(78, 211, 152, 0.12);
+    }
+}
+
+@keyframes motionIconBreathing {
+    0%,
+    100% {
+        filter: brightness(1);
+        scale: 1;
+    }
+
+    50% {
+        filter: brightness(1.17);
+        scale: 1.09;
+    }
+}
+
+@keyframes motionReactRotation {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes motionLogoGlow {
+    0%,
+    100% {
+        box-shadow:
+            0 32px 100px rgba(0, 0, 0, 0.34),
+            0 0 40px rgba(123, 112, 255, 0.13);
+    }
+
+    50% {
+        box-shadow:
+            0 32px 110px rgba(0, 0, 0, 0.38),
+            0 0 78px rgba(124, 110, 255, 0.26);
+    }
+}
+
+@keyframes motionSkillBounce {
+    0%,
+    100% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+
+    35% {
+        translate: 0 -6px;
+        rotate: -8deg;
+    }
+
+    68% {
+        translate: 0 2px;
+        rotate: 5deg;
+    }
+}
+
+@keyframes motionCodeFloat {
+    0%,
+    100% {
+        opacity: 0.16;
+        translate: 0 8px;
+    }
+
+    50% {
+        opacity: 0.58;
+        translate: 0 -11px;
+    }
+}
+
+@keyframes motionBrandGlow {
+    0%,
+    100% {
+        box-shadow: 0 10px 27px rgba(108, 92, 255, 0.35);
+    }
+
+    50% {
+        box-shadow: 0 12px 44px rgba(127, 111, 255, 0.68);
+    }
+}
+
+@keyframes motionStageOrb {
+    0%,
+    100% {
+        translate: 0 0;
+        scale: 0.92;
+    }
+
+    50% {
+        translate: -62px 46px;
+        scale: 1.24;
+    }
+}
+
+@keyframes motionStageSweep {
+    0%,
+    72%,
+    100% {
+        opacity: 0;
+        translate: 0 0;
+    }
+
+    76% {
+        opacity: 0.68;
+    }
+
+    94% {
+        opacity: 0;
+        translate: 210% 0;
+    }
+}
+
+@keyframes motionBadgeShimmer {
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    48% {
+        filter: brightness(1.24);
+    }
+}
+
+@keyframes motionMetaHighlight {
+    from {
+        filter: blur(4px);
+        opacity: 0;
+    }
+
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
 @media (max-width: 680px) {
     .motion-scroll-progress {
         height: 2px;
@@ -528,6 +976,30 @@ html.motion-ready:not(.motion-reduced) .scroll-top:hover > i {
     .motion-interactive-card::after {
         display: none;
     }
+
+    .motion-shooting-star,
+    .motion-cursor-halo,
+    .motion-stage-orb {
+        display: none;
+    }
+
+    .motion-particle {
+        animation-duration: calc(var(--particle-duration) + 2s);
+    }
+
+    .motion-code-symbol {
+        font-size: 11px;
+        opacity: 0.32;
+    }
+
+    html.motion-ready:not(.motion-reduced) .project-stage::after {
+        animation: none;
+        opacity: 0;
+    }
+
+    html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-visual .hero-logo-frame {
+        animation-duration: 6.2s;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -548,11 +1020,26 @@ html.motion-ready:not(.motion-reduced) .scroll-top:hover > i {
     .skillup-preview-card,
     .skillup-progress > span,
     .scroll-down i,
-    .project-hero::before {
+    .project-hero::before,
+    .motion-particle,
+    .motion-shooting-star,
+    .motion-code-symbol,
+    .motion-stage-orb,
+    .project-stage::after,
+    .hero-role-line,
+    .hero-availability,
+    .project-pill > i,
+    .hero-logo-frame,
+    .skillup-visual-brand > i {
         animation: none !important;
     }
 
     .motion-scroll-progress-fill {
         transition: none;
+    }
+
+    .motion-cursor-halo,
+    .motion-particle-field {
+        display: none;
     }
 }

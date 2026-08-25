@@ -6,6 +6,7 @@
         window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const finePointer = typeof window.matchMedia === "function" &&
         window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const compactScreen = typeof window.innerWidth === "number" && window.innerWidth <= 680;
     const scheduleFrame = typeof window.requestAnimationFrame === "function"
         ? window.requestAnimationFrame.bind(window)
         : function (callback) { callback(); };
@@ -93,6 +94,47 @@
         }
     }
 
+    function setupAmbientParticles() {
+        const hosts = document.querySelectorAll(".hero, .project-hero");
+        const particleCount = compactScreen ? 9 : 22;
+
+        hosts.forEach(function (host) {
+            const field = document.createElement("div");
+
+            field.className = "motion-particle-field";
+            field.setAttribute("aria-hidden", "true");
+
+            for (let index = 0; index < particleCount; index += 1) {
+                const particle = document.createElement("span");
+                const left = (index * 47 + 13) % 97;
+                const top = (index * 31 + 17) % 92;
+
+                particle.className = "motion-particle";
+                particle.style.setProperty("--particle-left", String(left) + "%");
+                particle.style.setProperty("--particle-top", String(top) + "%");
+                particle.style.setProperty("--particle-size", String(index % 5 === 0 ? 4 : index % 3 === 0 ? 3 : 2) + "px");
+                particle.style.setProperty("--particle-delay", String((index % 8) * -0.7) + "s");
+                particle.style.setProperty("--particle-duration", String(4.4 + index % 6 * 0.8) + "s");
+                particle.style.setProperty("--particle-drift", String((index % 4 - 1.5) * 13) + "px");
+                field.appendChild(particle);
+            }
+
+            if (!compactScreen) {
+                for (let index = 0; index < 3; index += 1) {
+                    const star = document.createElement("span");
+
+                    star.className = "motion-shooting-star";
+                    star.style.setProperty("--shooting-top", String(14 + index * 27) + "%");
+                    star.style.setProperty("--shooting-delay", String(index * 3.1 + 0.8) + "s");
+                    star.style.setProperty("--shooting-duration", String(7.5 + index * 1.7) + "s");
+                    field.appendChild(star);
+                }
+            }
+
+            host.appendChild(field);
+        });
+    }
+
     function setupScrollReveals() {
         const elements = document.querySelectorAll(
             ".section-heading, " +
@@ -107,6 +149,7 @@
             ".veille-card, " +
             ".accordion-item, " +
             ".skill-category, " +
+            ".skill-icon, " +
             ".project-card, " +
             ".cv-showcase, " +
             ".showreel-container, " +
@@ -222,14 +265,199 @@
         });
     }
 
+    function setupCursorHalo() {
+        if (!finePointer || compactScreen) {
+            return;
+        }
+
+        const halo = document.createElement("div");
+        let pointerX = 0;
+        let pointerY = 0;
+        let queued = false;
+
+        halo.className = "motion-cursor-halo";
+        halo.setAttribute("aria-hidden", "true");
+        document.body.appendChild(halo);
+
+        window.addEventListener("pointermove", function (event) {
+            pointerX = event.clientX;
+            pointerY = event.clientY;
+            halo.classList.add("motion-cursor-active");
+
+            if (event.target && typeof event.target.closest === "function") {
+                if (event.target.closest("a, button, .motion-interactive-card")) {
+                    halo.classList.add("motion-cursor-hovering");
+                } else {
+                    halo.classList.remove("motion-cursor-hovering");
+                }
+            }
+
+            if (queued) {
+                return;
+            }
+
+            queued = true;
+            scheduleFrame(function () {
+                halo.style.transform = "translate3d(" + String(pointerX) + "px, " + String(pointerY) + "px, 0)";
+                queued = false;
+            });
+        }, { passive: true });
+
+        window.addEventListener("blur", function () {
+            halo.classList.remove("motion-cursor-active");
+        });
+    }
+
+    function setupMagneticButtons() {
+        if (!finePointer || compactScreen) {
+            return;
+        }
+
+        const buttons = document.querySelectorAll(
+            ".btn-primary, .detail-button-primary, .theme-toggle, .detail-theme-toggle"
+        );
+
+        buttons.forEach(function (button) {
+            button.classList.add("motion-magnetic-button");
+
+            button.addEventListener("pointermove", function (event) {
+                const bounds = button.getBoundingClientRect();
+
+                if (!bounds.width || !bounds.height) {
+                    return;
+                }
+
+                const x = (event.clientX - bounds.left - bounds.width / 2) * 0.12;
+                const y = (event.clientY - bounds.top - bounds.height / 2) * 0.12;
+
+                button.style.setProperty("--magnetic-x", String(Math.max(-7, Math.min(7, x)).toFixed(2)) + "px");
+                button.style.setProperty("--magnetic-y", String(Math.max(-6, Math.min(6, y)).toFixed(2)) + "px");
+            }, { passive: true });
+
+            button.addEventListener("pointerleave", function () {
+                button.style.setProperty("--magnetic-x", "0px");
+                button.style.setProperty("--magnetic-y", "0px");
+            });
+        });
+    }
+
+    function setupNumericCounters() {
+        const elements = document.querySelectorAll(
+            ".about-stat-card > strong, .hero-floating-projects strong"
+        );
+        const counters = [];
+
+        elements.forEach(function (element) {
+            const original = element.textContent.trim();
+            const match = original.match(/^(\d+)(.*)$/);
+
+            if (!match) {
+                return;
+            }
+
+            counters.push({
+                element: element,
+                target: Number(match[1]),
+                suffix: match[2]
+            });
+        });
+
+        if (!counters.length) {
+            return;
+        }
+
+        function animateCounter(counter) {
+            let firstFrame = null;
+
+            function render(timestamp) {
+                const time = typeof timestamp === "number" ? timestamp : Date.now();
+
+                if (firstFrame === null) {
+                    firstFrame = time;
+                }
+
+                const progress = Math.min((time - firstFrame) / 1150, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+
+                counter.element.textContent = String(Math.round(counter.target * eased)) + counter.suffix;
+
+                if (progress < 1) {
+                    scheduleFrame(render);
+                }
+            }
+
+            scheduleFrame(render);
+        }
+
+        if (typeof window.IntersectionObserver !== "function") {
+            counters.forEach(animateCounter);
+            return;
+        }
+
+        const observer = new window.IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                const counter = counters.find(function (item) {
+                    return item.element === entry.target;
+                });
+
+                if (counter) {
+                    animateCounter(counter);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.6 });
+
+        counters.forEach(function (counter) {
+            observer.observe(counter.element);
+        });
+    }
+
+    function setupProjectAccents() {
+        const visual = document.querySelector(".project-visual-skillup");
+        const stage = document.querySelector(".project-stage");
+
+        if (visual) {
+            const symbols = ["</>", "{ }", "01", "✦", "//"];
+
+            symbols.forEach(function (symbol, index) {
+                const accent = document.createElement("span");
+
+                accent.className = "motion-code-symbol";
+                accent.textContent = symbol;
+                accent.setAttribute("aria-hidden", "true");
+                accent.style.setProperty("--code-left", String(13 + index * 18) + "%");
+                accent.style.setProperty("--code-top", String(index % 2 === 0 ? 23 : 71) + "%");
+                accent.style.setProperty("--code-delay", String(index * -0.9) + "s");
+                visual.appendChild(accent);
+            });
+        }
+
+        if (stage) {
+            const orb = document.createElement("span");
+
+            orb.className = "motion-stage-orb";
+            orb.setAttribute("aria-hidden", "true");
+            stage.appendChild(orb);
+        }
+    }
+
     createScrollProgress();
 
     if (reducedMotion) {
         return;
     }
 
+    setupAmbientParticles();
     setupHeroEntrance();
     setupScrollReveals();
     setupInteractiveCards();
     setupSubtleTilt();
+    setupCursorHalo();
+    setupMagneticButtons();
+    setupNumericCounters();
+    setupProjectAccents();
 })();
