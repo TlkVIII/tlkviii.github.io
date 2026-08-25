@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez SkillUp, une application web et mobile d'apprentissage gamifié développée par Fayed Amourani avec React Native, Expo, TypeScript, Node.js et MySQL.">
-    <meta name="theme-color" content="#090c17">
+    <meta name="theme-color" content="#06151A">
     <title>SkillUp — Projet de Fayed Amourani</title>
     <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"dark")}catch(error){document.documentElement.setAttribute("data-theme","dark")}</script>
     <link rel="icon" type="image/jpeg" href="../images/logo portfolio AMOURANI Fayed.jpg">
@@ -34,7 +34,8 @@
             <p class="project-intro">Une application d'apprentissage gamifié qui transforme la progression en expérience motivante, accessible sur mobile comme sur le web.</p>
             <div class="hero-actions">
                 <a href="https://tlkviii-skillup.expo.app" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-primary">Tester l'application <i class="fas fa-arrow-up-right-from-square"></i></a>
-                <a href="#fonctionnalites" class="detail-button detail-button-secondary">Explorer le projet <i class="fas fa-arrow-down"></i></a>
+                <a href="https://tlkviii.github.io/skillup-install/" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-secondary">Installer SkillUp <i class="fas fa-mobile-screen-button"></i></a>
+                <a href="#interface" class="detail-button detail-button-secondary">Voir l'interface <i class="fas fa-arrow-down"></i></a>
             </div>
             <div class="project-meta-grid">
                 <div class="meta-item"><span>Type de projet</span><strong>Application multiplateforme</strong></div>
@@ -42,14 +43,21 @@
                 <div class="meta-item"><span>Technologies</span><strong>Expo, TypeScript, Node.js</strong></div>
                 <div class="meta-item"><span>Mise en ligne</span><strong>Expo Web & Railway</strong></div>
             </div>
-            <div class="project-stage stage-skillup" aria-label="Aperçu illustré des fonctionnalités de SkillUp">
-                <div class="skillup-preview">
-                    <div class="skillup-preview-main">
-                        <div class="skillup-preview-brand"><i class="fas fa-bolt"></i> Skill<span>Up</span></div>
-                        <div><h2>Apprendre, progresser, recommencer.</h2><p>Quiz, exercices et défis réunis dans un parcours motivant.</p><div class="skillup-progress" aria-hidden="true"><span></span></div></div>
+            <div class="project-stage stage-skillup" aria-label="Aperçu de l'application SkillUp">
+                <div class="skillup-hero-showcase">
+                    <div class="skillup-hero-brand">
+                        <img src="../images/skillup-logo.png" alt="Logo de l'application SkillUp" class="skillup-hero-logo">
+                        <div>
+                            <span class="skillup-hero-kicker">Application d'apprentissage</span>
+                            <h2>Apprendre, progresser, recommencer.</h2>
+                            <p>Une interface mobile pensée autour de la progression, des objectifs quotidiens et de la pratique.</p>
+                        </div>
                     </div>
-                    <div class="skillup-preview-card"><i class="fas fa-trophy"></i><strong>Quiz interactifs</strong><p>Tester ses connaissances.</p></div>
-                    <div class="skillup-preview-card"><i class="fas fa-fire"></i><strong>Défis & badges</strong><p>Progresser au quotidien.</p></div>
+                    <div class="skillup-hero-phones" aria-label="Captures d'écran de SkillUp">
+                        <img src="../images/skillup-home.jpg" alt="Écran d'accueil de SkillUp avec niveau, XP et défis du jour">
+                        <img src="../images/skillup-learn.jpg" alt="Écran Apprendre de SkillUp avec les parcours Développement Web, Anglais et Design">
+                        <img src="../images/skillup-practice.jpg" alt="Écran Pratique de SkillUp avec les exercices par compétence">
+                    </div>
                 </div>
             </div>
         </section>
@@ -62,8 +70,18 @@
             </div>
         </section>
 
+        <section class="detail-section detail-container" id="interface">
+            <div class="detail-section-heading"><span class="section-label">02 — Interface</span><h2>Une expérience pensée d'abord pour le mobile.</h2><p>Quelques écrans réels de SkillUp : progression, apprentissage, pratique et statistiques.</p></div>
+            <div class="skillup-screens-grid">
+                <figure class="skillup-screen-card"><div class="skillup-phone-frame"><img src="../images/skillup-home.jpg" alt="Accueil SkillUp : niveau, expérience et défis quotidiens" loading="lazy"></div><figcaption><strong>Accueil</strong><span>Niveau, XP et défis du jour.</span></figcaption></figure>
+                <figure class="skillup-screen-card"><div class="skillup-phone-frame"><img src="../images/skillup-learn.jpg" alt="Section Apprendre de SkillUp avec les différents parcours" loading="lazy"></div><figcaption><strong>Apprendre</strong><span>Parcours et progression par compétence.</span></figcaption></figure>
+                <figure class="skillup-screen-card"><div class="skillup-phone-frame"><img src="../images/skillup-practice.jpg" alt="Section Pratique de SkillUp avec les exercices disponibles" loading="lazy"></div><figcaption><strong>Pratique</strong><span>Exercices guidés et suivi des réussites.</span></figcaption></figure>
+                <figure class="skillup-screen-card"><div class="skillup-phone-frame"><img src="../images/skillup-profile.jpg" alt="Profil SkillUp avec statistiques, XP et badges" loading="lazy"></div><figcaption><strong>Profil & statistiques</strong><span>Série, XP, niveaux et badges.</span></figcaption></figure>
+            </div>
+        </section>
+
         <section class="detail-section detail-container" id="fonctionnalites">
-            <div class="detail-section-heading"><span class="section-label">02 — Fonctionnalités</span><h2>Une progression qui donne envie.</h2><p>Chaque fonctionnalité participe à une expérience d'apprentissage simple à prendre en main.</p></div>
+            <div class="detail-section-heading"><span class="section-label">03 — Fonctionnalités</span><h2>Une progression qui donne envie.</h2><p>Chaque fonctionnalité participe à une expérience d'apprentissage simple à prendre en main.</p></div>
             <div class="features-grid">
                 <article class="feature-card"><span class="feature-icon"><i class="fas fa-user-shield"></i></span><h3>Comptes utilisateurs</h3><p>Inscription et connexion permettant à chacun de retrouver son espace et sa progression.</p></article>
                 <article class="feature-card"><span class="feature-icon"><i class="fas fa-circle-question"></i></span><h3>Quiz interactifs</h3><p>Questionnaires pour évaluer ses connaissances et visualiser ses résultats.</p></article>
@@ -75,7 +93,7 @@
         </section>
 
         <section class="detail-section detail-container">
-            <div class="detail-section-heading"><span class="section-label">03 — Technologies</span><h2>Une application complète, du front au serveur.</h2></div>
+            <div class="detail-section-heading"><span class="section-label">04 — Technologies</span><h2>Une application complète, du front au serveur.</h2></div>
             <div class="stack-layout">
                 <article class="stack-group"><h3>Application</h3><div class="stack-tags"><span>React Native</span><span>Expo</span><span>Expo Router</span><span>TypeScript</span></div></article>
                 <article class="stack-group"><h3>Serveur & données</h3><div class="stack-tags"><span>Node.js</span><span>API</span><span>MySQL</span></div></article>
@@ -84,7 +102,7 @@
         </section>
 
         <section class="detail-section detail-container">
-            <div class="detail-section-heading"><span class="section-label">04 — Défis techniques</span><h2>Les problèmes rencontrés, et leurs solutions.</h2></div>
+            <div class="detail-section-heading"><span class="section-label">05 — Défis techniques</span><h2>Les problèmes rencontrés, et leurs solutions.</h2></div>
             <div class="challenge-grid">
                 <article class="challenge-card"><span class="challenge-index">01</span><h3>Compatibilité web et mobile</h3><p>Adapter une application React Native pour qu'elle soit également utilisable dans un navigateur.<span class="challenge-solution">Solution : configuration d'Expo Web et adaptation des composants au fonctionnement multiplateforme.</span></p></article>
                 <article class="challenge-card"><span class="challenge-index">02</span><h3>Persistance de la progression</h3><p>Éviter que les comptes et les résultats disparaissent entre deux connexions.<span class="challenge-solution">Solution : liaison de l'application à une API Node.js et à une base de données MySQL.</span></p></article>
@@ -92,7 +110,7 @@
             </div>
         </section>
 
-        <section class="project-closing detail-container"><span class="section-label">Prêt à découvrir SkillUp ?</span><h2>Le projet est accessible en ligne.</h2><p>Testez l'application directement depuis votre navigateur ou échangeons autour de sa conception.</p><div class="closing-actions"><a href="https://tlkviii-skillup.expo.app" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-primary">Ouvrir SkillUp <i class="fas fa-arrow-up-right-from-square"></i></a><a href="../index.html#contact" class="detail-button detail-button-secondary">Me contacter <i class="fas fa-arrow-right"></i></a></div></section>
+        <section class="project-closing detail-container"><span class="section-label">Prêt à découvrir SkillUp ?</span><h2>Le projet est accessible en ligne.</h2><p>Testez l'application directement depuis votre navigateur ou échangeons autour de sa conception.</p><div class="closing-actions"><a href="https://tlkviii-skillup.expo.app" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-primary">Ouvrir SkillUp <i class="fas fa-arrow-up-right-from-square"></i></a><a href="https://tlkviii.github.io/skillup-install/" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-secondary">Installer l'application <i class="fas fa-download"></i></a><a href="../index.html#contact" class="detail-button detail-button-secondary">Me contacter <i class="fas fa-arrow-right"></i></a></div></section>
     </main>
 
     <footer class="detail-footer detail-container"><span>© Fayed Amourani — Développeur web & mobile</span><button type="button" class="analytics-preferences-link" data-analytics-preferences>Gérer les cookies</button><a href="ecommerce.html">Projet suivant : E-commerce <i class="fas fa-arrow-right"></i></a></footer>

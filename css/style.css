@@ -6305,3 +6305,134 @@ body.portfolio-premium {
         transition: none;
     }
 }
+
+/* SkillUp — aperçu réel de l'application */
+.portfolio-premium .project-visual-skillup {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    min-height: 338px;
+    place-items: center;
+    background:
+        radial-gradient(circle at 22% 22%, rgba(85, 230, 190, 0.2), transparent 32%),
+        radial-gradient(circle at 84% 82%, rgba(34, 131, 155, 0.18), transparent 34%),
+        linear-gradient(145deg, #06151a 0%, #08242a 55%, #07171b 100%);
+}
+
+.portfolio-premium .project-visual-skillup .project-visual-category {
+    z-index: 4;
+    border-color: rgba(140, 246, 214, 0.2);
+    color: #dcfff5;
+}
+
+.portfolio-premium .skillup-visual-showcase {
+    position: relative;
+    display: grid;
+    width: min(560px, 88%);
+    height: 250px;
+    align-items: center;
+    grid-template-columns: 0.8fr 1.2fr;
+}
+
+.portfolio-premium .skillup-card-logo {
+    z-index: 2;
+    width: min(178px, 100%);
+    aspect-ratio: 1;
+    justify-self: center;
+    object-fit: cover;
+    border: 1px solid rgba(140, 246, 214, 0.25);
+    border-radius: 29px;
+    box-shadow: 0 22px 46px rgba(0, 0, 0, 0.34), 0 0 32px rgba(85, 230, 190, 0.1);
+}
+
+.portfolio-premium .skillup-card-phones {
+    position: relative;
+    display: flex;
+    height: 235px;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-premium .skillup-card-phones img {
+    position: absolute;
+    width: 118px;
+    border: 1px solid rgba(140, 246, 214, 0.2);
+    border-radius: 17px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.3);
+}
+
+.portfolio-premium .skillup-card-phones img:first-child {
+    left: 22%;
+    transform: translateX(-50%) rotate(-5deg);
+}
+
+.portfolio-premium .skillup-card-phones img:last-child {
+    right: 20%;
+    transform: translateX(50%) translateY(7px) rotate(5deg);
+}
+
+.portfolio-premium .project-visual-skillup .skillup-visual-metrics > span {
+    background: rgba(6, 38, 42, 0.82);
+    border-color: rgba(85, 230, 190, 0.18);
+    color: #d9fff4;
+}
+
+.portfolio-premium .project-visual-skillup .skillup-visual-metrics i {
+    color: #55e6be;
+}
+
+@media (max-width: 700px) {
+    .portfolio-premium .skillup-visual-showcase {
+        width: 94%;
+        height: 205px;
+        grid-template-columns: 0.85fr 1.15fr;
+    }
+
+    .portfolio-premium .skillup-card-logo {
+        width: 130px;
+        border-radius: 22px;
+    }
+
+    .portfolio-premium .skillup-card-phones {
+        height: 190px;
+    }
+
+    .portfolio-premium .skillup-card-phones img {
+        width: 94px;
+        border-radius: 14px;
+    }
+}
+
+@media (max-width: 430px) {
+    .portfolio-premium .project-visual-skillup {
+        min-height: 260px;
+    }
+
+    .portfolio-premium .skillup-visual-showcase {
+        width: 92%;
+        height: 170px;
+    }
+
+    .portfolio-premium .skillup-card-logo {
+        width: 105px;
+        border-radius: 18px;
+    }
+
+    .portfolio-premium .skillup-card-phones {
+        height: 160px;
+    }
+
+    .portfolio-premium .skillup-card-phones img {
+        width: 78px;
+        border-radius: 12px;
+    }
+
+    .portfolio-premium .skillup-visual-metrics {
+        gap: 5px;
+    }
+
+    .portfolio-premium .skillup-visual-metrics > span {
+        padding: 5px 7px;
+        font-size: 8px;
+    }
+}
