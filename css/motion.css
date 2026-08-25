@@ -394,45 +394,6 @@ html.motion-ready:not(.motion-reduced) .scroll-top:hover > i {
     box-shadow: 0 0 12px rgba(var(--detail-accent-rgb), 0.72);
 }
 
-.motion-cursor-halo {
-    position: fixed;
-    z-index: 1195;
-    top: -9px;
-    left: -9px;
-    width: 18px;
-    height: 18px;
-    background: rgba(134, 122, 255, 0.055);
-    border: 1px solid rgba(153, 145, 255, 0.48);
-    border-radius: 50%;
-    box-shadow:
-        0 0 10px rgba(142, 126, 255, 0.18),
-        inset 0 0 7px rgba(134, 121, 255, 0.07);
-    opacity: 0;
-    pointer-events: none;
-    transition:
-        width 0.28s var(--motion-ease),
-        height 0.28s var(--motion-ease),
-        top 0.28s var(--motion-ease),
-        left 0.28s var(--motion-ease),
-        opacity 0.22s ease,
-        border-color 0.28s ease,
-        background-color 0.28s ease;
-    will-change: transform;
-}
-
-.motion-cursor-halo.motion-cursor-active {
-    opacity: 1;
-}
-
-.motion-cursor-halo.motion-cursor-hovering {
-    top: -12px;
-    left: -12px;
-    width: 24px;
-    height: 24px;
-    background: rgba(129, 121, 255, 0.08);
-    border-color: rgba(166, 158, 255, 0.66);
-}
-
 .motion-magnetic-button {
     translate: var(--magnetic-x, 0px) var(--magnetic-y, 0px);
     transition:
@@ -571,11 +532,6 @@ html.motion-ready:not(.motion-reduced) .section-label {
 html.motion-ready:not(.motion-reduced) .section-kicker > i,
 html.motion-ready:not(.motion-reduced) .section-label > i {
     animation: motionIconBreathing 3.4s ease-in-out infinite;
-}
-
-[data-theme="light"] .motion-cursor-halo {
-    background: rgba(108, 95, 225, 0.055);
-    border-color: rgba(111, 96, 226, 0.48);
 }
 
 [data-theme="light"] .project-hero .motion-particle {
@@ -935,7 +891,6 @@ html.motion-ready:not(.motion-reduced) .section-label > i {
         display: none;
     }
 
-    .motion-cursor-halo,
     .motion-stage-orb {
         display: none;
     }
@@ -994,7 +949,6 @@ html.motion-ready:not(.motion-reduced) .section-label > i {
         transition: none;
     }
 
-    .motion-cursor-halo,
     .motion-particle-field {
         display: none;
     }

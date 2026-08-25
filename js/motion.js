@@ -253,49 +253,6 @@
         });
     }
 
-    function setupCursorHalo() {
-        if (!finePointer || compactScreen) {
-            return;
-        }
-
-        const halo = document.createElement("div");
-        let pointerX = 0;
-        let pointerY = 0;
-        let queued = false;
-
-        halo.className = "motion-cursor-halo";
-        halo.setAttribute("aria-hidden", "true");
-        document.body.appendChild(halo);
-
-        window.addEventListener("pointermove", function (event) {
-            pointerX = event.clientX;
-            pointerY = event.clientY;
-            halo.classList.add("motion-cursor-active");
-
-            if (event.target && typeof event.target.closest === "function") {
-                if (event.target.closest("a, button, .motion-interactive-card")) {
-                    halo.classList.add("motion-cursor-hovering");
-                } else {
-                    halo.classList.remove("motion-cursor-hovering");
-                }
-            }
-
-            if (queued) {
-                return;
-            }
-
-            queued = true;
-            scheduleFrame(function () {
-                halo.style.transform = "translate3d(" + String(pointerX) + "px, " + String(pointerY) + "px, 0)";
-                queued = false;
-            });
-        }, { passive: true });
-
-        window.addEventListener("blur", function () {
-            halo.classList.remove("motion-cursor-active");
-        });
-    }
-
     function setupMagneticButtons() {
         if (!finePointer || compactScreen) {
             return;
@@ -444,7 +401,6 @@
     setupScrollReveals();
     setupInteractiveCards();
     setupSubtleTilt();
-    setupCursorHalo();
     setupMagneticButtons();
     setupNumericCounters();
     setupProjectAccents();
