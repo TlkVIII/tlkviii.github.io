@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/redesign.css?v=atelier-20260825">
 </head>
-<body class="blue-theme-background theme-night">
+<body class="blue-theme-background theme-night shop-premium shop-cart-page">
     <header>
         <div class="top-header">
             <div class="logo">
@@ -42,7 +44,7 @@
     </header>
 
     <main class="cart-page blue-gradient-bg">
-        <h1>Votre Panier</h1>
+        <div class="shop-cart-heading"><span class="shop-eyebrow">Vos futurs essentiels</span><h1>Votre <span>sélection.</span></h1><p>Les petits objets qui rendront votre quotidien plus agréable.</p></div>
         
         <div id="cart-content">
             <!-- Panier avec articles -->
@@ -84,8 +86,8 @@
         </div>
     </main>
 
-    <footer class="blue-gradient-bg">
-        <p>&copy; 2024 Stylo Magik - Tous droits réservés</p>
+    <footer class="blue-gradient-bg shop-footer">
+        <a class="shop-footer-brand" href="../index.html">Stylo <span>Magik.</span></a><p>Des essentiels choisis avec soin, depuis Montpellier.</p><span>© 2026 Stylo Magik</span>
     </footer>
 
     <script src="../scripts/cart.js"></script>
@@ -93,6 +95,7 @@
     <script src="../scripts/back-to-top.js"></script>
     <script src="../scripts/header-scroll.js"></script>
     <script src="../scripts/theme-toggle.js"></script>
+    <script src="../scripts/redesign.js?v=atelier-20260825"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Mettre à jour l'affichage initial du panier

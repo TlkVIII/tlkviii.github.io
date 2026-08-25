@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez une large sélection de papeterie et bureautique sur notre site. Achetez des produits de qualité à prix compétitifs." />
-    <title>Stylo Magik- Accueil</title>
+    <title>Stylo Magik — L'art de bien travailler</title>
     <link rel="stylesheet" href="./Styles/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Styles/redesign.css?v=atelier-20260825">
     <style>
         .blue-theme-background {
             background-color: var(--background-color);
@@ -19,7 +21,7 @@
         }
     </style>
 </head>
-<body class="blue-theme-background theme-night">
+<body class="blue-theme-background theme-night shop-premium shop-home">
     <div class="fixed-logo">
         <a href="./index.html">
             <img src="./Images/Logo.png" alt="Logo Stylo Magique" class="logo-img">
@@ -55,22 +57,37 @@
 
     <main>
         <h1 class="visually-hidden">Accueil - Stylo Magik</h1>
-        <section class="hero blue-gradient-bg">
+        <section class="hero blue-gradient-bg shop-hero">
             <div class="hero-particles">
                 <span></span>
             </div>
             <div class="hero-content">
-                <h2 class="hero-title">Bienvenue chez <strong>Stylo <span class="highlight">Magik</span></strong></h2>
-                <p>Votre destination pour tous vos besoins en <strong>papeterie</strong> et <strong>bureautique</strong></p>
+                <span class="shop-eyebrow"><span></span> Papeterie & objets de bureau</span>
+                <h2 class="hero-title">Le beau commence<br>sur votre <span class="highlight">bureau.</span></h2>
+                <p>Des essentiels soigneusement choisis pour écrire, créer et travailler dans un espace qui vous ressemble.</p>
                 <div class="hero-buttons">
-                    <a href="#categories" class="cta-button">Découvrir nos produits</a>
-                    <a href="#contact" class="cta-button secondary">Nous contacter</a>
+                    <a href="#categories" class="cta-button">Découvrir la collection <i class="fas fa-arrow-right"></i></a>
+                    <a href="#selection" class="cta-button secondary">Notre sélection</a>
                 </div>
+                <div class="shop-hero-note"><i class="fas fa-leaf"></i> Des objets utiles, beaux et faits pour durer.</div>
+            </div>
+            <div class="shop-hero-visual" aria-hidden="true">
+                <div class="shop-hero-halo"></div>
+                <img class="shop-hero-lamp" src="./Images/products/bureautique/lampe-bureau.png" alt="">
+                <div class="shop-hero-product-label"><span>Notre sélection</span><strong>Lampe de bureau</strong><span>29,99 €</span></div>
+                <div class="shop-hero-floating-note"><i class="fas fa-star"></i> Les essentiels du quotidien</div>
             </div>
         </section>
 
-        <section id="categories" class="categories blue-gradient-bg">
-            <h2>Nos Catégories</h2>
+        <div class="shop-trust-strip">
+            <span><i class="fas fa-truck-fast"></i> Livraison 24/48h</span>
+            <span><i class="fas fa-shield-heart"></i> Qualité sélectionnée</span>
+            <span><i class="fas fa-lock"></i> Paiement sécurisé</span>
+            <span><i class="fas fa-box-open"></i> Expédition soignée</span>
+        </div>
+
+        <section id="categories" class="categories blue-gradient-bg shop-section">
+            <div class="shop-section-heading"><span class="shop-eyebrow">Nos univers</span><h2>À chaque envie,<br><span>son inspiration.</span></h2><p>Explorez deux collections pensées pour rendre votre quotidien plus agréable.</p></div>
             <div class="category-grid">
                 <a href="./pages/papeterie.html" class="category-card">
                     <div class="category-image">
@@ -79,8 +96,8 @@
                     </div>
                     <div class="category-content">
                         <h3>Papeterie</h3>
-                        <p>Découvrez notre sélection de produits de papeterie de qualité</p>
-                        <span class="category-link">Explorer <i class="fas fa-arrow-right"></i></span>
+                        <p>Carnets, stylos et accessoires pour donner vie à vos idées.</p>
+                        <span class="category-link">Voir la collection <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
                 <a href="./pages/bureautique.html" class="category-card">
@@ -90,15 +107,24 @@
                     </div>
                     <div class="category-content">
                         <h3>Bureautique</h3>
-                        <p>Équipez votre bureau avec nos produits professionnels</p>
-                        <span class="category-link">Explorer <i class="fas fa-arrow-right"></i></span>
+                        <p>Les essentiels pour créer un espace de travail inspirant.</p>
+                        <span class="category-link">Voir la collection <i class="fas fa-arrow-right"></i></span>
                     </div>
                 </a>
             </div>
         </section>
 
-        <section class="advantages blue-gradient-bg">
-            <h2>Pourquoi Nous Choisir ?</h2>
+        <section id="selection" class="shop-featured shop-section">
+            <div class="shop-section-heading"><span class="shop-eyebrow">Choisis pour vous</span><h2>Les essentiels<br><span>qu'on adore.</span></h2><p>Une sélection de pièces utiles et bien pensées.</p></div>
+            <div class="product-grid shop-featured-grid">
+                <article class="product-card"><div class="image-container"><span class="shop-product-badge">Papeterie</span><img src="./Images/products/papeterie/cahier-premium.png" alt="Cahier premium noir"></div><div class="product-info"><h3>Cahier Premium A4</h3><p class="product-reference">RÉF: CAH-PREM</p><div class="price-stock-container"><span class="price">€4.99</span><span class="stock-status">En stock</span></div><button class="add-to-cart">Ajouter au panier</button></div></article>
+                <article class="product-card"><div class="image-container"><span class="shop-product-badge">Bureautique</span><img src="./Images/products/bureautique/lampe-bureau.png" alt="Lampe de bureau LED ajustable"></div><div class="product-info"><h3>Lampe LED Ajustable</h3><p class="product-reference">RÉF: LAM-LED</p><div class="price-stock-container"><span class="price">€29.99</span><span class="stock-status">En stock</span></div><button class="add-to-cart">Ajouter au panier</button></div></article>
+                <article class="product-card"><div class="image-container"><span class="shop-product-badge">Papeterie</span><img src="./Images/products/papeterie/stylos-couleur.png" alt="Ensemble de stylos colorés"></div><div class="product-info"><h3>Set de Stylos Colorés</h3><p class="product-reference">RÉF: STY-COL</p><div class="price-stock-container"><span class="price">€9.99</span><span class="stock-status">En stock</span></div><button class="add-to-cart">Ajouter au panier</button></div></article>
+            </div>
+        </section>
+
+        <section class="advantages blue-gradient-bg shop-section">
+            <div class="shop-section-heading"><span class="shop-eyebrow">Notre promesse</span><h2>Simplement<br><span>bien pensé.</span></h2></div>
             <div class="advantages-grid">
                 <div class="advantage-card">
                     <i class="fas fa-truck"></i>
@@ -123,8 +149,8 @@
             </div>
         </section>
 
-        <section class="testimonials blue-gradient-bg">
-            <h2>Nos Clients Témoignent</h2>
+        <section class="testimonials blue-gradient-bg shop-section">
+            <div class="shop-section-heading"><span class="shop-eyebrow">Ils nous font confiance</span><h2>De jolis mots,<br><span>tout simplement.</span></h2></div>
             <div class="testimonials-container">
                 <div class="testimonial-card">
                     <div class="testimonial-rating">
@@ -182,8 +208,8 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section blue-gradient-bg visible-section">
-            <h2>Nous Contacter</h2>
+        <section id="contact" class="contact-section blue-gradient-bg visible-section shop-section">
+            <div class="shop-section-heading"><span class="shop-eyebrow">Un mot, une question ?</span><h2>Parlons de<br><span>vos envies.</span></h2></div>
             <div class="contact-container">
                 <div class="contact-info">
                     <h3><strong>Nos Coordonnées</strong></h3>
@@ -228,8 +254,10 @@
         <div style="margin: 50px 0;"></div>
     </main>
 
-    <footer class="blue-gradient-bg">
-        <p>&copy; 2024 Stylo Magik - Tous droits réservés</p>
+    <footer class="blue-gradient-bg shop-footer">
+        <a class="shop-footer-brand" href="./index.html">Stylo <span>Magik.</span></a>
+        <p>Des essentiels choisis avec soin, depuis Montpellier.</p>
+        <span>© 2026 Stylo Magik</span>
     </footer>
 
     <div id="back-to-top">
@@ -249,6 +277,7 @@
     <script src="./scripts/back-to-top.js"></script>
     <script src="./scripts/header-scroll.js"></script>
     <script src="./scripts/theme-toggle.js"></script>
+    <script src="./scripts/redesign.js?v=atelier-20260825"></script>
     <script>
         // Back to top functionality
         document.addEventListener('DOMContentLoaded', function() {

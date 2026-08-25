@@ -3,63 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ma Galerie Photos</title>
+    <meta name="description" content="Journal visuel de Fayed Amourani : photographies, paysages et instants du quotidien.">
+    <title>Fayed Amourani — Journal visuel</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css?v=journal-20260825">
 </head>
-<body>
+<body class="photo-premium photo-home">
     <div class="container">
         <header class="main-header">
-            <nav class="nav-menu">
+            <a href="index.html" class="photo-brand"><span class="photo-brand-mark">f.</span><span class="photo-brand-name">Fayed <span>Amourani</span></span></a>
+            <nav class="nav-menu" id="photo-navigation" aria-label="Navigation photographique">
                 <ul>
                     <li><a href="index.html" class="active">Accueil</a></li>
                     <li><a href="photographie.html">Photographie</a></li>
                     <li><a href="galerie.html">Galerie</a></li>
-                    <li><a href="personnalisation.html">Personnalisation</a></li>
+                    <li><a href="personnalisation.html">Studio</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </button>
-            <h1>Ma Galerie Photos</h1>
-            <p class="subtitle">Bienvenue dans mon univers photographique</p>
+            <div class="photo-header-actions"><a href="../index.html" class="photo-portfolio-link"><i class="fas fa-arrow-left"></i><span>Portfolio</span></a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Changer le thème"><i class="fas fa-moon"></i></button><button class="photo-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="photo-navigation" aria-expanded="false"><i class="fas fa-bars"></i></button></div>
         </header>
 
-        <main class="main-content">
-            <section class="welcome-section">
-                <h2>Découvrez</h2>
-                <p class="welcome-text">
-                    Explorez une collection unique de photographies capturant des moments 
-                    précieux et des perspectives uniques à travers mon objectif.
-                </p>
-
-                <div class="features">
-                    <div class="feature-card">
-                        <i class="fas fa-camera"></i>
-                        <h3>Photographie</h3>
-                        <p>Des clichés réalisés uniquement avec mon appareil photo.</p>
-                        <a class="feature-link" href="photographie.html">Voir la catégorie</a>
-                    </div>
-
-                    <div class="feature-card">
-                        <i class="fas fa-image"></i>
-                        <h3>Galerie</h3>
-                        <p>Un mélange de photos appareil photo et de photos prises à l'iPhone.</p>
-                        <a class="feature-link" href="galerie.html">Voir la galerie</a>
-                    </div>
-                </div>
+        <main class="main-content photo-home-content">
+            <section class="photo-hero">
+                <div class="photo-hero-copy"><span class="photo-eyebrow"><span></span> Journal visuel — Montpellier</span><h1>Voir autrement<br>les choses <span>simples.</span></h1><p>Des paysages, des lumières et des instants saisis entre deux moments. Bienvenue dans mon regard sur le monde.</p><div class="photo-hero-actions"><a class="photo-button photo-button-primary" href="galerie.html">Explorer les images <i class="fas fa-arrow-right"></i></a><a class="photo-button photo-button-secondary" href="#collections">Découvrir mon univers</a></div></div>
+                <div class="photo-hero-visual"><img class="photo-hero-main-image" src="images/gallery/IMG_3089.jpg" alt="Littoral photographié par Fayed Amourani"><div class="photo-hero-image-label"><span>Journal visuel</span><strong>Là où la lumière s'arrête.</strong></div><div class="photo-hero-floating-frame"><img src="images/gallery/IMG_1720.jpg" alt="Fleurs violettes photographiées en pleine nature"></div><span class="photo-hero-index">01 / 03</span></div>
             </section>
+
+            <div class="photo-journal-strip"><span><i class="fas fa-camera"></i> Appareil photo</span><span><i class="fas fa-mobile-screen"></i> iPhone</span><span><i class="fas fa-location-dot"></i> Montpellier & ailleurs</span><span><strong data-photo-count data-photo-scope="all">53</strong> photographies</span></div>
+
+            <section class="photo-collections" id="collections"><div class="photo-section-heading"><span class="photo-eyebrow">Deux façons de regarder</span><h2>Des images,<br><span>des histoires.</span></h2><p>Deux collections, un même goût pour les instants vrais et les détails qui passent souvent inaperçus.</p></div><div class="photo-collection-grid"><a class="photo-collection-card" href="photographie.html"><div class="photo-collection-image"><img src="images/gallery/IMG_0609.jpg" alt="Pont de pierre au milieu de la nature"></div><div class="photo-collection-copy"><span>Collection 01</span><h3>À travers l'objectif.</h3><p>Des clichés réalisés avec mon appareil photo, entre paysages et scènes du quotidien.</p><span class="photo-collection-link">Découvrir la collection <i class="fas fa-arrow-right"></i></span></div></a><a class="photo-collection-card" href="galerie.html"><div class="photo-collection-image"><img src="images/gallery/IMG_2773.jpg" alt="Vagues et reflets sur le littoral"></div><div class="photo-collection-copy"><span>Collection 02</span><h3>L'instant, partout.</h3><p>Une collection libre mêlant photos d'appareil et moments saisis avec mon iPhone.</p><span class="photo-collection-link">Parcourir la galerie <i class="fas fa-arrow-right"></i></span></div></a></div></section>
+
+            <section class="photo-studio-invite"><div><span class="photo-eyebrow">Le studio créatif</span><h2>Et si vous créiez<br><span>votre propre image ?</span></h2><p>Importez une photo, ajustez les couleurs, appliquez un filtre et repartez avec votre création.</p></div><a class="photo-button photo-button-primary" href="personnalisation.html">Ouvrir le studio <i class="fas fa-arrow-right"></i></a></section>
         </main>
 
         <footer class="main-footer">
-            <p>&copy; 2024 Ma Galerie Photos - Tous droits réservés</p>
+            <a href="index.html" class="photo-footer-brand">Fayed<span>.</span></a><p>Photographies et instants choisis avec attention.</p><span>© 2026 Fayed Amourani</span>
         </footer>
     </div>
     <script src="js/theme.js"></script>
+    <script src="js/photo-data.js"></script>
     <script src="js/ui-behavior.js"></script>
+    <script src="js/redesign.js?v=journal-20260825"></script>
 </body>
 </html> 

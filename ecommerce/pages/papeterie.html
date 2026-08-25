@@ -11,8 +11,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Styles/redesign.css?v=atelier-20260825">
 </head>
-<body class="papeterie-page blue-theme-background theme-night">
+<body class="papeterie-page blue-theme-background theme-night shop-premium shop-category-page">
     <header>
         <div class="top-header">
             <div class="logo">
@@ -44,13 +46,15 @@
     <main class="papeterie-page">
         <section class="category-header">
             <div class="header-content">
-                <h1>Papeterie</h1>
-                <p>Découvrez notre sélection de produits de papeterie de qualité pour tous vos besoins professionnels et personnels</p>
+                <span class="shop-eyebrow">Collection 01 — Les idées prennent vie</span>
+                <h1>Jolie <span>papeterie.</span></h1>
+                <p>Des carnets, stylos et accessoires choisis pour accompagner chaque idée, chaque note et chaque nouveau départ.</p>
+                <a href="#collection" class="shop-category-scroll">Explorer les produits <i class="fas fa-arrow-down"></i></a>
             </div>
         </section>
 
-        <section class="products-section blue-gradient-bg">
-            <h2>Nos Produits de Papeterie</h2>
+        <section id="collection" class="products-section blue-gradient-bg shop-section">
+            <div class="shop-catalog-heading"><div><span class="shop-eyebrow">Nos indispensables</span><h2>Toute la papeterie</h2></div><span class="shop-product-count" data-product-count></span></div>
             <div class="product-grid">
                 <div class="product-card">
                     <div class="image-container">
@@ -207,8 +211,8 @@
         </div>
     </main>
 
-    <footer class="blue-gradient-bg">
-        <p>&copy; 2024 Stylo Magik - Tous droits réservés</p>
+    <footer class="blue-gradient-bg shop-footer">
+        <a class="shop-footer-brand" href="../index.html">Stylo <span>Magik.</span></a><p>Des essentiels choisis avec soin, depuis Montpellier.</p><span>© 2026 Stylo Magik</span>
     </footer>
 
     <script src="../scripts/cart.js"></script>
@@ -216,6 +220,7 @@
     <script src="../scripts/back-to-top.js"></script>
     <script src="../scripts/header-scroll.js"></script>
     <script src="../scripts/theme-toggle.js"></script>
+    <script src="../scripts/redesign.js?v=atelier-20260825"></script>
     <script>
         // Script pour la modal d'image
         function openModal(src, alt) {
@@ -246,21 +251,13 @@
         });
 
         // Fonctionnalité du bouton retour en haut
-        const backToTopButton = document.getElementById('back-to-top');
-        
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 500) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
-        });
-        
-        backToTopButton.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+        document.addEventListener('DOMContentLoaded', function () {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (!backToTopButton) return;
+
+            window.addEventListener('scroll', function() {
+                backToTopButton.classList.toggle('visible', window.scrollY > 500);
+            }, { passive: true });
         });
     </script>
 

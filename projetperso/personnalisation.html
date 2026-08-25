@@ -3,38 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personnalisation d'Image - Ma Galerie Photos</title>
+    <meta name="description" content="Studio créatif de Fayed Amourani : modifiez, personnalisez et téléchargez vos photographies.">
+    <title>Le studio créatif — Fayed Amourani</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/personnalisation.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/redesign.css?v=journal-20260825">
 </head>
-<body>
+<body class="photo-premium photo-editor-page">
     <div class="container">
         <header class="main-header">
-            <nav class="nav-menu">
+            <a href="index.html" class="photo-brand"><span class="photo-brand-mark">f.</span><span class="photo-brand-name">Fayed <span>Amourani</span></span></a>
+            <nav class="nav-menu" id="photo-navigation" aria-label="Navigation photographique">
                 <ul>
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="photographie.html">Photographie</a></li>
                     <li><a href="galerie.html">Galerie</a></li>
-                    <li><a href="personnalisation.html" class="active">Personnalisation</a></li>
+                    <li><a href="personnalisation.html" class="active">Studio</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-toggle">
-                <i class="fas fa-moon"></i>
-            </button>
-            <h1>Personnalisation d'Image</h1>
-            <p class="subtitle">Éditez et personnalisez vos photos</p>
+            <div class="photo-header-actions"><a href="../index.html" class="photo-portfolio-link"><i class="fas fa-arrow-left"></i><span>Portfolio</span></a><button id="theme-toggle" class="theme-toggle" type="button" aria-label="Changer le thème"><i class="fas fa-moon"></i></button><button class="photo-menu-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="photo-navigation" aria-expanded="false"><i class="fas fa-bars"></i></button></div>
         </header>
 
         <main class="main-content">
+            <section class="photo-page-heading"><span class="photo-eyebrow">L'atelier — Expérimenter librement</span><h1>À vous de créer<br><span>votre histoire.</span></h1><p class="gallery-intro">Importez une image, jouez avec les couleurs et les filtres, puis téléchargez le résultat.</p></section>
             <div class="editor-container">
                 <div class="upload-section">
                     <div class="upload-area" id="uploadArea">
                         <i class="fas fa-cloud-upload-alt"></i>
-                        <p>Glissez-déposez une image ici ou cliquez pour sélectionner</p>
+                        <strong>Déposez votre plus belle image ici.</strong>
+                        <p>Glissez-déposez votre photo ou cliquez pour parcourir vos fichiers.</p>
+                        <span class="photo-upload-hint">JPEG, PNG ou WebP</span>
                         <input type="file" id="imageInput" accept="image/*" hidden>
                     </div>
                 </div>
@@ -136,13 +139,13 @@
         </main>
 
         <footer class="main-footer">
-            <p>&copy; 2024 Ma Galerie Photos - Tous droits réservés</p>
+            <a href="index.html" class="photo-footer-brand">Fayed<span>.</span></a><p>Photographies et instants choisis avec attention.</p><span>© 2026 Fayed Amourani</span>
         </footer>
     </div>
     <script src="js/theme.js"></script>
     <script src="js/personnalisation.js"></script>
     <script src="js/ui-behavior.js"></script>
+    <script src="js/redesign.js?v=journal-20260825"></script>
 </body>
 </html>
-
 
