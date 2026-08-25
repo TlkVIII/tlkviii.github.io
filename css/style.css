@@ -5893,6 +5893,52 @@ body.portfolio-premium {
     font-size: 11px;
 }
 
+.portfolio-premium .cv-qr-card {
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    align-items: center;
+    gap: 12px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+}
+
+.portfolio-premium .cv-qr-card > img {
+    width: 73px;
+    height: 73px;
+    flex: 0 0 73px;
+    object-fit: contain;
+    background: #ffffff;
+    border-radius: 9px;
+}
+
+.portfolio-premium .cv-qr-card > div {
+    display: grid;
+    min-width: 0;
+    gap: 4px;
+}
+
+.portfolio-premium .cv-qr-card > div > span {
+    color: var(--light-text);
+    font-size: 9px;
+}
+
+.portfolio-premium .cv-qr-card > div > strong {
+    color: var(--text-color);
+    font-size: 12px;
+}
+
+.portfolio-premium .cv-qr-card > div > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--primary-color);
+    font-size: 9px;
+    font-weight: 700;
+}
+
 .portfolio-premium .cv-contact-link {
     display: inline-flex;
     margin-top: 23px;
@@ -6040,6 +6086,12 @@ body.portfolio-premium {
 
     .portfolio-premium .cv-actions {
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-premium .cv-qr-card > img {
+        width: 65px;
+        height: 65px;
+        flex-basis: 65px;
     }
 
     .portfolio-premium .cv-preview-shell {

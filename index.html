@@ -16,7 +16,8 @@
     <link rel="icon" type="image/jpeg" href="images/logo portfolio AMOURANI Fayed.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/style.css?v=projets-cv-mobile-20260825">
+    <link rel="stylesheet" href="css/style.css?v=analytics-qr-20260825">
+    <link rel="stylesheet" href="css/analytics.css?v=analytics-qr-20260825">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -198,8 +199,17 @@
                     </div>
 
                     <div class="cv-actions">
-                        <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ouvrir en plein écran <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        <a href="cv/cv.pdf" download="CV_Fayed_AMOURANI.pdf" class="btn btn-outline"><i class="fas fa-download"></i> Télécharger le CV</a>
+                        <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary" data-analytics-event="cv_open">Ouvrir en plein écran <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        <a href="cv/cv.pdf" download="CV_Fayed_AMOURANI.pdf" class="btn btn-outline" data-analytics-event="cv_download"><i class="fas fa-download"></i> Télécharger le CV</a>
+                    </div>
+
+                    <div class="cv-qr-card">
+                        <img src="images/qr-code-portfolio-cv.png" alt="QR code permettant d'accéder au portfolio de Fayed Amourani" loading="lazy">
+                        <div>
+                            <span>Portfolio à partager</span>
+                            <strong>Scanner le QR code</strong>
+                            <a href="images/qr-code-portfolio-cv.png" download="QR-code-portfolio-Fayed-Amourani.png" data-analytics-event="qr_download">Télécharger le QR code <i class="fas fa-arrow-down"></i></a>
+                        </div>
                     </div>
 
                     <a href="#contact" class="cv-contact-link">Une opportunité à me proposer ? <i class="fas fa-arrow-right"></i></a>
@@ -1095,6 +1105,7 @@
                 </div>
                 <p>Conçu et développé avec passion à Montpellier.</p>
                 <div class="footer-socials"><a href="https://github.com/TlkVIII" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="https://www.linkedin.com/in/fayed-amourani-62749031b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></div>
+                <button type="button" class="analytics-preferences-link" data-analytics-preferences>Gérer mes préférences cookies</button>
                 <p class="footer-copyright">© <span id="current-year">2026</span> Fayed Amourani. Tous droits réservés.</p>
             </div>
         </div>
@@ -1106,7 +1117,8 @@
     </a>
 
     <!-- Scripts -->
-    <script src="js/main.js?v=projets-cv-mobile-20260825"></script>
+    <script src="js/main.js?v=analytics-qr-20260825"></script>
+    <script src="js/analytics.js?v=analytics-qr-20260825"></script>
     <script src="js/back-to-top.js"></script>
 </body>
 </html> 

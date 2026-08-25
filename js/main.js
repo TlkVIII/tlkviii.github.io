@@ -325,6 +325,15 @@ if (contactForm) {
             feedback.textContent =
                 "Votre message a bien été envoyé. Merci !";
             feedback.dataset.state = "success";
+
+            if (
+                typeof window.gtag === "function" &&
+                window["ga-disable-G-RXJNW6WN37"] !== true
+            ) {
+                window.gtag("event", "contact_message_sent", {
+                    attachment_count: attachments.length
+                });
+            }
         } catch (error) {
             console.error("Erreur lors de l'envoi du formulaire :", error);
             feedback.textContent = error.message ||
