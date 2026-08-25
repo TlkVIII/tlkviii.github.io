@@ -3093,3 +3093,59 @@ body.shop-premium .shop-checkout-note {
         border-left: 0;
     }
 }
+
+/* Bouton de thème compact, intégré à droite dans la navigation. */
+body.shop-premium .user-actions {
+    display: flex !important;
+    margin-left: auto;
+    align-items: center;
+    gap: 8px;
+}
+
+body.shop-premium .theme-toggle-btn.theme-toggle-nav {
+    position: static !important;
+    inset: auto !important;
+    display: grid !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 42px !important;
+    min-height: 42px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    place-items: center;
+    background: var(--atelier-surface-soft) !important;
+    border: 1px solid var(--atelier-border) !important;
+    border-radius: 13px !important;
+    box-shadow: none !important;
+    color: var(--atelier-text) !important;
+    cursor: pointer;
+    font-size: 14px !important;
+    line-height: 1;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease !important;
+}
+
+body.shop-premium .theme-toggle-btn.theme-toggle-nav:hover {
+    background: var(--atelier-panel) !important;
+    color: var(--atelier-accent) !important;
+    transform: translateY(-2px);
+}
+
+body.shop-premium .theme-toggle-btn.theme-toggle-nav:focus-visible {
+    outline: 2px solid var(--atelier-accent);
+    outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+    body.shop-premium .user-actions {
+        gap: 6px;
+    }
+
+    body.shop-premium .theme-toggle-btn.theme-toggle-nav {
+        width: 38px !important;
+        min-width: 38px !important;
+        height: 38px !important;
+        min-height: 38px !important;
+        border-radius: 11px !important;
+        font-size: 13px !important;
+    }
+}

@@ -8,12 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
     body.classList.add(`theme-${mode}`);
 
     const button = document.createElement('button');
-    button.className = 'theme-toggle-btn';
+    button.className = 'theme-toggle-btn theme-toggle-nav';
     button.type = 'button';
+    button.innerHTML = '<i class="fas fa-moon" aria-hidden="true"></i>';
 
     const updateLabel = () => {
         const isNight = body.classList.contains('theme-night');
-        button.textContent = isNight ? 'Mode Jour' : 'Mode Nuit';
+        const label = isNight ? 'Activer le mode jour' : 'Activer le mode nuit';
+        const icon = button.querySelector('i');
+
+        button.setAttribute('aria-label', label);
+        button.setAttribute('title', label);
+
+        if (icon) {
+            icon.className = isNight ? 'fas fa-sun' : 'fas fa-moon';
+        }
     };
 
     button.addEventListener('click', function () {
@@ -25,5 +34,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     updateLabel();
-    document.body.appendChild(button);
+    const userActions = document.querySelector('.user-actions');
+
+    if (userActions) {
+        userActions.insertBefore(button, userActions.firstChild);
+    } else {
+        document.body.appendChild(button);
+    }
 });
