@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez SkillUp, une application web et mobile d'apprentissage gamifié développée par Fayed Amourani avec React Native, Expo, TypeScript, Node.js et MySQL.">
+    <meta name="theme-color" content="#090c17">
+    <title>SkillUp — Projet de Fayed Amourani</title>
+    <script>try{document.documentElement.setAttribute("data-theme",localStorage.getItem("theme")||"dark")}catch(error){document.documentElement.setAttribute("data-theme","dark")}</script>
+    <link rel="icon" type="image/jpeg" href="../images/logo portfolio AMOURANI Fayed.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/project-details.css?v=projets-cv-20260825">
+</head>
+<body class="project-skillup">
+    <nav class="detail-nav" aria-label="Navigation du projet">
+        <a href="../index.html" class="detail-brand" aria-label="Retour au portfolio de Fayed Amourani"><span class="detail-monogram">FA</span><span class="detail-brand-name">Fayed<span>.</span></span></a>
+        <div class="detail-nav-actions">
+            <a href="../index.html#projets" class="detail-nav-link"><i class="fas fa-arrow-left"></i><span class="nav-back-label">Tous les projets</span></a>
+            <a href="../index.html#contact" class="detail-nav-link">Contact</a>
+            <button class="detail-theme-toggle" type="button" aria-label="Changer le thème"><i class="fas fa-sun"></i></button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="project-hero detail-container">
+            <div class="breadcrumb"><a href="../index.html">Accueil</a><i class="fas fa-chevron-right"></i><a href="../index.html#projets">Projets</a><i class="fas fa-chevron-right"></i><span>SkillUp</span></div>
+            <span class="project-pill"><i class="fas fa-bolt"></i> Application web & mobile</span>
+            <h1>Skill<span>Up.</span></h1>
+            <p class="project-intro">Une application d'apprentissage gamifié qui transforme la progression en expérience motivante, accessible sur mobile comme sur le web.</p>
+            <div class="hero-actions">
+                <a href="https://tlkviii-skillup.expo.app" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-primary">Tester l'application <i class="fas fa-arrow-up-right-from-square"></i></a>
+                <a href="#fonctionnalites" class="detail-button detail-button-secondary">Explorer le projet <i class="fas fa-arrow-down"></i></a>
+            </div>
+            <div class="project-meta-grid">
+                <div class="meta-item"><span>Type de projet</span><strong>Application multiplateforme</strong></div>
+                <div class="meta-item"><span>Mon rôle</span><strong>Conception & développement</strong></div>
+                <div class="meta-item"><span>Technologies</span><strong>Expo, TypeScript, Node.js</strong></div>
+                <div class="meta-item"><span>Mise en ligne</span><strong>Expo Web & Railway</strong></div>
+            </div>
+            <div class="project-stage stage-skillup" aria-label="Aperçu illustré des fonctionnalités de SkillUp">
+                <div class="skillup-preview">
+                    <div class="skillup-preview-main">
+                        <div class="skillup-preview-brand"><i class="fas fa-bolt"></i> Skill<span>Up</span></div>
+                        <div><h2>Apprendre, progresser, recommencer.</h2><p>Quiz, exercices et défis réunis dans un parcours motivant.</p><div class="skillup-progress" aria-hidden="true"><span></span></div></div>
+                    </div>
+                    <div class="skillup-preview-card"><i class="fas fa-trophy"></i><strong>Quiz interactifs</strong><p>Tester ses connaissances.</p></div>
+                    <div class="skillup-preview-card"><i class="fas fa-fire"></i><strong>Défis & badges</strong><p>Progresser au quotidien.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-section detail-container" id="presentation">
+            <div class="detail-section-heading"><span class="section-label">01 — Le projet</span><h2>Apprendre sans perdre sa motivation.</h2><p>Une application pensée pour rendre l'apprentissage plus engageant, plus concret et plus régulier.</p></div>
+            <div class="overview-grid">
+                <div class="overview-copy"><p>SkillUp est une application web et mobile qui rassemble plusieurs formats d'apprentissage dans une seule expérience. L'utilisateur peut créer un compte, répondre à des quiz, réaliser des exercices et suivre sa progression.</p><p>Le projet associe une interface React Native compatible avec le navigateur à une API Node.js et une base de données MySQL. Les comptes, les résultats et la progression sont ainsi conservés en ligne.</p></div>
+                <aside class="overview-callout"><strong><i class="fas fa-bullseye"></i> Objectifs du projet</strong><ul><li>Proposer une expérience cohérente sur mobile et sur le web.</li><li>Encourager l'apprentissage avec des défis, badges et classements.</li><li>Synchroniser les données utilisateur avec un serveur distant.</li><li>Publier une version accessible directement depuis un navigateur.</li></ul></aside>
+            </div>
+        </section>
+
+        <section class="detail-section detail-container" id="fonctionnalites">
+            <div class="detail-section-heading"><span class="section-label">02 — Fonctionnalités</span><h2>Une progression qui donne envie.</h2><p>Chaque fonctionnalité participe à une expérience d'apprentissage simple à prendre en main.</p></div>
+            <div class="features-grid">
+                <article class="feature-card"><span class="feature-icon"><i class="fas fa-user-shield"></i></span><h3>Comptes utilisateurs</h3><p>Inscription et connexion permettant à chacun de retrouver son espace et sa progression.</p></article>
+                <article class="feature-card"><span class="feature-icon"><i class="fas fa-circle-question"></i></span><h3>Quiz interactifs</h3><p>Questionnaires pour évaluer ses connaissances et visualiser ses résultats.</p></article>
+                <article class="feature-card"><span class="feature-icon"><i class="fas fa-laptop-code"></i></span><h3>Exercices pratiques</h3><p>Mise en application des notions découvertes dans les différents contenus.</p></article>
+                <article class="feature-card"><span class="feature-icon"><i class="fas fa-fire-flame-curved"></i></span><h3>Défis quotidiens</h3><p>Objectifs réguliers pour encourager la pratique et entretenir sa motivation.</p></article>
+                <article class="feature-card"><span class="feature-icon"><i class="fas fa-medal"></i></span><h3>Badges & classement</h3><p>Récompenses et classement qui rendent la progression plus visible et stimulante.</p></article>
+                <article class="feature-card"><span class="feature-icon"><i class="fas fa-cloud-arrow-up"></i></span><h3>Progression en ligne</h3><p>Synchronisation des données avec une API et une base de données distantes.</p></article>
+            </div>
+        </section>
+
+        <section class="detail-section detail-container">
+            <div class="detail-section-heading"><span class="section-label">03 — Technologies</span><h2>Une application complète, du front au serveur.</h2></div>
+            <div class="stack-layout">
+                <article class="stack-group"><h3>Application</h3><div class="stack-tags"><span>React Native</span><span>Expo</span><span>Expo Router</span><span>TypeScript</span></div></article>
+                <article class="stack-group"><h3>Serveur & données</h3><div class="stack-tags"><span>Node.js</span><span>API</span><span>MySQL</span></div></article>
+                <article class="stack-group"><h3>Déploiement</h3><div class="stack-tags"><span>Expo Web</span><span>Railway</span><span>Git</span><span>GitHub</span></div></article>
+            </div>
+        </section>
+
+        <section class="detail-section detail-container">
+            <div class="detail-section-heading"><span class="section-label">04 — Défis techniques</span><h2>Les problèmes rencontrés, et leurs solutions.</h2></div>
+            <div class="challenge-grid">
+                <article class="challenge-card"><span class="challenge-index">01</span><h3>Compatibilité web et mobile</h3><p>Adapter une application React Native pour qu'elle soit également utilisable dans un navigateur.<span class="challenge-solution">Solution : configuration d'Expo Web et adaptation des composants au fonctionnement multiplateforme.</span></p></article>
+                <article class="challenge-card"><span class="challenge-index">02</span><h3>Persistance de la progression</h3><p>Éviter que les comptes et les résultats disparaissent entre deux connexions.<span class="challenge-solution">Solution : liaison de l'application à une API Node.js et à une base de données MySQL.</span></p></article>
+                <article class="challenge-card"><span class="challenge-index">03</span><h3>Accès permanent à l'application</h3><p>Rendre le projet consultable sans démarrer manuellement un serveur de développement.<span class="challenge-solution">Solution : publication de la version web et hébergement du serveur sur Railway.</span></p></article>
+            </div>
+        </section>
+
+        <section class="project-closing detail-container"><span class="section-label">Prêt à découvrir SkillUp ?</span><h2>Le projet est accessible en ligne.</h2><p>Testez l'application directement depuis votre navigateur ou échangeons autour de sa conception.</p><div class="closing-actions"><a href="https://tlkviii-skillup.expo.app" target="_blank" rel="noopener noreferrer" class="detail-button detail-button-primary">Ouvrir SkillUp <i class="fas fa-arrow-up-right-from-square"></i></a><a href="../index.html#contact" class="detail-button detail-button-secondary">Me contacter <i class="fas fa-arrow-right"></i></a></div></section>
+    </main>
+
+    <footer class="detail-footer detail-container"><span>© Fayed Amourani — Développeur web & mobile</span><a href="ecommerce.html">Projet suivant : E-commerce <i class="fas fa-arrow-right"></i></a></footer>
+    <script src="../js/project-details.js?v=projets-cv-20260825"></script>
+</body>
+</html>
