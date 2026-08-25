@@ -38,6 +38,7 @@ html {
 body {
     min-width: 320px;
     margin: 0;
+    overflow-x: hidden;
     background: var(--detail-bg);
     color: var(--detail-text);
     font-family: var(--detail-font);
@@ -620,6 +621,42 @@ img {
     color: var(--detail-accent);
 }
 
+.project-scroll-top {
+    position: fixed;
+    z-index: 20;
+    right: 26px;
+    bottom: 26px;
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    background: var(--detail-accent);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 15px;
+    box-shadow: 0 14px 34px rgba(var(--detail-accent-rgb), 0.28);
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+}
+
+.project-scroll-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.project-scroll-top:hover {
+    transform: translateY(-4px);
+}
+
+.project-scroll-top:focus-visible {
+    outline: 2px solid var(--detail-text);
+    outline-offset: 4px;
+}
+
 .project-ecommerce {
     --detail-accent: #30b894;
     --detail-accent-rgb: 48, 184, 148;
@@ -775,6 +812,14 @@ img {
         align-items: flex-start;
         flex-direction: column;
         gap: 11px;
+    }
+
+    .project-scroll-top {
+        right: 14px;
+        bottom: 14px;
+        width: 43px;
+        height: 43px;
+        border-radius: 13px;
     }
 }
 

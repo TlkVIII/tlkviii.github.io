@@ -215,10 +215,6 @@ nav.scrolled {
     transition: var(--transition);
 }
 
-.dropdown:hover > a i {
-    transform: rotate(180deg);
-}
-
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -244,10 +240,16 @@ nav.scrolled {
     box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
 }
 
-.dropdown:hover .dropdown-menu {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
+@media (hover: hover) and (min-width: 981px) {
+    .dropdown:hover > a i {
+        transform: rotate(180deg);
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
 .dropdown-menu li {
@@ -5769,7 +5771,7 @@ body.portfolio-premium {
 
 .portfolio-premium .cv-section {
     overflow: hidden;
-    padding-top: 35px;
+    padding-top: var(--section-spacing);
 }
 
 .portfolio-premium .cv-showcase {
@@ -5973,6 +5975,25 @@ body.portfolio-premium {
 }
 
 @media (max-width: 980px) {
+    .portfolio-premium .dropdown > a {
+        cursor: pointer;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .portfolio-premium .dropdown:not(.open) .dropdown-menu {
+        max-height: 0;
+        margin-top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    .portfolio-premium .dropdown:not(.open) > a > i {
+        transform: rotate(0deg);
+    }
+
     .portfolio-premium .cv-showcase {
         grid-template-columns: 1fr;
     }

@@ -37,4 +37,24 @@
             // Le thème reste utilisable lorsque le stockage est indisponible.
         }
     });
+
+    const scrollTopButton = document.querySelector(".project-scroll-top");
+
+    if (!scrollTopButton) {
+        return;
+    }
+
+    function updateScrollTopVisibility() {
+        scrollTopButton.classList.toggle("is-visible", window.scrollY > 300);
+    }
+
+    scrollTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+
+    window.addEventListener("scroll", updateScrollTopVisibility, { passive: true });
+    updateScrollTopVisibility();
 })();

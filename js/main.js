@@ -74,10 +74,26 @@ toggleMenu.addEventListener('click', () => {
     const isOpen = navLinks.classList.contains('active');
     toggleMenu.setAttribute('aria-expanded', String(isOpen));
     toggleMenu.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+
+    if (!isOpen) {
+        closeMobileDropdowns();
+    }
 });
 
 // Sous-menus mobile (toggle au clic)
 const navDropdowns = document.querySelectorAll('.nav-links .dropdown');
+
+function closeMobileDropdowns() {
+    navDropdowns.forEach(dropdown => {
+        dropdown.classList.remove('open');
+
+        const trigger = dropdown.querySelector(':scope > a');
+        if (trigger) {
+            trigger.setAttribute('aria-expanded', 'false');
+        }
+    });
+}
+
 navDropdowns.forEach(dropdown => {
     const trigger = dropdown.querySelector(':scope > a');
     if (!trigger) return;
@@ -86,10 +102,12 @@ navDropdowns.forEach(dropdown => {
         if (window.innerWidth > mobileNavigationBreakpoint) return;
         e.preventDefault();
 
-        const isOpen = dropdown.classList.contains('open');
-        navDropdowns.forEach(item => item.classList.remove('open'));
-        if (!isOpen) {
+        const shouldOpen = !dropdown.classList.contains('open');
+        closeMobileDropdowns();
+
+        if (shouldOpen) {
             dropdown.classList.add('open');
+            trigger.setAttribute('aria-expanded', 'true');
         }
     });
 });
@@ -106,7 +124,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         toggleMenu.classList.remove('active');
         toggleMenu.setAttribute('aria-expanded', 'false');
         toggleMenu.setAttribute('aria-label', 'Ouvrir le menu');
-        navDropdowns.forEach(item => item.classList.remove('open'));
+        closeMobileDropdowns();
     });
 });
 

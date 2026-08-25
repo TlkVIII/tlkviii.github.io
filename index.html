@@ -16,7 +16,7 @@
     <link rel="icon" type="image/jpeg" href="images/logo portfolio AMOURANI Fayed.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/style.css?v=projets-cv-20260825">
+    <link rel="stylesheet" href="css/style.css?v=projets-cv-mobile-20260825">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -42,23 +42,23 @@
         <ul class="nav-links">
             <li><a href="#accueil" class="active">Accueil</a></li>
             <li class="dropdown">
-                <a href="#qui-suis-je">Qui suis-je <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
+                <a href="#qui-suis-je" aria-expanded="false" aria-controls="menu-qui-suis-je">Qui suis-je <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu" id="menu-qui-suis-je">
                     <li class="mobile-only"><a href="#qui-suis-je">Qui suis-je</a></li>
                     <li><a href="#a-propos">À propos</a></li>
                     <li><a href="#presentation-bts">BTS SIO</a></li>
                 </ul>
             </li>
+            <li><a href="#cv">Mon CV</a></li>
             <li class="dropdown">
-                <a href="#parcours">Parcours <i class="fas fa-chevron-down"></i></a>
-                <ul class="dropdown-menu">
+                <a href="#parcours" aria-expanded="false" aria-controls="menu-parcours">Parcours <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-menu" id="menu-parcours">
                     <li class="mobile-only"><a href="#parcours">Parcours</a></li>
                     <li><a href="#veille">Veille</a></li>
                     <li><a href="#competences">Compétences</a></li>
                 </ul>
             </li>
             <li><a href="#projets">Projets</a></li>
-            <li><a href="#cv">Mon CV</a></li>
             <li><a href="#showreel">Showreel</a></li>
             <li><a href="#contact" class="nav-contact-link">Contact <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
             <li class="theme-toggle-container"><button class="theme-toggle" type="button" aria-label="Changer le thème"><i class="fas fa-moon"></i></button></li>
@@ -83,7 +83,6 @@
                 <p class="hero-description fade-in delay-2">Je conçois des expériences numériques modernes, utiles et accessibles. Actuellement à la recherche d'une alternance en développement web à Montpellier.</p>
                 <div class="buttons fade-in delay-3">
                     <a href="#projets" class="btn btn-primary">Découvrir mes projets <i class="fas fa-arrow-right"></i></a>
-                    <a href="cv/cv.pdf" class="btn btn-outline" download="CV_Fayed_AMOURANI.pdf"><i class="fas fa-download"></i> Télécharger mon CV</a>
                 </div>
                 <div class="hero-meta fade-in delay-3">
                     <span><i class="fas fa-location-dot"></i> Montpellier</span>
@@ -176,11 +175,53 @@
         </div>
     </section>
 
+    <!-- Section CV -->
+    <section id="cv" class="section cv-section bg-alt">
+        <div class="container">
+            <div class="section-heading reveal">
+                <span class="section-kicker"><span>02</span> Mon CV</span>
+                <h2 class="section-title">Mon parcours,<br><span>en un coup d'œil.</span></h2>
+                <p>Consultez mon curriculum vitæ directement ici ou téléchargez-le pour le garder à portée de main.</p>
+            </div>
+
+            <div class="cv-showcase reveal">
+                <div class="cv-showcase-copy">
+                    <span class="cv-availability"><span></span> Disponible pour une alternance</span>
+                    <h3>Fayed<br><span>Amourani.</span></h3>
+                    <p class="cv-role">Développeur web & mobile</p>
+                    <p class="cv-description">Étudiant en BTS SIO option SLAM, passionné par les interfaces modernes, le développement d'applications et les projets utiles.</p>
+
+                    <div class="cv-profile-highlights">
+                        <div><span><i class="fas fa-location-dot"></i></span><strong>Montpellier</strong></div>
+                        <div><span><i class="fas fa-graduation-cap"></i></span><strong>BTS SIO SLAM</strong></div>
+                        <div><span><i class="fas fa-code"></i></span><strong>Web & mobile</strong></div>
+                    </div>
+
+                    <div class="cv-actions">
+                        <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ouvrir en plein écran <i class="fas fa-arrow-up-right-from-square"></i></a>
+                        <a href="cv/cv.pdf" download="CV_Fayed_AMOURANI.pdf" class="btn btn-outline"><i class="fas fa-download"></i> Télécharger le CV</a>
+                    </div>
+
+                    <a href="#contact" class="cv-contact-link">Une opportunité à me proposer ? <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="cv-preview-shell">
+                    <div class="cv-preview-toolbar">
+                        <div class="cv-preview-file"><i class="fas fa-file-pdf"></i><span>CV_Fayed_AMOURANI.pdf</span></div>
+                        <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le CV en plein écran"><i class="fas fa-up-right-and-down-left-from-center"></i></a>
+                    </div>
+                    <iframe src="cv/cv.pdf#view=FitH" title="Curriculum vitæ de Fayed Amourani" loading="lazy"></iframe>
+                    <p class="cv-preview-fallback">L'aperçu ne s'affiche pas ? <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CV</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section Qui suis-je -->
     <section id="qui-suis-je" class="section bg-alt">
         <div class="container">
             <div class="section-heading reveal">
-                <span class="section-kicker"><span>02</span> Ma personnalité</span>
+                <span class="section-kicker"><span>03</span> Ma personnalité</span>
                 <h2 class="section-title">Bien plus<br><span>que quelques lignes de code.</span></h2>
                 <p>Ce qui guide ma manière d'apprendre, de travailler et d'évoluer.</p>
             </div>
@@ -281,7 +322,7 @@
     <section id="presentation-bts" class="section bg-alt">
         <div class="container">
             <div class="section-heading reveal">
-                <span class="section-kicker"><span>03</span> Ma formation</span>
+                <span class="section-kicker"><span>04</span> Ma formation</span>
                 <h2 class="section-title">BTS SIO,<br><span>spécialité développement.</span></h2>
                 <p>Une formation complète pour concevoir les solutions numériques de demain.</p>
             </div>
@@ -362,7 +403,7 @@
     <section id="veille" class="section">
         <div class="container">
             <div class="section-heading reveal">
-                <span class="section-kicker"><span>04</span> Veille & curiosité</span>
+                <span class="section-kicker"><span>05</span> Veille & curiosité</span>
                 <h2 class="section-title">Comprendre ce qui<br><span>fait avancer la tech.</span></h2>
                 <p>J'explore les technologies et les méthodes qui transforment nos usages.</p>
             </div>
@@ -428,7 +469,7 @@
     <section id="parcours" class="section bg-light">
         <div class="container">
             <div class="section-heading reveal">
-                <span class="section-kicker"><span>05</span> Mon parcours</span>
+                <span class="section-kicker"><span>06</span> Mon parcours</span>
                 <h2 class="section-title">Une progression<br><span>construite sur le terrain.</span></h2>
                 <p>Formations, expériences professionnelles et projets qui ont façonné mon profil.</p>
             </div>
@@ -652,7 +693,7 @@
     <section id="competences" class="section bg-light">
         <div class="container">
             <div class="section-heading reveal">
-                <span class="section-kicker"><span>06</span> Compétences</span>
+                <span class="section-kicker"><span>07</span> Compétences</span>
                 <h2 class="section-title">Ma boîte à outils<br><span>pour donner vie aux idées.</span></h2>
                 <p>Des technologies que j'utilise pour concevoir, développer et mettre en ligne.</p>
             </div>
@@ -793,7 +834,7 @@
     <section id="projets" class="section">
         <div class="container">
             <div class="section-heading reveal">
-                <span class="section-kicker"><span>07</span> Projets sélectionnés</span>
+                <span class="section-kicker"><span>08</span> Projets sélectionnés</span>
                 <h2 class="section-title">Des idées devenues<br><span>des expériences concrètes.</span></h2>
                 <p>Une sélection de réalisations web et mobile accessibles en ligne.</p>
             </div>
@@ -889,48 +930,6 @@
                             <a href="./projetperso/index.html" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline project-live-link">Démo <i class="fas fa-arrow-up-right-from-square"></i></a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section CV -->
-    <section id="cv" class="section cv-section">
-        <div class="container">
-            <div class="section-heading reveal">
-                <span class="section-kicker"><span>08</span> Mon CV</span>
-                <h2 class="section-title">Mon parcours,<br><span>en un coup d'œil.</span></h2>
-                <p>Consultez mon curriculum vitæ directement ici ou téléchargez-le pour le garder à portée de main.</p>
-            </div>
-
-            <div class="cv-showcase reveal">
-                <div class="cv-showcase-copy">
-                    <span class="cv-availability"><span></span> Disponible pour une alternance</span>
-                    <h3>Fayed<br><span>Amourani.</span></h3>
-                    <p class="cv-role">Développeur web & mobile</p>
-                    <p class="cv-description">Étudiant en BTS SIO option SLAM, passionné par les interfaces modernes, le développement d'applications et les projets utiles.</p>
-
-                    <div class="cv-profile-highlights">
-                        <div><span><i class="fas fa-location-dot"></i></span><strong>Montpellier</strong></div>
-                        <div><span><i class="fas fa-graduation-cap"></i></span><strong>BTS SIO SLAM</strong></div>
-                        <div><span><i class="fas fa-code"></i></span><strong>Web & mobile</strong></div>
-                    </div>
-
-                    <div class="cv-actions">
-                        <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ouvrir en plein écran <i class="fas fa-arrow-up-right-from-square"></i></a>
-                        <a href="cv/cv.pdf" download="CV_Fayed_AMOURANI.pdf" class="btn btn-outline"><i class="fas fa-download"></i> Télécharger le CV</a>
-                    </div>
-
-                    <a href="#contact" class="cv-contact-link">Une opportunité à me proposer ? <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="cv-preview-shell">
-                    <div class="cv-preview-toolbar">
-                        <div class="cv-preview-file"><i class="fas fa-file-pdf"></i><span>CV_Fayed_AMOURANI.pdf</span></div>
-                        <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le CV en plein écran"><i class="fas fa-up-right-and-down-left-from-center"></i></a>
-                    </div>
-                    <iframe src="cv/cv.pdf#view=FitH" title="Curriculum vitæ de Fayed Amourani" loading="lazy"></iframe>
-                    <p class="cv-preview-fallback">L'aperçu ne s'affiche pas ? <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CV</a></p>
                 </div>
             </div>
         </div>
@@ -1107,7 +1106,7 @@
     </a>
 
     <!-- Scripts -->
-    <script src="js/main.js?v=portfolio-premium-aemm-20260825"></script>
+    <script src="js/main.js?v=projets-cv-mobile-20260825"></script>
     <script src="js/back-to-top.js"></script>
 </body>
 </html> 
