@@ -119,18 +119,6 @@
                 field.appendChild(particle);
             }
 
-            if (!compactScreen) {
-                for (let index = 0; index < 3; index += 1) {
-                    const star = document.createElement("span");
-
-                    star.className = "motion-shooting-star";
-                    star.style.setProperty("--shooting-top", String(14 + index * 27) + "%");
-                    star.style.setProperty("--shooting-delay", String(index * 3.1 + 0.8) + "s");
-                    star.style.setProperty("--shooting-duration", String(7.5 + index * 1.7) + "s");
-                    field.appendChild(star);
-                }
-            }
-
             host.appendChild(field);
         });
     }
