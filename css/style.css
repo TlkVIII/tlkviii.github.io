@@ -5771,7 +5771,138 @@ body.portfolio-premium {
 
 .portfolio-premium .cv-section {
     overflow: hidden;
-    padding-top: var(--section-spacing);
+    padding: clamp(42px, 6vw, 76px) 0;
+}
+
+.portfolio-premium .cv-accordion {
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 92% 0%, rgba(113, 99, 255, 0.13), transparent 34%),
+        var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    box-shadow: var(--card-shadow);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-premium .cv-accordion:hover,
+.portfolio-premium .cv-accordion[open] {
+    border-color: rgba(113, 99, 255, 0.32);
+    box-shadow: var(--hover-shadow);
+}
+
+.portfolio-premium .cv-accordion-summary {
+    display: flex;
+    min-height: 151px;
+    padding: 28px 34px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    list-style: none;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.portfolio-premium .cv-accordion-summary::-webkit-details-marker {
+    display: none;
+}
+
+.portfolio-premium .cv-accordion-summary::marker {
+    content: "";
+}
+
+.portfolio-premium .cv-accordion-summary:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: -5px;
+}
+
+.portfolio-premium .cv-accordion-intro {
+    display: grid;
+    min-width: 0;
+    gap: 7px;
+}
+
+.portfolio-premium .cv-accordion-title {
+    color: var(--text-color);
+    font-family: var(--font-display);
+    font-size: clamp(21px, 3.1vw, 31px);
+    font-weight: 700;
+    letter-spacing: -1.1px;
+    line-height: 1.2;
+}
+
+.portfolio-premium .cv-accordion-title > span {
+    background: linear-gradient(110deg, var(--primary-color), var(--secondary-color));
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.portfolio-premium .cv-accordion-description {
+    color: var(--light-text);
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.portfolio-premium .cv-accordion-action {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 12px;
+}
+
+.portfolio-premium .cv-accordion-state {
+    color: var(--light-text);
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.portfolio-premium .cv-accordion-chevron {
+    display: grid;
+    width: 43px;
+    height: 43px;
+    place-items: center;
+    background: var(--surface-muted);
+    border: 1px solid var(--border-color);
+    border-radius: 13px;
+    color: var(--primary-color);
+    font-size: 13px;
+    transition:
+        transform 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.portfolio-premium .cv-accordion-summary:hover .cv-accordion-chevron {
+    background: rgba(113, 99, 255, 0.1);
+    border-color: rgba(113, 99, 255, 0.32);
+}
+
+.portfolio-premium .cv-accordion[open] .cv-accordion-chevron {
+    transform: rotate(180deg);
+}
+
+.portfolio-premium .cv-accordion-panel {
+    padding: 0 11px 11px;
+}
+
+.portfolio-premium .cv-accordion[open] .cv-accordion-panel {
+    animation: cvAccordionReveal 0.42s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cvAccordionReveal {
+    from {
+        opacity: 0;
+        transform: translateY(-9px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .portfolio-premium .cv-showcase {
@@ -6048,6 +6179,11 @@ body.portfolio-premium {
         padding: 31px;
     }
 
+    .portfolio-premium .cv-accordion-summary {
+        min-height: 137px;
+        padding: 24px 27px;
+    }
+
     .portfolio-premium .cv-actions {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -6072,6 +6208,53 @@ body.portfolio-premium {
         padding: 7px;
         border-radius: 21px;
         gap: 7px;
+    }
+
+    .portfolio-premium .cv-section {
+        padding: 38px 0;
+    }
+
+    .portfolio-premium .cv-accordion {
+        border-radius: 20px;
+    }
+
+    .portfolio-premium .cv-accordion-summary {
+        min-height: 124px;
+        padding: 20px 17px;
+        gap: 12px;
+    }
+
+    .portfolio-premium .cv-accordion-intro {
+        gap: 6px;
+    }
+
+    .portfolio-premium .cv-accordion-kicker {
+        font-size: 9px;
+    }
+
+    .portfolio-premium .cv-accordion-title {
+        font-size: clamp(19px, 5vw, 22px);
+        letter-spacing: -0.7px;
+    }
+
+    .portfolio-premium .cv-accordion-description {
+        max-width: 255px;
+        font-size: 10px;
+    }
+
+    .portfolio-premium .cv-accordion-state {
+        display: none;
+    }
+
+    .portfolio-premium .cv-accordion-chevron {
+        width: 37px;
+        height: 37px;
+        border-radius: 11px;
+        font-size: 11px;
+    }
+
+    .portfolio-premium .cv-accordion-panel {
+        padding: 0 7px 7px;
     }
 
     .portfolio-premium .cv-showcase-copy {
@@ -6110,5 +6293,15 @@ body.portfolio-premium {
 
     .portfolio-premium .cv-preview-file {
         font-size: 9px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .portfolio-premium .cv-accordion[open] .cv-accordion-panel {
+        animation: none;
+    }
+
+    .portfolio-premium .cv-accordion-chevron {
+        transition: none;
     }
 }

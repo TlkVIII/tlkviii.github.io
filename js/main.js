@@ -128,6 +128,42 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
+// CV repliable : consulter le parcours uniquement lorsqu'on le demande.
+const cvAccordion = document.querySelector('.cv-accordion');
+
+if (cvAccordion) {
+    const cvSummary = cvAccordion.querySelector('.cv-accordion-summary');
+    const cvState = cvAccordion.querySelector('.cv-accordion-state');
+
+    const updateCvAccordion = () => {
+        const isOpen = cvAccordion.open;
+
+        cvSummary.setAttribute('aria-expanded', String(isOpen));
+        cvState.textContent = isOpen ? 'Masquer le CV' : 'Afficher le CV';
+
+        if (isOpen) {
+            animateOnScroll();
+
+            if (
+                typeof window.gtag === 'function' &&
+                window['ga-disable-G-RXJNW6WN37'] !== true
+            ) {
+                window.gtag('event', 'cv_expand');
+            }
+        }
+    };
+
+    cvAccordion.addEventListener('toggle', updateCvAccordion);
+
+    document.querySelectorAll('a[href="#cv"]').forEach(link => {
+        link.addEventListener('click', () => {
+            cvAccordion.open = true;
+        });
+    });
+
+    updateCvAccordion();
+}
+
 // Animation des compétences
 function animateSkills() {
     skillProgressBars.forEach(bar => {

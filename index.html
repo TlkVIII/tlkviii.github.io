@@ -16,7 +16,7 @@
     <link rel="icon" type="image/jpeg" href="images/logo portfolio AMOURANI Fayed.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="css/style.css?v=analytics-qr-20260825">
+    <link rel="stylesheet" href="css/style.css?v=cv-accordeon-20260825">
     <link rel="stylesheet" href="css/analytics.css?v=analytics-qr-20260825">
     <link rel="stylesheet" href="css/motion.css?v=motion-sans-halo-20260825">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -180,13 +180,21 @@
     <!-- Section CV -->
     <section id="cv" class="section cv-section bg-alt">
         <div class="container">
-            <div class="section-heading reveal">
-                <span class="section-kicker"><span>02</span> Mon CV</span>
-                <h2 class="section-title">Mon parcours,<br><span>en un coup d'œil.</span></h2>
-                <p>Consultez mon curriculum vitæ directement ici ou téléchargez-le pour le garder à portée de main.</p>
-            </div>
+            <details class="cv-accordion reveal">
+                <summary class="cv-accordion-summary" aria-controls="cv-accordion-content" aria-expanded="false">
+                    <span class="cv-accordion-intro">
+                        <span class="section-kicker cv-accordion-kicker"><span>02</span> Mon CV</span>
+                        <span class="cv-accordion-title">Mon parcours, <span>en un coup d'œil.</span></span>
+                        <span class="cv-accordion-description">Consulter mon CV, le télécharger ou accéder au QR code.</span>
+                    </span>
+                    <span class="cv-accordion-action">
+                        <span class="cv-accordion-state">Afficher le CV</span>
+                        <span class="cv-accordion-chevron" aria-hidden="true"><i class="fas fa-chevron-down"></i></span>
+                    </span>
+                </summary>
 
-            <div class="cv-showcase reveal">
+                <div id="cv-accordion-content" class="cv-accordion-panel">
+                    <div class="cv-showcase reveal">
                 <div class="cv-showcase-copy">
                     <span class="cv-availability"><span></span> Disponible pour une alternance</span>
                     <h3>Fayed<br><span>Amourani.</span></h3>
@@ -224,7 +232,9 @@
                     <iframe src="cv/cv.pdf#view=FitH" title="Curriculum vitæ de Fayed Amourani" loading="lazy"></iframe>
                     <p class="cv-preview-fallback">L'aperçu ne s'affiche pas ? <a href="cv/cv.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CV</a></p>
                 </div>
-            </div>
+                    </div>
+                </div>
+            </details>
         </div>
     </section>
 
@@ -1118,7 +1128,7 @@
     </a>
 
     <!-- Scripts -->
-    <script src="js/main.js?v=analytics-qr-20260825"></script>
+    <script src="js/main.js?v=cv-accordeon-20260825"></script>
     <script src="js/analytics.js?v=analytics-qr-20260825"></script>
     <script src="js/motion.js?v=motion-sans-halo-20260825"></script>
     <script src="js/back-to-top.js"></script>
