@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Styles/redesign.css?v=atelier-20260825">
+    <link rel="stylesheet" href="../Styles/redesign.css?v=atelier-signature-20260825">
 </head>
-<body class="papeterie-page blue-theme-background theme-night shop-premium shop-category-page">
+<body class="papeterie-page blue-theme-background theme-day shop-premium shop-category-page">
     <header>
         <div class="top-header">
             <div class="logo">
@@ -44,6 +44,7 @@
     </header>
 
     <main class="papeterie-page">
+        <div class="shop-breadcrumb"><a href="../index.html">Accueil</a><i class="fas fa-chevron-right"></i><span>Papeterie</span></div>
         <section class="category-header">
             <div class="header-content">
                 <span class="shop-eyebrow">Collection 01 — Les idées prennent vie</span>
@@ -55,6 +56,10 @@
 
         <section id="collection" class="products-section blue-gradient-bg shop-section">
             <div class="shop-catalog-heading"><div><span class="shop-eyebrow">Nos indispensables</span><h2>Toute la papeterie</h2></div><span class="shop-product-count" data-product-count></span></div>
+            <div class="shop-catalog-toolbar">
+                <label class="shop-search-field" for="product-search"><i class="fas fa-search"></i><input id="product-search" data-product-search type="search" placeholder="Rechercher un carnet, un stylo…" autocomplete="off"><kbd>/</kbd></label>
+                <div class="shop-catalog-actions"><button class="shop-favorites-filter" data-favorites-filter type="button" aria-pressed="false"><i class="far fa-heart"></i><span>Favoris</span><span class="shop-favorites-count" data-favorites-count>0</span></button><label class="shop-sort-field" for="product-sort"><span>Trier</span><select id="product-sort" data-product-sort><option value="recommended">Recommandés</option><option value="price-asc">Prix croissants</option><option value="price-desc">Prix décroissants</option><option value="name">Nom : A à Z</option></select><i class="fas fa-chevron-down"></i></label></div>
+            </div>
             <div class="product-grid">
                 <div class="product-card">
                     <div class="image-container">
@@ -200,6 +205,7 @@
                     </div>
                 </div>
             </div>
+            <div class="shop-catalog-empty" data-catalog-empty hidden><i class="fas fa-search"></i><h3>Oups, aucun objet par ici.</h3><p>Essayez un autre mot ou affichez de nouveau toute la collection.</p><button class="cta-button secondary" data-clear-filters type="button">Réinitialiser la recherche</button></div>
         </section>
         
         <!-- Modal pour l'agrandissement des images -->
@@ -220,7 +226,7 @@
     <script src="../scripts/back-to-top.js"></script>
     <script src="../scripts/header-scroll.js"></script>
     <script src="../scripts/theme-toggle.js"></script>
-    <script src="../scripts/redesign.js?v=atelier-20260825"></script>
+    <script src="../scripts/redesign.js?v=atelier-signature-20260825"></script>
     <script>
         // Script pour la modal d'image
         function openModal(src, alt) {

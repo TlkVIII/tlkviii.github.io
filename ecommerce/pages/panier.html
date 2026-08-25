@@ -12,9 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../Styles/redesign.css?v=atelier-20260825">
+    <link rel="stylesheet" href="../Styles/redesign.css?v=atelier-signature-20260825">
 </head>
-<body class="blue-theme-background theme-night shop-premium shop-cart-page">
+<body class="blue-theme-background theme-day shop-premium shop-cart-page">
     <header>
         <div class="top-header">
             <div class="logo">
@@ -44,6 +44,7 @@
     </header>
 
     <main class="cart-page blue-gradient-bg">
+        <div class="shop-breadcrumb"><a href="../index.html">Accueil</a><i class="fas fa-chevron-right"></i><span>Mon panier</span></div>
         <div class="shop-cart-heading"><span class="shop-eyebrow">Vos futurs essentiels</span><h1>Votre <span>sélection.</span></h1><p>Les petits objets qui rendront votre quotidien plus agréable.</p></div>
         
         <div id="cart-content">
@@ -70,9 +71,11 @@
                         </div>
                     </div>
                     <button class="checkout-button">
-                        Procéder au paiement
+                        Finaliser ma commande
                         <i class="fas fa-lock"></i>
                     </button>
+                    <p class="shop-checkout-note"><i class="fas fa-shield-alt"></i> Projet de démonstration : paiement non activé.</p>
+                    <div class="shop-order-guarantees"><span><i class="fas fa-box-open"></i> Préparation soignée</span><span><i class="fas fa-lock"></i> Informations protégées</span></div>
                 </div>
             </div>
 
@@ -95,7 +98,7 @@
     <script src="../scripts/back-to-top.js"></script>
     <script src="../scripts/header-scroll.js"></script>
     <script src="../scripts/theme-toggle.js"></script>
-    <script src="../scripts/redesign.js?v=atelier-20260825"></script>
+    <script src="../scripts/redesign.js?v=atelier-signature-20260825"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             // Mettre à jour l'affichage initial du panier

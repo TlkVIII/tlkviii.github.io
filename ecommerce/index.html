@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./Styles/redesign.css?v=atelier-20260825">
+    <link rel="stylesheet" href="./Styles/redesign.css?v=atelier-signature-20260825">
     <style>
         .blue-theme-background {
             background-color: var(--background-color);
@@ -21,7 +21,7 @@
         }
     </style>
 </head>
-<body class="blue-theme-background theme-night shop-premium shop-home">
+<body class="blue-theme-background theme-day shop-premium shop-home">
     <div class="fixed-logo">
         <a href="./index.html">
             <img src="./Images/Logo.png" alt="Logo Stylo Magique" class="logo-img">
@@ -57,33 +57,36 @@
 
     <main>
         <h1 class="visually-hidden">Accueil - Stylo Magik</h1>
+        <div class="shop-announcement"><i class="fas fa-leaf"></i><span>Des essentiels choisis avec soin pour des journées qui vous ressemblent.</span><a href="#selection">Découvrir la sélection <i class="fas fa-arrow-right"></i></a></div>
         <section class="hero blue-gradient-bg shop-hero">
             <div class="hero-particles">
                 <span></span>
             </div>
             <div class="hero-content">
-                <span class="shop-eyebrow"><span></span> Papeterie & objets de bureau</span>
-                <h2 class="hero-title">Le beau commence<br>sur votre <span class="highlight">bureau.</span></h2>
-                <p>Des essentiels soigneusement choisis pour écrire, créer et travailler dans un espace qui vous ressemble.</p>
+                <span class="shop-eyebrow"><span></span> Papeterie indépendante · Montpellier</span>
+                <h2 class="hero-title">Un joli bureau,<br>de plus belles <span class="highlight">idées.</span></h2>
+                <p>Des objets bien dessinés, utiles chaque jour, choisis pour faire de votre espace de travail un endroit où l'on aime vraiment être.</p>
                 <div class="hero-buttons">
-                    <a href="#categories" class="cta-button">Découvrir la collection <i class="fas fa-arrow-right"></i></a>
-                    <a href="#selection" class="cta-button secondary">Notre sélection</a>
+                    <a href="#categories" class="cta-button">Explorer la boutique <i class="fas fa-arrow-right"></i></a>
+                    <a href="#selection" class="cta-button secondary">Voir les coups de cœur</a>
                 </div>
-                <div class="shop-hero-note"><i class="fas fa-leaf"></i> Des objets utiles, beaux et faits pour durer.</div>
+                <div class="shop-hero-note"><span class="shop-hero-avatars" aria-hidden="true"><span>M</span><span>L</span><span>S</span></span><span><strong>4,9 / 5</strong> · Des essentiels déjà adoptés.</span></div>
             </div>
             <div class="shop-hero-visual" aria-hidden="true">
                 <div class="shop-hero-halo"></div>
                 <img class="shop-hero-lamp" src="./Images/products/bureautique/lampe-bureau.png" alt="">
-                <div class="shop-hero-product-label"><span>Notre sélection</span><strong>Lampe de bureau</strong><span>29,99 €</span></div>
-                <div class="shop-hero-floating-note"><i class="fas fa-star"></i> Les essentiels du quotidien</div>
+                <img class="shop-hero-notebook" src="./Images/products/papeterie/cahier-premium.png" alt="">
+                <div class="shop-hero-product-label"><span>Notre coup de cœur</span><strong>Lampe de bureau LED</strong><span>29,99 €</span></div>
+                <div class="shop-hero-floating-note"><span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span><strong>Des objets qu'on garde.</strong></div>
+                <span class="shop-hero-edition">Édition du quotidien — 01</span>
             </div>
         </section>
 
         <div class="shop-trust-strip">
-            <span><i class="fas fa-truck-fast"></i> Livraison 24/48h</span>
-            <span><i class="fas fa-shield-heart"></i> Qualité sélectionnée</span>
-            <span><i class="fas fa-lock"></i> Paiement sécurisé</span>
-            <span><i class="fas fa-box-open"></i> Expédition soignée</span>
+            <span><i class="fas fa-truck"></i><strong>Livraison rapide</strong><small>En 24 à 48 heures</small></span>
+            <span><i class="fas fa-heart"></i><strong>Objets sélectionnés</strong><small>Pour durer longtemps</small></span>
+            <span><i class="fas fa-lock"></i><strong>Paiement protégé</strong><small>En toute sérénité</small></span>
+            <span><i class="fas fa-box-open"></i><strong>Préparé avec soin</strong><small>Depuis Montpellier</small></span>
         </div>
 
         <section id="categories" class="categories blue-gradient-bg shop-section">
@@ -95,9 +98,10 @@
                         <div class="category-overlay"></div>
                     </div>
                     <div class="category-content">
+                        <span class="shop-category-number">COLLECTION 01</span>
                         <h3>Papeterie</h3>
                         <p>Carnets, stylos et accessoires pour donner vie à vos idées.</p>
-                        <span class="category-link">Voir la collection <i class="fas fa-arrow-right"></i></span>
+                        <div class="shop-category-footer"><span>8 essentiels</span><span class="category-link">Explorer <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                 </a>
                 <a href="./pages/bureautique.html" class="category-card">
@@ -106,9 +110,10 @@
                         <div class="category-overlay"></div>
                     </div>
                     <div class="category-content">
+                        <span class="shop-category-number">COLLECTION 02</span>
                         <h3>Bureautique</h3>
                         <p>Les essentiels pour créer un espace de travail inspirant.</p>
-                        <span class="category-link">Voir la collection <i class="fas fa-arrow-right"></i></span>
+                        <div class="shop-category-footer"><span>9 essentiels</span><span class="category-link">Explorer <i class="fas fa-arrow-right"></i></span></div>
                     </div>
                 </a>
             </div>
@@ -121,6 +126,12 @@
                 <article class="product-card"><div class="image-container"><span class="shop-product-badge">Bureautique</span><img src="./Images/products/bureautique/lampe-bureau.png" alt="Lampe de bureau LED ajustable"></div><div class="product-info"><h3>Lampe LED Ajustable</h3><p class="product-reference">RÉF: LAM-LED</p><div class="price-stock-container"><span class="price">€29.99</span><span class="stock-status">En stock</span></div><button class="add-to-cart">Ajouter au panier</button></div></article>
                 <article class="product-card"><div class="image-container"><span class="shop-product-badge">Papeterie</span><img src="./Images/products/papeterie/stylos-couleur.png" alt="Ensemble de stylos colorés"></div><div class="product-info"><h3>Set de Stylos Colorés</h3><p class="product-reference">RÉF: STY-COL</p><div class="price-stock-container"><span class="price">€9.99</span><span class="stock-status">En stock</span></div><button class="add-to-cart">Ajouter au panier</button></div></article>
             </div>
+            <a class="shop-view-all" href="./pages/papeterie.html">Voir tous nos essentiels <i class="fas fa-arrow-right"></i></a>
+        </section>
+
+        <section class="shop-editorial" aria-label="Notre manière de choisir">
+            <div class="shop-editorial-content"><span class="shop-eyebrow">Notre philosophie</span><h2>Moins d'objets.<br><span>Plus d'intention.</span></h2><p>Un carnet qu'on a envie d'ouvrir, une lumière qui apaise, des couleurs qui donnent envie de créer : nous choisissons ce qui compte vraiment.</p><a href="./pages/bureautique.html" class="cta-button">Composer mon espace <i class="fas fa-arrow-right"></i></a></div>
+            <div class="shop-editorial-art"><img src="./Images/products/bureautique/porte-documents.png" alt="Porte-documents élégant sélectionné par Stylo Magik"><span>Des essentiels bien pensés.</span></div>
         </section>
 
         <section class="advantages blue-gradient-bg shop-section">
@@ -277,7 +288,7 @@
     <script src="./scripts/back-to-top.js"></script>
     <script src="./scripts/header-scroll.js"></script>
     <script src="./scripts/theme-toggle.js"></script>
-    <script src="./scripts/redesign.js?v=atelier-20260825"></script>
+    <script src="./scripts/redesign.js?v=atelier-signature-20260825"></script>
     <script>
         // Back to top functionality
         document.addEventListener('DOMContentLoaded', function() {

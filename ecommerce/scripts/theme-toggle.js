@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const storageKey = 'themeMode';
     const body = document.body;
     const savedMode = localStorage.getItem(storageKey);
-    const mode = savedMode === 'day' ? 'day' : 'night';
+    const mode = savedMode === 'night' ? 'night' : 'day';
 
     body.classList.remove('theme-day', 'theme-night');
     body.classList.add(`theme-${mode}`);
