@@ -1,0 +1,558 @@
+:root {
+    --motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+    --motion-ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+    --motion-highlight: var(--detail-accent, var(--primary-color, #8b82ff));
+}
+
+.motion-scroll-progress {
+    position: fixed;
+    z-index: 1300;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 3px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.motion-scroll-progress-fill {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, var(--motion-highlight), #61a6ff, var(--motion-highlight));
+    background-size: 200% 100%;
+    box-shadow: 0 0 14px rgba(113, 111, 255, 0.48);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.12s linear;
+}
+
+html.motion-ready:not(.motion-reduced) .motion-scroll-progress-fill {
+    animation: motionGradientTravel 5s linear infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .motion-reveal {
+    opacity: 0;
+    scale: 0.985;
+    translate: 0 27px;
+    transition:
+        opacity 0.68s var(--motion-ease),
+        translate 0.78s var(--motion-ease),
+        scale 0.78s var(--motion-ease),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+    transition-delay: var(--motion-delay, 0ms);
+    will-change: opacity, translate;
+}
+
+html.motion-ready:not(.motion-reduced) .motion-reveal.motion-visible {
+    opacity: 1;
+    scale: 1;
+    translate: 0 0;
+}
+
+html.motion-ready:not(.motion-reduced) .motion-reveal.motion-visible:hover {
+    transition-delay: 0ms;
+}
+
+html.motion-ready:not(.motion-reduced) .motion-hero-enter {
+    animation: motionHeroEntrance 0.85s var(--motion-ease) both;
+    animation-delay: var(--motion-hero-delay, 0ms);
+}
+
+html.motion-ready:not(.motion-reduced) .motion-stage-enter {
+    animation: motionStageEntrance 1.05s var(--motion-ease) both;
+    animation-delay: 420ms;
+}
+
+html.motion-ready:not(.motion-reduced) .motion-nav-enter {
+    animation: motionNavEntrance 0.72s ease both;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit {
+    animation: motionOrbitRotation 25s linear infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit::before,
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit-two::after {
+    position: absolute;
+    top: calc(50% - 3px);
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    background: #a49cff;
+    border-radius: 50%;
+    box-shadow: 0 0 18px rgba(153, 142, 255, 0.82);
+    content: "";
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit-two {
+    animation-duration: 34s;
+    animation-direction: reverse;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-orbit-two::after {
+    top: -3px;
+    left: calc(50% - 3px);
+    background: #7db3ff;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-floating-projects {
+    animation: motionFloat 6.2s ease-in-out infinite;
+    animation-delay: 0.45s;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-floating-code {
+    animation: motionFloatReverse 7s ease-in-out infinite;
+    animation-delay: 1.1s;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-visual .hero-logo-frame {
+    box-shadow:
+        0 32px 100px rgba(0, 0, 0, 0.34),
+        0 0 45px rgba(125, 112, 255, 0.1);
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero .shape {
+    animation: motionAmbientDrift 14s ease-in-out infinite alternate;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero .shape:nth-child(even) {
+    animation-duration: 18s;
+    animation-direction: alternate-reverse;
+}
+
+html.motion-ready:not(.motion-reduced) .project-hero::before {
+    animation: motionAmbientGlow 9s ease-in-out infinite alternate;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero h1 .highlight,
+html.motion-ready:not(.motion-reduced) .portfolio-premium .section-heading .section-title > span {
+    background-size: 210% 100%;
+    animation: motionGradientTravel 8s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .project-hero h1 > span {
+    background: linear-gradient(110deg, var(--detail-accent), #a8c8ff, var(--detail-accent));
+    background-clip: text;
+    background-size: 210% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: motionGradientTravel 7s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-availability > span,
+html.motion-ready:not(.motion-reduced) .portfolio-premium .cv-availability > span,
+html.motion-ready:not(.motion-reduced) .portfolio-premium .contact-availability-dot {
+    animation: motionAvailabilityPulse 2.4s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .portfolio-premium .scroll-down i {
+    animation: motionArrowDown 1.9s ease-in-out infinite;
+}
+
+.portfolio-premium .btn-primary,
+.detail-button-primary {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.portfolio-premium .btn-primary::after,
+.detail-button-primary::after {
+    position: absolute;
+    z-index: -1;
+    top: -90%;
+    left: -55%;
+    width: 43%;
+    height: 280%;
+    background: rgba(255, 255, 255, 0.2);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transform: rotate(20deg) translateX(-125%);
+    transition: transform 0.72s var(--motion-ease), opacity 0.25s ease;
+}
+
+.portfolio-premium .btn-primary:hover::after,
+.detail-button-primary:hover::after {
+    opacity: 1;
+    transform: rotate(20deg) translateX(460%);
+}
+
+.portfolio-premium .btn-primary > i,
+.detail-button > i,
+.project-live-link > i,
+.cv-contact-link > i,
+.detail-footer > a > i {
+    transition: transform 0.3s var(--motion-ease);
+}
+
+.portfolio-premium .btn-primary:hover > i,
+.detail-button:hover > i,
+.project-live-link:hover > i,
+.cv-contact-link:hover > i,
+.detail-footer > a:hover > i {
+    transform: translateX(3px);
+}
+
+.motion-interactive-card {
+    position: relative;
+    isolation: isolate;
+}
+
+.motion-interactive-card::after {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: radial-gradient(
+        270px circle at var(--motion-pointer-x, 50%) var(--motion-pointer-y, 50%),
+        rgba(133, 120, 255, 0.13),
+        transparent 55%
+    );
+    border-radius: inherit;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.32s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    html.motion-ready:not(.motion-reduced) .motion-interactive-card:hover::after {
+        opacity: 1;
+    }
+
+    html.motion-ready:not(.motion-reduced) .motion-tilt {
+        transform:
+            perspective(1100px)
+            rotateX(var(--motion-tilt-x, 0deg))
+            rotateY(var(--motion-tilt-y, 0deg));
+        transition:
+            transform 0.36s var(--motion-ease),
+            box-shadow 0.36s ease,
+            border-color 0.3s ease;
+        will-change: transform;
+    }
+
+    html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-logo-frame.motion-tilt {
+        transform:
+            perspective(1100px)
+            rotateX(var(--motion-tilt-x, 0deg))
+            rotateY(var(--motion-tilt-y, 0deg));
+    }
+
+    html.motion-ready:not(.motion-reduced) .motion-interactive-card:hover .feature-icon,
+    html.motion-ready:not(.motion-reduced) .motion-interactive-card:hover .identity-header > i,
+    html.motion-ready:not(.motion-reduced) .motion-interactive-card:hover .option-icon,
+    html.motion-ready:not(.motion-reduced) .motion-interactive-card:hover .about-feature-icon {
+        transform: translateY(-3px) rotate(-5deg);
+    }
+
+    html.motion-ready:not(.motion-reduced) .motion-interactive-card:hover .challenge-index {
+        transform: translateX(4px);
+    }
+}
+
+.feature-icon,
+.identity-header > i,
+.option-icon,
+.about-feature-icon,
+.challenge-index {
+    transition: transform 0.35s var(--motion-ease), background-color 0.3s ease;
+}
+
+html.motion-ready:not(.motion-reduced) .feature-card:hover,
+html.motion-ready:not(.motion-reduced) .challenge-card:hover,
+html.motion-ready:not(.motion-reduced) .stack-group:hover,
+html.motion-ready:not(.motion-reduced) .overview-callout:hover,
+html.motion-ready:not(.motion-reduced) .visual-card:hover {
+    border-color: color-mix(in srgb, var(--detail-accent) 38%, transparent);
+    box-shadow: 0 18px 48px rgba(0, 0, 0, 0.14);
+    transform: translateY(-5px);
+}
+
+.feature-card,
+.challenge-card,
+.stack-group,
+.overview-callout,
+.visual-card {
+    transition:
+        transform 0.35s var(--motion-ease),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.visual-image > img,
+.project-stage > img {
+    transition: transform 0.8s var(--motion-ease);
+}
+
+html.motion-ready:not(.motion-reduced) .visual-card:hover .visual-image > img,
+html.motion-ready:not(.motion-reduced) .project-stage:hover > img {
+    transform: scale(1.055);
+}
+
+.stack-tags > span,
+.project-tags > span,
+.technology-strip-list > span {
+    transition:
+        transform 0.28s var(--motion-ease),
+        color 0.25s ease,
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.stack-tags > span:hover,
+.project-tags > span:hover,
+.technology-strip-list > span:hover {
+    color: var(--motion-highlight);
+    transform: translateY(-3px);
+}
+
+html.motion-ready:not(.motion-reduced) .skillup-progress > span {
+    transform-origin: left center;
+    animation: motionProgressFill 1.25s var(--motion-ease) 0.75s both;
+}
+
+html.motion-ready:not(.motion-reduced) .skillup-preview-main {
+    animation: motionPreviewFloat 6.5s ease-in-out infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .skillup-preview-card:nth-child(2) {
+    animation: motionPreviewFloat 5.8s ease-in-out 0.55s infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .skillup-preview-card:nth-child(3) {
+    animation: motionPreviewFloat 6.2s ease-in-out 1s infinite;
+}
+
+html.motion-ready:not(.motion-reduced) .cv-qr-card > img {
+    transition: transform 0.38s var(--motion-ease), box-shadow 0.3s ease;
+}
+
+html.motion-ready:not(.motion-reduced) .cv-qr-card:hover > img {
+    box-shadow: 0 8px 23px rgba(73, 69, 139, 0.16);
+    transform: scale(1.045) rotate(-2deg);
+}
+
+html.motion-ready:not(.motion-reduced) .contact-form-field input:focus,
+html.motion-ready:not(.motion-reduced) .contact-form-field textarea:focus {
+    transform: translateY(-1px);
+}
+
+html.motion-ready:not(.motion-reduced) .project-scroll-top:hover > i,
+html.motion-ready:not(.motion-reduced) .scroll-top:hover > i {
+    animation: motionArrowUp 0.75s var(--motion-ease);
+}
+
+@keyframes motionHeroEntrance {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes motionStageEntrance {
+    from {
+        opacity: 0;
+        scale: 0.965;
+        translate: 0 24px;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+}
+
+@keyframes motionNavEntrance {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes motionOrbitRotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes motionFloat {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -9px, 0);
+    }
+}
+
+@keyframes motionFloatReverse {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, 8px, 0);
+    }
+}
+
+@keyframes motionAmbientDrift {
+    from {
+        transform: translate3d(-12px, 0, 0) scale(1);
+    }
+
+    to {
+        transform: translate3d(16px, -16px, 0) scale(1.07);
+    }
+}
+
+@keyframes motionAmbientGlow {
+    from {
+        opacity: 0.6;
+        transform: translate3d(-18px, 0, 0) scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(20px, 12px, 0) scale(1.09);
+    }
+}
+
+@keyframes motionGradientTravel {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes motionAvailabilityPulse {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(57, 196, 131, 0.36);
+    }
+
+    55% {
+        box-shadow: 0 0 0 6px rgba(57, 196, 131, 0);
+    }
+}
+
+@keyframes motionArrowDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes motionArrowUp {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    45% {
+        transform: translateY(-4px);
+    }
+}
+
+@keyframes motionProgressFill {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes motionPreviewFloat {
+    0%,
+    100% {
+        translate: 0 0;
+    }
+
+    50% {
+        translate: 0 -5px;
+    }
+}
+
+@media (max-width: 680px) {
+    .motion-scroll-progress {
+        height: 2px;
+    }
+
+    html.motion-ready:not(.motion-reduced) .motion-reveal {
+        scale: 1;
+        translate: 0 17px;
+        transition-duration: 0.48s, 0.56s, 0.56s, 0.3s, 0.3s, 0.3s;
+    }
+
+    html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-floating-projects,
+    html.motion-ready:not(.motion-reduced) .portfolio-premium .hero-floating-code {
+        animation-duration: 8s;
+    }
+
+    html.motion-ready:not(.motion-reduced) .skillup-preview-main,
+    html.motion-ready:not(.motion-reduced) .skillup-preview-card {
+        animation: none;
+    }
+
+    .motion-interactive-card::after {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html.motion-ready .motion-reveal,
+    html.motion-ready .motion-reveal.motion-visible {
+        opacity: 1;
+        scale: 1;
+        translate: 0 0;
+    }
+
+    .motion-scroll-progress-fill,
+    .motion-hero-enter,
+    .motion-stage-enter,
+    .motion-nav-enter,
+    .hero-orbit,
+    .hero-floating-card,
+    .skillup-preview-main,
+    .skillup-preview-card,
+    .skillup-progress > span,
+    .scroll-down i,
+    .project-hero::before {
+        animation: none !important;
+    }
+
+    .motion-scroll-progress-fill {
+        transition: none;
+    }
+}
