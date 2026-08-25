@@ -1,0 +1,398 @@
+/* Accueil Stylo Magik — composition aérée, organique et sans gros encadrés. */
+
+.shop-premium.shop-home .shop-announcement {
+    min-height: 42px;
+    background: color-mix(in srgb, var(--atelier-accent) 12%, var(--atelier-bg));
+    border-bottom: 1px solid var(--atelier-border);
+    color: var(--atelier-muted);
+}
+
+.shop-premium.shop-home .shop-announcement > a {
+    color: var(--atelier-accent);
+}
+
+.shop-premium.shop-home .shop-hero {
+    width: min(1160px, calc(100% - 120px)) !important;
+    min-height: 735px !important;
+    margin: 0 auto !important;
+    padding: 105px 0 125px !important;
+    align-items: center;
+    gap: 105px !important;
+    grid-template-columns: minmax(0, 0.92fr) minmax(430px, 1.08fr) !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.shop-premium.shop-home .hero-content {
+    width: 100% !important;
+    max-width: 525px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.shop-premium.shop-home .shop-eyebrow {
+    margin: 0;
+    font-size: 10px;
+    letter-spacing: 1.65px;
+}
+
+.shop-premium.shop-home .hero-title {
+    max-width: 520px !important;
+    margin: 24px 0 0 !important;
+    font-size: clamp(59px, 5.2vw, 76px) !important;
+    letter-spacing: -3.4px !important;
+    line-height: 1.07 !important;
+}
+
+.shop-premium.shop-home .hero-title .highlight {
+    display: inline-block;
+    padding-right: 6px;
+    color: var(--atelier-accent) !important;
+    font-style: italic;
+}
+
+.shop-premium.shop-home .hero-title .highlight::after {
+    display: none !important;
+}
+
+body.shop-premium.shop-home .hero-content > p {
+    max-width: 465px !important;
+    margin: 29px 0 0 !important;
+    color: var(--atelier-muted) !important;
+    font-size: 14px !important;
+    line-height: 1.95 !important;
+}
+
+.shop-premium.shop-home .hero-buttons {
+    margin-top: 36px !important;
+    flex-wrap: wrap;
+    gap: 12px !important;
+}
+
+.shop-premium.shop-home .hero-buttons .cta-button {
+    width: auto !important;
+    min-height: 51px !important;
+    padding: 0 22px !important;
+    border-radius: 999px !important;
+    font-size: 11px !important;
+}
+
+.shop-premium.shop-home .shop-hero-note {
+    margin-top: 42px !important;
+    padding: 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.shop-premium.shop-home .shop-hero-visual {
+    position: relative !important;
+    display: grid !important;
+    width: 100% !important;
+    min-height: 540px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    place-items: center !important;
+    overflow: visible !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    isolation: isolate;
+}
+
+.shop-premium.shop-home .shop-hero-visual::before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 0 !important;
+    top: 50% !important;
+    left: 50% !important;
+    display: block !important;
+    width: min(92%, 455px) !important;
+    aspect-ratio: 1 !important;
+    background:
+        radial-gradient(circle at 32% 24%, rgba(255, 255, 255, 0.72), transparent 30%),
+        linear-gradient(145deg, #dfe7d8, #c7d4c1) !important;
+    border: 1px solid rgba(58, 78, 61, 0.08) !important;
+    border-radius: 43% 57% 61% 39% / 47% 39% 61% 53% !important;
+    box-shadow: 0 35px 90px rgba(40, 54, 41, 0.13) !important;
+    transform: translate(-50%, -50%) rotate(-4deg) !important;
+}
+
+.shop-premium.shop-home .shop-hero-visual::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 52px;
+    right: 4px;
+    width: 84px;
+    height: 84px;
+    background: color-mix(in srgb, var(--atelier-accent) 12%, transparent);
+    border-radius: 50%;
+}
+
+.shop-premium.theme-night.shop-home .shop-hero-visual::before {
+    background:
+        radial-gradient(circle at 32% 24%, rgba(183, 207, 173, 0.19), transparent 31%),
+        linear-gradient(145deg, #2b3b30, #1e2c24) !important;
+    border-color: rgba(224, 235, 218, 0.08) !important;
+    box-shadow: 0 38px 100px rgba(0, 0, 0, 0.26) !important;
+}
+
+.shop-premium.shop-home .shop-hero-halo {
+    display: none !important;
+}
+
+.shop-premium.shop-home .shop-hero-lamp {
+    position: relative !important;
+    z-index: 2 !important;
+    width: min(62%, 315px) !important;
+    max-height: 365px !important;
+    margin: 0 !important;
+    filter: drop-shadow(0 27px 38px rgba(28, 39, 29, 0.25)) !important;
+}
+
+.shop-premium.shop-home .shop-hero-notebook {
+    position: absolute !important;
+    z-index: 3 !important;
+    right: 6% !important;
+    bottom: 82px !important;
+    width: 92px !important;
+    opacity: 0.9 !important;
+    transform: rotate(-10deg) !important;
+}
+
+.shop-premium.shop-home .shop-hero-product-label {
+    position: absolute !important;
+    z-index: 5 !important;
+    right: auto !important;
+    bottom: 17px !important;
+    left: 1% !important;
+    display: grid !important;
+    width: 226px !important;
+    min-width: 0 !important;
+    padding: 14px 16px !important;
+    background: color-mix(in srgb, var(--atelier-surface) 91%, transparent) !important;
+    border: 1px solid var(--atelier-border) !important;
+    border-radius: 20px !important;
+    box-shadow: 0 18px 45px rgba(35, 45, 36, 0.12) !important;
+    backdrop-filter: blur(16px) !important;
+}
+
+.shop-premium.shop-home .shop-hero-floating-note {
+    position: absolute !important;
+    z-index: 5 !important;
+    top: 30px !important;
+    right: 0 !important;
+    left: auto !important;
+    display: grid !important;
+    width: auto !important;
+    min-width: 150px !important;
+    padding: 11px 14px !important;
+    background: color-mix(in srgb, var(--atelier-surface) 90%, transparent) !important;
+    border: 1px solid var(--atelier-border) !important;
+    border-radius: 999px !important;
+    box-shadow: 0 15px 38px rgba(35, 45, 36, 0.1) !important;
+    backdrop-filter: blur(16px) !important;
+}
+
+.shop-premium.shop-home .shop-hero-edition {
+    position: absolute !important;
+    z-index: 4 !important;
+    top: 49px !important;
+    left: 0 !important;
+    max-width: 135px;
+}
+
+.shop-premium.shop-home .shop-trust-strip {
+    width: min(1060px, calc(100% - 150px)) !important;
+    min-height: 96px !important;
+    margin: -13px auto 0 !important;
+    padding: 26px 0 0 !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-top: 1px solid var(--atelier-border) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    gap: 0 !important;
+}
+
+.shop-premium.shop-home .shop-trust-strip > span {
+    min-height: 48px !important;
+    padding: 0 24px !important;
+    background: transparent !important;
+    border: 0 !important;
+}
+
+.shop-premium.shop-home .shop-trust-strip > span + span {
+    border-left: 1px solid var(--atelier-border) !important;
+}
+
+.shop-premium.shop-home .shop-trust-strip > span > i {
+    width: 36px !important;
+    height: 36px !important;
+    background: color-mix(in srgb, var(--atelier-accent) 11%, transparent) !important;
+    border-radius: 50% !important;
+}
+
+@media (max-width: 1250px) {
+    .shop-premium.shop-home .shop-hero {
+        width: calc(100% - 90px) !important;
+        gap: 72px !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip {
+        width: calc(100% - 110px) !important;
+    }
+}
+
+@media (max-width: 980px) {
+    .shop-premium.shop-home .shop-hero {
+        width: min(720px, calc(100% - 70px)) !important;
+        padding: 88px 0 100px !important;
+        gap: 76px !important;
+        grid-template-columns: 1fr !important;
+    }
+
+    .shop-premium.shop-home .hero-content {
+        max-width: 620px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
+    .shop-premium.shop-home .hero-title,
+    body.shop-premium.shop-home .hero-content > p {
+        max-width: 620px !important;
+        margin-right: auto !important;
+        margin-left: auto !important;
+    }
+
+    .shop-premium.shop-home .hero-buttons,
+    .shop-premium.shop-home .shop-hero-note {
+        justify-content: center !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-visual {
+        width: min(560px, 100%) !important;
+        min-height: 525px !important;
+        margin: 0 auto !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-visual::before {
+        width: min(82%, 430px) !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip {
+        width: min(720px, calc(100% - 70px)) !important;
+        padding-top: 24px !important;
+        gap: 22px 0 !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip > span:nth-child(3) {
+        border-left: 0 !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .shop-premium.shop-home .shop-hero {
+        width: calc(100% - 36px) !important;
+        padding: 66px 0 78px !important;
+        gap: 56px !important;
+    }
+
+    .shop-premium.shop-home .hero-title {
+        font-size: clamp(48px, 13vw, 64px) !important;
+        letter-spacing: -2.6px !important;
+    }
+
+    body.shop-premium.shop-home .hero-content > p {
+        margin-top: 21px !important;
+        font-size: 12px !important;
+    }
+
+    .shop-premium.shop-home .hero-buttons {
+        margin-top: 29px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-note {
+        margin-top: 31px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-visual {
+        min-height: 390px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-visual::before {
+        width: min(82%, 315px) !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-lamp {
+        width: min(60%, 215px) !important;
+        max-height: 275px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-notebook {
+        right: 4% !important;
+        bottom: 64px !important;
+        width: 69px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-product-label {
+        bottom: 2px !important;
+        left: 0 !important;
+        width: 185px !important;
+        padding: 10px 12px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-floating-note {
+        top: 12px !important;
+        right: 0 !important;
+        min-width: 126px !important;
+        padding: 8px 10px !important;
+        font-size: 9px !important;
+    }
+
+    .shop-premium.shop-home .shop-hero-edition {
+        top: 19px !important;
+        left: 0 !important;
+        max-width: 90px;
+        font-size: 7px !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip {
+        width: calc(100% - 36px) !important;
+        gap: 18px 0 !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip > span {
+        padding: 0 9px !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .shop-premium.shop-home .hero-buttons {
+        align-items: stretch !important;
+        flex-direction: column !important;
+    }
+
+    .shop-premium.shop-home .hero-buttons .cta-button {
+        width: 100% !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip {
+        grid-template-columns: 1fr !important;
+    }
+
+    .shop-premium.shop-home .shop-trust-strip > span + span {
+        padding-top: 15px !important;
+        border-top: 1px solid var(--atelier-border) !important;
+        border-left: 0 !important;
+    }
+}
